@@ -7,7 +7,7 @@ export default function LocationSection(){
             <p className="text-sm pt-1">Testy probíhají v budově základní školy Edisona.</p>
             <div className="flex flex-col gap-y-5 pt-10 ">
                 <div className="w-full border-0 rounded-xl overflow-hidden shadow-lg h-48">
-                    <Image src={edisonaPhoto}></Image>
+                    <Image src={edisonaPhoto} alt="edisona škola"></Image>
                 </div>
 
             <div className="w-full border-0 rounded-xl overflow-hidden shadow-lg h-48">
