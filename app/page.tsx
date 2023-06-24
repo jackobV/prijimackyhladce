@@ -4,6 +4,7 @@ import LandingFeaturesOne from "@/app/(components)/landingFeaturesOne";
 import TestCardItemCTA from "@/app/(components)/testCardItemCTA";
 import LocationSection from "@/app/(components)/locationSection";
 import TestDaySchedule from "@/app/(components)/testDaySchedule";
+import Testimonials from "@/app/(components)/testimonials";
 
 export default function Home() {
   return (
@@ -18,6 +19,7 @@ export default function Home() {
             <LocationSection />
         </div>
         <TestDaySchedule />
+        <Testimonials />
     </main>
   )
 }

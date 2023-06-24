@@ -46,7 +46,7 @@ export default function TestDaySchedule(){
     return(
         <div className="px-4 pt-5">
             <h2 className="font-bold text-lg pb-2">Časový hormonogram testového dne</h2>
-            <ol className="bg-sky-50 px-4 rounded-lg py-2 gap-y-6 flex flex-col">
+            <ol className="bg-sky-50 px-4 rounded-lg py-8 gap-y-6 flex flex-col">
                 {timeSlots.map((item)=>(
                     <li className="text-center">
                         <p className="text-sky-700 font-medium text-xs">{item.title}</p>
