@@ -2,9 +2,9 @@ import edisonaPhoto from "../(media)/edisona.webp"
 import Image from "next/image";
 export default function LocationSection(){
     return(
-        <div className="px-4 pt-16">
-            <h2 className="font-bold text-xl">Kde testy probíhají?</h2>
-            <p className="text-sm pt-1">Testy probíhají v budově základní školy Edisona.</p>
+        <div className="px-4 pt-20">
+            <h2 className="font-bold text-2xl">Kde testy probíhají?</h2>
+            <p className="pt-2">Testy probíhají v budově základní školy Edisona.</p>
             <div className="flex flex-col gap-y-5 pt-10 ">
                 <div className="w-full border-0 rounded-xl overflow-hidden shadow-lg h-48">
                     <Image src={edisonaPhoto} alt="edisona škola"></Image>
