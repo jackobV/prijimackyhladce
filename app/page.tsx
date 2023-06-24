@@ -11,7 +11,7 @@ export default function Home() {
     <main>
         <MenuBar />
         <LandingPageHero />
-        <div className="pb-20">
+        <div className="pb-10">
             <LandingFeaturesOne />
         </div>
         <div className="bg-gray-50 py-20">
