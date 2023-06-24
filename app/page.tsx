@@ -3,6 +3,7 @@ import MenuBar from "@/app/(components)/menuBar";
 import LandingFeaturesOne from "@/app/(components)/landingFeaturesOne";
 import TestCardItemCTA from "@/app/(components)/testCardItemCTA";
 import LocationSection from "@/app/(components)/locationSection";
+import TestDaySchedule from "@/app/(components)/testDaySchedule";
 
 export default function Home() {
   return (
@@ -15,8 +16,8 @@ export default function Home() {
         <div className="bg-gray-50 py-10">
             <TestCardItemCTA />
             <LocationSection />
-
         </div>
+        <TestDaySchedule />
     </main>
   )
 }
