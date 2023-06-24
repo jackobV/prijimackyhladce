@@ -5,6 +5,7 @@ import TestCardItemCTA from "@/app/(components)/testCardItemCTA";
 import LocationSection from "@/app/(components)/locationSection";
 import TestDaySchedule from "@/app/(components)/testDaySchedule";
 import Testimonials from "@/app/(components)/testimonials";
+import JakVypadaTest from "@/app/(components)/jakVypadaTest";
 
 export default function Home() {
   return (
@@ -21,6 +22,7 @@ export default function Home() {
         </div>
         <TestDaySchedule />
         <Testimonials />
+        <JakVypadaTest />
     </main>
   )
 }
