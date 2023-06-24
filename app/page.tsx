@@ -6,6 +6,9 @@ import LocationSection from "@/app/(components)/locationSection";
 import TestDaySchedule from "@/app/(components)/testDaySchedule";
 import Testimonials from "@/app/(components)/testimonials";
 import JakVypadaTest from "@/app/(components)/jakVypadaTest";
+import CTAbuy from "@/app/(components)/CTAbuy";
+import JsmeSVami from "@/app/(components)/jsmeSVami";
+import JakFungujeKoupe from "@/app/(components)/jakFungujeKoupe";
 
 export default function Home() {
   return (
@@ -23,6 +26,9 @@ export default function Home() {
         <TestDaySchedule />
         <Testimonials />
         <JakVypadaTest />
+        <CTAbuy />
+        <JsmeSVami />
+        <JakFungujeKoupe />
     </main>
   )
 }
