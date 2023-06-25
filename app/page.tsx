@@ -18,14 +18,15 @@ export default function Home() {
         <div className="pb-10">
             <LandingFeaturesOne />
         </div>
+        <div className="pb-10">
+            <JakVypadaTest />
+        </div>
         <div className="bg-gray-50 py-20">
             <TestCardItemCTA />
-
             <LocationSection />
         </div>
         <TestDaySchedule />
         <Testimonials />
-        <JakVypadaTest />
         <CTAbuy />
         <JsmeSVami />
         <JakFungujeKoupe />
