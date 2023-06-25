@@ -22,14 +22,18 @@ export default function Home() {
             <JakVypadaTest />
         </div>
         <div className="bg-gray-50 py-20">
-            <TestCardItemCTA />
             <LocationSection />
+            <TestCardItemCTA />
         </div>
         <TestDaySchedule />
         <Testimonials />
-        <CTAbuy />
         <JsmeSVami />
         <JakFungujeKoupe />
+        <div className="py-20">
+            <CTAbuy />
+
+        </div>
+
     </main>
   )
 }
