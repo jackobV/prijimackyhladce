@@ -44,7 +44,7 @@ let timeSlots:Array<timeSlot> = [
 ]
 export default function TestDaySchedule(){
     return(
-        <div className="px-4 pt-10 md:pt-20 mx-auto max-w-5xl">
+        <div className="px-4 mx-auto max-w-5xl">
             <h2 className="font-bold text-lg md:text-2xl pb-5 md:pb-10">Časový hormonogram testového dne</h2>
             <ol className="bg-sky-50 px-4 rounded-lg py-8 gap-y-6 flex flex-col">
                 {timeSlots.map((item)=>(

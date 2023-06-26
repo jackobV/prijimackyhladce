@@ -1,6 +1,6 @@
 import { Inter } from 'next/font/google'
 import './global.css';
-import MenuBar from "@/app/(components)/menuBar";
+import MenuBar from "@/app/(general)/(components)/menuBar";
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
@@ -9,13 +9,15 @@ export const metadata = {
 }
 
 export default function RootLayout({
-  children,
-}: {
+                                     children,
+                                   }: {
   children: React.ReactNode
 }) {
   return (
-    <html lang="cs">
-      <body className="font-sans">{children}</body>
-    </html>
+      <html lang="cs">
+      <body className="font-sans">
+      {children}
+      </body>
+      </html>
   )
 }

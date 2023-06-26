@@ -22,7 +22,7 @@ let features:Array<Feature> = [
 ]
 export default function LandingFeaturesOne(){
     return(
-        <div className="pt-10 px-4 max-w-5xl mx-auto">
+        <div className="px-4 max-w-5xl mx-auto">
             <ul className="bg-sky-50 px-4 rounded-lg py-2 md:hidden">
             {features.map((item)=>(
                     <li className="py-4 md:py-4 flex flex-col md:flex-row">

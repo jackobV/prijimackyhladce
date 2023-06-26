@@ -2,9 +2,10 @@ import { StarIcon } from '@heroicons/react/20/solid'
 
 export default function Testimonials() {
     return (
-        <section className="py-24 sm:py-32 ">
+        <section className="">
             <div className="px-4 bg-blue-600 py-10 rounded-tr-3xl rounded-br-3xl">
-            <figure className="mx-auto max-w-2xl">
+            <figure className="mx-auto max-w-5xl">
+
                 <p className="sr-only">5 z 5 hvězd</p>
                 <div className="flex gap-x-1 text-white">
                     <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
@@ -13,7 +14,7 @@ export default function Testimonials() {
                     <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
                     <StarIcon className="h-5 w-5 flex-none" aria-hidden="true" />
                 </div>
-                <blockquote className="mt-10 text-xl font-semibold leading-8 tracking-tight text-blue-50 sm:text-2xl sm:leading-9">
+                <blockquote className="mt-10 text-xl font-semibold leading-8 tracking-tight text-blue-50 sm:text-2xl sm:leading-9 max-w-2xl">
                     <p>
                         “PH byly rozhodně tím nejlepším, co jsem navštívila. Krásná atmosféra, skvělá vedoucí i testy, které byly schválně těžší a více připravily. Určitě bych doporučila i všem ostatním, je to ta správná volba. Děkuji za všechno.”
                     </p>
