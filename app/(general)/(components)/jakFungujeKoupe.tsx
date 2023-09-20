@@ -28,7 +28,7 @@ let steps:Array<Step> = [
 
 export default function JakFungujeKoupe(){
     return(
-        <div className=" px-4  max-w-5xl mx-auto ">
+        <div className=" max-w-6xl px-6 lg:px-8 mx-auto">
             <h2 className="font-bold text-xl tracking-tight pb-5 md:text-2xl">Jak funguje zakoupení termínu?</h2>
 
             <div className="px-4 py-4 md:py-6 bg-sky-50 rounded-xl">

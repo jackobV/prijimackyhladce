@@ -5,24 +5,24 @@ interface Feature {
 }
 let features:Array<Feature> = [
     {
-        uptitle:"Podle testů cermat",
-        title:"O něco těžší než ty na ostro.",
-        text:"Řídíme se zásadou těžko na cvičišti, lehko na bojišti. Testy obsahují přesné učivo, které se bude vyskytovat na těch opravdových, pouze o něco těžší."
+        uptitle:"(Co)",
+        title:"Přijímačky na zkoušku pro 9.třídu",
+        text:"Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy."
     },
     {
-        uptitle:"Podle testů cermat",
-        title:"O něco těžší než ty na ostro.",
-        text:"Řídíme se zásadou těžko na cvičišti, lehko na bojišti. Testy obsahují přesné učivo, které se bude vyskytovat na těch opravdových, pouze o něco těžší."
+        uptitle:"(Kde)",
+        title:"V Praze (u metra Budějovická).",
+        text:"Testy na zkoušku pořádáme v prostorech školy Edisona. Můžete k nám dojet autem a zaparkovat přímo v ulici. Od stanice Budějovická (metro C) je to k nám deset minut pěšky."
     },
     {
-        uptitle:"Podle testů cermat",
-        title:"O něco těžší než ty na ostro.",
-        text:"Řídíme se zásadou těžko na cvičišti, lehko na bojišti. Testy obsahují přesné učivo, které se bude vyskytovat na těch opravdových, pouze o něco těžší."
+        uptitle:"(Kdy)",
+        title:"Vybrané soboty (24 termínů)",
+        text:"V období listopad - duben pořádáme přijímačky na zkoušku každou sobotu. Pokud si chcete vyzkoušet testy ještě dříve, přihlašte se na vybranné soboty v září a říjnu. Všechny termíny najdete níže v kalendáři."
     },
 ]
 export default function LandingFeaturesOne(){
     return(
-        <div className="px-4 max-w-5xl mx-auto">
+        <div className="max-w-6xl px-6 lg:px-8 mx-auto">
             <ul className="bg-sky-50 px-4 rounded-lg py-2 md:hidden">
             {features.map((item)=>(
                     <li className="py-4 md:py-4 flex flex-col md:flex-row">
@@ -34,9 +34,9 @@ export default function LandingFeaturesOne(){
                     </li>
             ))}
             </ul>
-            <ul className="rounded-lg py-2 flex flex-row gap-x-5 hidden md:flex">
+            <ul className="rounded-lg py-2 flex flex-row gap-x-10 hidden md:flex ">
                 {features.map((item)=>(
-                    <li className="py-10 flex flex-col bg-sky-50 px-4 rounded-lg">
+                    <li className="py-10 flex flex-col bg-sky-50 px-4 rounded-lg w-full">
                         <div className="w-full">
                             <p className="text-xs md:text-sm text-sky-700 font-medium">{item.uptitle}</p>
                             <h2 className="font-semibold tracking-tight md:text-xl pt-3">{item.title}</h2>

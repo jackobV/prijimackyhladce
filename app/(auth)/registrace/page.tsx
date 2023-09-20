@@ -9,11 +9,11 @@ export default function RegisterForm2(){
     * */
     const [step, setStep] = useState(0);
     const [question, setQuestion] = useState("Co se na tebe nejvíce hodí?")
-    const [questionDescription, setQuestionDescription] = useState("Odpověď poslouží k vylepšení tvého zážitku.")
+    const [questionDescription, setQuestionDescription] = useState("Vyber si jednu z následujících možností...")
     const [year, setYear] = useState(0);
-    const [difficultie, setDifficultie] = useState("")
-    const [perosnalRole, setPersonalRole] = useState("")
-    const [loadingRegister, setLoadingRegister] = useState(false)
+    const [difficultie, setDifficultie] = useState("");
+    const [perosnalRole, setPersonalRole] = useState("");
+    const [loadingRegister, setLoadingRegister] = useState(false);
     /*
     * Variables k formuláři
     * */
@@ -36,7 +36,7 @@ export default function RegisterForm2(){
     const handleNext = (()=>{
         if(step === 0 && perosnalRole != ""){
             setQuestion("Která třída se tě týká?")
-            setQuestionDescription("Podle tvé odpovědí ti budeme nabízet volné termíny atd...")
+            setQuestionDescription("Momentálně poskytujeme přijímačky nenečisto pouze pro devátou třídu...")
             setStep(1)
         }
         if(step === 1 && year != 0) {
@@ -51,13 +51,13 @@ export default function RegisterForm2(){
         }
     })
 
-    const pb = new PocketBase('https://admin.deleno.cz');
+    const pb = new PocketBase('https://server.na-zkousku.cz');
     const handleSubmit = async (e: { preventDefault: () => void; }) => {
         e.preventDefault();
         if(validatePassword() === true){
             try {
                 setLoadingRegister(true);
-                await pb.collection('users').create({"email":email,"emailVisibility":true,"password":heslo,"passwordConfirm":hesloZnovu,"jmeno":jmeno,"prijmeni":prijimeni,"trida":year});
+                await pb.collection('users').create({"email":email,"emailVisibility":true,"password":heslo,"passwordConfirm":hesloZnovu,"jmeno":jmeno,"prijimeni":prijimeni,"trida":year,"role":perosnalRole,"difficultie":difficultie});
                 await pb.collection('users').authWithPassword(email,heslo);
                 fetch("/api/registerok",{
                     method: "POST",
@@ -156,28 +156,6 @@ export default function RegisterForm2(){
 
                 {step === 1 ?
                     <div className="flex flex-col w-full md:w-3/5 gap-y-2">
-                        {year === 5 ?
-                            <div className="flex flex-row w-full gap-x-4 rounded-lg border-2 h-20 items-center pl-4 border-blue-700 shadow-lg cursor-pointer" onClick={(()=>(setYear(0)))}>
-                                <div className="w-8 h-8 bg-blue-500 rounded-full p-1 text-blue-800 border-blue-800 border flex flex-col items-center justify-center font-medium">5</div>
-                                <div className=""><p className="inline font-medium">Pátá třída</p> </div>
-                            </div>
-                            :
-                            <div className="flex flex-row w-full gap-x-4 rounded-lg border h-20 items-center pl-4 hover:scale-[101%] duration-100 cursor-pointer hover:border-blue-700" onClick={(()=>(setYear(5)))}>
-                                <div className="w-8 h-8 bg-blue-500 rounded-full p-1 text-blue-800 border-blue-800 border flex flex-col items-center justify-center font-medium">5</div>
-                                <div className=""><p className="inline font-medium">Pátá třída</p> </div>
-                            </div>
-                        }
-                        {year === 7 ?
-                            <div className="flex flex-row w-full gap-x-4 rounded-lg border-2 h-20 items-center pl-4 border-blue-700 shadow-lg cursor-pointer" onClick={(()=>(setYear(0)))}>
-                                <div className="w-8 h-8 bg-blue-500 rounded-full p-1 text-blue-800 border-blue-800 border flex flex-col items-center justify-center font-medium">7</div>
-                                <div className=""><p className="inline font-medium">Sedmá třída</p> </div>
-                            </div>
-                            :
-                            <div className="flex flex-row w-full gap-x-4 rounded-lg border h-20 items-center pl-4 hover:scale-[101%] duration-100 cursor-pointer hover:border-blue-700" onClick={(()=>(setYear(7)))}>
-                                <div className="w-8 h-8 bg-blue-500 rounded-full p-1 text-blue-800 border-blue-800 border flex flex-col items-center justify-center font-medium">7</div>
-                                <div className=""><p className="inline font-medium">Sedmá třída</p> </div>
-                            </div>
-                        }
                         {year === 9 ?
                             <div className="flex flex-row w-full gap-x-4 rounded-lg border-2 h-20 items-center pl-4 border-blue-700 shadow-lg cursor-pointer" onClick={(()=>(setYear(0)))}>
                                 <div className="w-8 h-8 bg-blue-500 rounded-full p-1 text-blue-800 border-blue-800 border flex flex-col items-center justify-center font-medium">9</div>
@@ -246,7 +224,7 @@ export default function RegisterForm2(){
                                         <input className="rounded-xl w-full border-gray-400 " type="text" id="name" name="name" placeholder="Jméno" required={true} onChange={e => setJmeno(e.target.value)} />
                                         <input className="rounded-xl w-full border-gray-400 " type="text" id="surname" name="surname" placeholder="Přijímení" required={true} onChange={e => setPrijimeni(e.target.value)}  />
                                     </div>
-                                    <input className="rounded-xl w-full border-gray-400 border" type="email" id="email" name="email" placeholder="Email" required={true} onChange={e => setEmail(e.target.value)} />
+                                    <input className="rounded-xl w-full border-gray-400 " type="email" id="email" name="email" placeholder="Email" required={true} onChange={e => setEmail(e.target.value)} />
                                     <input className="rounded-xl w-full border-gray-400 " type="password" id="heslo" name="heslo" pattern="(?=.*[a-z])(?=.*[A-Z])(?=.*\d).{8,}" placeholder="Heslo" required={true} onChange={e => setHeslo(e.target.value)} />
                                     {passwordProblemMessage === "" ?
                                         <input className="rounded-xl w-full border-gray-400 " type="password" id="heslo"
@@ -268,7 +246,7 @@ export default function RegisterForm2(){
                                     </label>
                                     {loadingRegister === false ?
                                         <button
-                                            className="rounded-xl w-full bg-black text-white py-3 mt-2 hover:bg-gray-500"
+                                            className="rounded-xl w-full bg-blue-600 text-white py-3 mt-2 hover:bg-blue-700 duration-100"
                                             type="submit">Registrovat se</button>
                                         :
                                         <button

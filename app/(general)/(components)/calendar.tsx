@@ -1,6 +1,6 @@
 export default function Calendar(){
     return(
-        <div className="mx-auto px-4 max-w-5xl">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8">
             kalendář
         </div>
     )

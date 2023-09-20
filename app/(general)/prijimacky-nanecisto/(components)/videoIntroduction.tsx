@@ -10,7 +10,7 @@ let features:Array<string> = [
 export default function VideoIntroduction(){
     return(
         <div className="">
-            <div className="flex md:flex-row flex-col max-w-5xl mx-auto px-4">
+            <div className="flex md:flex-row flex-col mx-auto max-w-6xl px-6 lg:px-8 items-center">
                 <div className="w-full pb-5 md:pb-0">
                     <h2 className="font-bold tracking-tight text-xl pb-5">Co můžeš od přijímaček na zkoušku <br></br>očekávat? </h2>
                     <ul className="px-4 flex flex-col gap-y-2">

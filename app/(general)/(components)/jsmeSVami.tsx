@@ -1,6 +1,6 @@
 export default function JsmeSVami(){
     return(
-        <div className="px-4 max-w-5xl mx-auto">
+        <div className="max-w-6xl px-6 lg:px-8 mx-auto">
             <h2 className="font-bold text-xl tracking-tight md:text-3xl">Jsme s Vámi během celého procesu</h2>
             <div className="flex flex-col md:flex-row text-sm md:text-base gap-y-2 pt-2 md:pt-10 gap-x-10">
             <p className="">
