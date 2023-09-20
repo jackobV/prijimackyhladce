@@ -22,7 +22,7 @@ export async function POST(req: Request){
             console.log(event.data.object);
             const customerEmail: string = event.data.object.email
             const customerId: string = event.data.object.metadata.user_id
-            const databaseIds:Array<string> = event.object.metadata.database_ids.split(",");
+            const databaseIds:Array<string> = event.data.object.metadata.database_ids.split(",");
             console.log(databaseIds)
             for (const databaseId of databaseIds){
                 try{
