@@ -10,6 +10,7 @@ const cors = Cors({
     allowMethods: ["POST", "HEAD"],
 });
 const webhookSecret:string = process.env.STRIPE_WEBHOOK_SERCET_KEY || "";
+const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
 
 
 export async function POST(req: Request){
@@ -19,6 +20,24 @@ export async function POST(req: Request){
         const event = stripe.webhooks.constructEvent(body,signature,webhookSecret);
         if (event.type === "checkout.session.completed"){
             console.log(event.data.object);
+            const customerEmail: string = event.data.object.email
+            const customerId: string = event.data.object.metadata.user_id
+            const databaseIds:Array<string> = event.object.metadata.database_ids.split(",");
+            for (const databaseId of databaseIds){
+                try{
+                    const ticket = await pb.collection("ticket").create({
+                        "user":customerId,
+                        "testy":databaseId
+                    })
+                    const userAlreadyHasTickets = await pb.collection("users").getOne(customerId)
+                    const newTicketArray = [...userAlreadyHasTickets.tickets, ticket.id]
+                    await pb.collection("users").update(customerId,{
+                        "tickets":newTicketArray
+                    })
+                } catch (e) {
+                    console.log(e)
+                }
+            }
         }
         return NextResponse.json({result:event,ok:true})
         }catch (error){
