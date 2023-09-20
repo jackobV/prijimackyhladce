@@ -23,6 +23,7 @@ export async function POST(req: Request){
             const customerEmail: string = event.data.object.email
             const customerId: string = event.data.object.metadata.user_id
             const databaseIds:Array<string> = event.object.metadata.database_ids.split(",");
+            console.log(databaseIds)
             for (const databaseId of databaseIds){
                 try{
                     const ticket = await pb.collection("ticket").create({
