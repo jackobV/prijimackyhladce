@@ -9,7 +9,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const cors = Cors({
     allowMethods: ["POST", "HEAD"],
 });
-const webhookSecret:string = process.env.STRIPE_WEBHOOK_SERCET_KEY
+const webhookSecret:string = process.env.STRIPE_WEBHOOK_SERCET_KEY || "";
 
 
 export async function POST(req: Request){
