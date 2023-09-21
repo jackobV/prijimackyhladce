@@ -35,6 +35,11 @@ export async function POST(req: Request){
                     await pb.collection("users").update(customerId,{
                         "tickets":newTicketArray
                     })
+                    const testDateAlreadyHasTickets = await pb.collection("testy").getOne(databaseId)
+                    const newTestTicketArray = [...testDateAlreadyHasTickets.tickets, ticket.id]
+                    await pb.collection("testy").update(databaseId,{
+                        "tickets":newTestTicketArray
+                    })
                 } catch (e) {
                     console.log(e)
                 }
