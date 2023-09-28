@@ -45,7 +45,7 @@ export async function POST(req: Request){
                 }
             }
             const msg = {
-                to: customerEmail, // Change to your recipient
+                to: 'info@na-zkousku.cz', // Change to your recipient
                 from: 'info@na-zkousku.cz', // Change to your verified sender
                 subject: 'Děkujeme za zakoupení produktů',
                 text: 'Děkujeme za zakoupení produktů',
