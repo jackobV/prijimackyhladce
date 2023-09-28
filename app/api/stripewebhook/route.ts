@@ -10,6 +10,7 @@ const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const cors = Cors({
     allowMethods: ["POST", "HEAD"],
 });
+const senggridApiKey:string = process.env.SENDGRID_API_KEY || "";
 const webhookSecret:string = process.env.STRIPE_WEBHOOK_SERCET_KEY || "";
 const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
 export async function POST(req: Request){
@@ -43,7 +44,7 @@ export async function POST(req: Request){
                     console.log(e)
                 }
             }
-            sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
+            sendgrid.setApiKey(senggridApiKey)
             const msg = {
                 to: 'info@na-zkousku.cz', // Change to your recipient
                 from: 'info@na-zkousku.cz', // Change to your verified sender
