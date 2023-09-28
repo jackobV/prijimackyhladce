@@ -17,7 +17,7 @@ const pocketbaseApiKey:string = process.env.POCKETBASE_API_KEY || "";
 const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
 export async function POST(req: Request){
     try {
-        await pb.collection("users").authWithPassword(
+        await pb.admins.authWithPassword(
             "apipocketbase@na-zkousku.cz",
             pocketbaseApiKey
         )
