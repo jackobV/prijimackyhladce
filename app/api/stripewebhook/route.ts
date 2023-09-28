@@ -13,9 +13,14 @@ const cors = Cors({
 });
 const senggridApiKey:string = process.env.SENDGRID_API_KEY || "";
 const webhookSecret:string = process.env.STRIPE_WEBHOOK_SERCET_KEY || "";
+const pocketbaseApiKey:string = process.env.POCKETBASE_API_KEY || "";
 const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
 export async function POST(req: Request){
     try {
+        await pb.collection("users").authWithPassword(
+            "apipocketbase@na-zkousku.cz",
+            pocketbaseApiKey
+        )
         const body = await req.text();
         const signature = headers().get("stripe-signature");
         const event = stripe.webhooks.constructEvent(body,signature,webhookSecret);
