@@ -41,7 +41,7 @@ export async function POST(req: Request){
                         "tickets":newTestTicketArray
                     })
                 } catch (e) {
-                    console.log(e)
+                    console.log(e.body)
                 }
             }
             console.log(senggridApiKey)
