@@ -59,7 +59,7 @@ export async function POST(req: Request){
                 .then(() => {
                     console.log('Email sent')
                 })
-                .catch((error) => {
+                .catch((error:any) => {
                     console.error(error)
                 })
         }
