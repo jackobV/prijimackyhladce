@@ -54,14 +54,11 @@ export async function POST(req: Request){
                 text: 'and easy to do anywhere, even with Node.js',
                 html: '<strong>and easy to do anywhere, even with Node.js</strong>',
             }
-            sgMail
-                .send(msg)
-                .then(() => {
-                    console.log('Email sent')
-                })
-                .catch((error:any) => {
-                    console.error(error)
-                })
+            try {
+                await sgMail.send(msg)
+            } catch (e){
+                console.log(e)
+            }
         }
 
         return NextResponse.json({result:event,ok:true})
