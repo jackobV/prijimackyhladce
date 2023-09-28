@@ -2,6 +2,7 @@ import PickADateAndReview from "@/app/(kosik)/kosik/(components)/pickADateAndRev
 import MenuBar from "@/app/(general)/(components)/menuBar";
 import CheckoutContainer from "@/app/(kosik)/kosik/(components)/checkoutContainer";
 import PocketBase from 'pocketbase';
+import Footer from "@/app/(general)/(components)/footer";
 
 interface TestDate{
     id:string;
@@ -65,7 +66,12 @@ export default async function Kosik(){
     return(
         <main>
             <MenuBar />
-            <CheckoutContainer testDates={propsForClient} />
+            <section className="pb-20">
+                <CheckoutContainer testDates={propsForClient} />
+            </section>
+            <section className="border-t">
+                <Footer />
+            </section>
         </main>
     )
 }
