@@ -45,7 +45,8 @@ export async function POST(req: Request){
                 }
             }
             console.log(senggridApiKey)
-            sendgrid.setApiKey(senggridApiKey)
+            const sgMail = require('@sendgrid/mail')
+            sgMail.setApiKey(process.env.SENDGRID_API_KEY)
             const msg = {
                 to: 'info@na-zkousku.cz', // Change to your recipient
                 from: 'info@na-zkousku.cz', // Change to your verified sender
@@ -53,11 +54,14 @@ export async function POST(req: Request){
                 text: 'and easy to do anywhere, even with Node.js',
                 html: '<strong>and easy to do anywhere, even with Node.js</strong>',
             }
-            try{
-                await sendgrid.send(msg)
-            } catch (e) {
-                console.log(e)
-            }
+            sgMail
+                .send(msg)
+                .then(() => {
+                    console.log('Email sent')
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
         }
 
         return NextResponse.json({result:event,ok:true})
