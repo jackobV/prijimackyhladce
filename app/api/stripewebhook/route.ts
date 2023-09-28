@@ -5,6 +5,7 @@ import Cors from "micro-cors";
 import { headers } from "next/headers";
 import PocketBase from "pocketbase";
 import {buffer} from "micro";
+import sendgrid from "@sendgrid/mail";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const cors = Cors({
     allowMethods: ["POST", "HEAD"],
@@ -42,8 +43,7 @@ export async function POST(req: Request){
                     console.log(e)
                 }
             }
-            const sgMail = require('@sendgrid/mail')
-            sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+            sendgrid.setApiKey(process.env.SENDGRID_API_KEY)
             const msg = {
                 to: 'info@na-zkousku.cz', // Change to your recipient
                 from: 'info@na-zkousku.cz', // Change to your verified sender
@@ -51,16 +51,11 @@ export async function POST(req: Request){
                 text: 'and easy to do anywhere, even with Node.js',
                 html: '<strong>and easy to do anywhere, even with Node.js</strong>',
             }
-            sgMail
-                .send(msg)
-                .then(() => {
-                    console.log('Email sent')
-                })
-                .catch((error:any) => {
-                    console.error(error)
-                })
-
-
+            try{
+                await sendgrid.send(msg)
+            } catch (e) {
+                console.log(e)
+            }
         }
 
         return NextResponse.json({result:event,ok:true})
