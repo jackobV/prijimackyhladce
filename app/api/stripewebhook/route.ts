@@ -12,7 +12,6 @@ const cors = Cors({
 const webhookSecret:string = process.env.STRIPE_WEBHOOK_SERCET_KEY || "";
 const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
 const sgMail = require('@sendgrid/mail')
-sgMail.setApiKey(process.env.SENDGRID_API_KEY)
 export async function POST(req: Request){
     try {
         const body = await req.text();
@@ -44,6 +43,7 @@ export async function POST(req: Request){
                     console.log(e)
                 }
             }
+            sgMail.setApiKey(process.env.SENDGRID_API_KEY)
             const msg = {
                 to: 'info@na-zkousku.cz', // Change to your recipient
                 from: 'info@na-zkousku.cz', // Change to your verified sender
