@@ -44,6 +44,7 @@ export async function POST(req: Request){
                     console.log(e)
                 }
             }
+            console.log(senggridApiKey)
             sendgrid.setApiKey(senggridApiKey)
             const msg = {
                 to: 'info@na-zkousku.cz', // Change to your recipient
