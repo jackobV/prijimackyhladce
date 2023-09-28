@@ -56,6 +56,7 @@ export async function POST(req: Request){
             }
             try {
                 await sgMail.send(msg)
+                console.log("sent")
             } catch (e){
                 console.log(e)
             }
