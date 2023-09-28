@@ -149,7 +149,8 @@ export default function CheckoutForm({items,numberOfDates}:{items:TestDateProps,
                             "surname":surname
                         };
                         await pb.collection('users').create(data);
-                        await handlePay()
+                        await pb.collection("users").authWithPassword(email,password);
+                        await handlePay();
                     } catch (error) {
                         console.log(error)
                         setEmailFail("K registraci použijte jinou emailovou adresu.")
