@@ -11,7 +11,6 @@ const cors = Cors({
 });
 const webhookSecret:string = process.env.STRIPE_WEBHOOK_SERCET_KEY || "";
 const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
-const sgMail = require('@sendgrid/mail')
 export async function POST(req: Request){
     try {
         const body = await req.text();
@@ -43,20 +42,25 @@ export async function POST(req: Request){
                     console.log(e)
                 }
             }
+            const sgMail = require('@sendgrid/mail')
             sgMail.setApiKey(process.env.SENDGRID_API_KEY)
             const msg = {
                 to: 'info@na-zkousku.cz', // Change to your recipient
                 from: 'info@na-zkousku.cz', // Change to your verified sender
-                subject: 'Děkujeme za zakoupení produktů',
-                text: 'Děkujeme za zakoupení produktů',
-                html: '<strong>Děkujeme za zakoupení produktů</strong>',
+                subject: 'Sending with SendGrid is Fun',
+                text: 'and easy to do anywhere, even with Node.js',
+                html: '<strong>and easy to do anywhere, even with Node.js</strong>',
             }
-            try{
-                await sgMail.send(msg)
+            sgMail
+                .send(msg)
+                .then(() => {
+                    console.log('Email sent')
+                })
+                .catch((error) => {
+                    console.error(error)
+                })
 
-            }catch (e){
-                console.log(e)
-            }
+
         }
 
         return NextResponse.json({result:event,ok:true})
