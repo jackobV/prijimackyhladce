@@ -17,10 +17,11 @@ const pocketbaseApiKey:string = process.env.POCKETBASE_API_KEY || "";
 const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
 export async function POST(req: Request){
     try {
-        await pb.admins.authWithPassword(
-            "apipocketbase@na-zkousku.cz",
-            pocketbaseApiKey
-        )
+        try{
+            await pb.admins.authWithPassword("apipocketbase@na-zkousku.cz", pocketbaseApiKey)
+        } catch (e){
+            console.log(e)
+        }
         const body = await req.text();
         const signature = headers().get("stripe-signature");
         const event = stripe.webhooks.constructEvent(body,signature,webhookSecret);
@@ -44,10 +45,6 @@ export async function POST(req: Request){
                 console.log("error")
                 console.log(e)
             }
-
-
-
-
             console.log(event.data.object);
             const customerEmail: string = event.data.object.email
             const customerId: string = event.data.object.metadata.user_id
