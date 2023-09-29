@@ -35,10 +35,9 @@ export async function POST(req: Request){
             const databaseIds:Array<string> = event.data.object.metadata.database_ids.split(",");
             console.log(databaseIds)
             const user = await pb.collection("users").getOne(customerId)
-            const ticketIdArray:Array<string> = [""]
-            const ticketDateArray: Array<string> = [""]
+            const ticketIdArray:Array<string> = []
+            const ticketDateArray: Array<string> = []
             ticketIdArray.push(user.tickets)
-
             for (const databaseId of databaseIds){
                 try{
                     const ticket = await pb.collection("ticket").create({
