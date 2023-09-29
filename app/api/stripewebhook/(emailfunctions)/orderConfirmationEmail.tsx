@@ -12,6 +12,16 @@ export interface EmailConfirmationData {
 }
 
 export default async function OrderConfirmationEmail({ emailData } : {emailData:EmailConfirmationData}){
+    function formatDateArray(dates: string[]): string {
+        return dates.map(date => {
+            const d = new Date(date);
+            const day = d.getDate().toString().padStart(2, '0');
+            const month = (d.getMonth() + 1).toString().padStart(2, '0'); // Months are zero-based
+            const year = d.getFullYear();
+            return `${day}.${month}.${year}`;
+        }).join(', ');
+    }
+
         console.log("trying to send email")
         const sgMail = require('@sendgrid/mail')
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
@@ -25,7 +35,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
                     <ul>
                         <li><strong>Produkt</strong> : Test na zkoušku</li>
                         <li><strong>Množství</strong> : ${emailData.ticketIds.length}</li>
-                        <li><strong>Datum testu</strong> : ${emailData.itemDates.map((item:string,key)=>(<p>{item}, </p>))}</li>
+                        <li><strong>Datum testu</strong> : ${formatDateArray(emailData.itemDates)}</li>
                         <li><strong>Způsob platby</strong> : Online platba</li>
                     </ul>
                     <br>
