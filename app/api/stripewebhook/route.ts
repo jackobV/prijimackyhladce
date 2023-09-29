@@ -62,7 +62,7 @@ export async function POST(req: Request){
                 "paymentIntent":event.data.object.payment_intent
             })
             const emailData:EmailConfirmationData = {
-                email:customerEmail,
+                email:user.email,
                 name: user.name,
                 surname: user.surname,
                 purchaseId:purchase.id,
