@@ -47,7 +47,8 @@ export async function POST(req: Request){
                     })
                     ticketIdArray.push(ticket.id)
                     const testDate = await pb.collection("testy").getOne(databaseId)
-                    ticketDateArray.push(testDate.datum)
+                    ticketDateArray.push(testDate.date)
+                    console.log(testDate.date)
                     const newTestTicketArray = [...testDate.tickets, ticket.id]
                     await pb.collection("testy").update(databaseId,{
                         "tickets":newTestTicketArray
