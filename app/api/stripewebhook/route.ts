@@ -47,7 +47,7 @@ export async function POST(req: Request){
                     })
                     ticketIdArray.push(ticket.id)
                     const testDate = await pb.collection("testy").getOne(databaseId)
-                    ticketDateArray.push(testDate.date)
+                    ticketDateArray.push(testDate.datum)
                     const newTestTicketArray = [...testDate.tickets, ticket.id]
                     await pb.collection("testy").update(databaseId,{
                         "tickets":newTestTicketArray
@@ -56,6 +56,9 @@ export async function POST(req: Request){
                     console.log(e)
                 }
             }
+            await pb.collection("users").update(customerId,{
+                "tickets":ticketIdArray
+            })
             const purchase = await pb.collection("purchase").create({
                 "user":customerId,
                 "tickets":ticketIdArray,

@@ -20,10 +20,8 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
             from: 'info@na-zkousku.cz', // Change to your verified sender
             subject: `🎉 Potvrzení objednávky - na-zkousku.cz`,
             text: `Děkujeme za Vaši objednávku! Tento email slouží jako potvrzení Vaší objednávky ${emailData.purchaseId}.`,
-            html: `<div><p>Dobrý den ${emailData.name} ${emailData.surname} <br><br> Děkujeme za Vaši objednávku! Tento email slouží jako potvrzení Vaší objednávky ${emailData.purchaseId}.</p>
-                    <br>
+            html: `<div><p>Dobrý den ${emailData.name} ${emailData.surname} <br><br> Děkujeme za Vaši objednávku! Tento email slouží jako potvrzení Vaší objednávky <strong>${emailData.purchaseId}.</strong></p>
                     <p><strong>📦 Detaily Objednávky:</strong></p>
-                    <br>
                     <ul>
                         <li><strong>Produkt</strong> : Test na zkoušku</li>
                         <li><strong>Množství</strong> : ${emailData.ticketIds.length}</li>
@@ -32,9 +30,9 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
                     </ul>
                     <br>
                     <h2>Kontakt:</h2>
-                    <br>
                     <p>
                     Pokud máte jakékoliv otázky nebo potřebujete asistenci, neváhejte nás kontaktovat na info@na-zkousku.cz.
+                    <br>
                     Děkujeme za nákup u Na Zkoušku!
                     <br>
                     S pozdravem,
