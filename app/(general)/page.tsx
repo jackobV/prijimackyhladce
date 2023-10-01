@@ -17,7 +17,6 @@ import GoogleAnalytics from "../GoogleAnalytics"
 export default function Home() {
   return (
     <main>
-        <GoogleAnalytics />
         <section className="pt-20">
             <LandingPageHero />
         </section>
