@@ -5,23 +5,23 @@ interface Step {
 }
 let steps:Array<Step> = [
     {
-        text:"Registrace",
-        explenation:"Založení účtu zabere pouze pár sekund",
+        text:"Výběr termínu",
+        explenation:"Zvolte si jeden či více termínů testu Na zkoušku.",
         step:"1"
     },
     {
-        text:"Výběr termínu",
-        explenation:"Zvolte si jeden či více termínů Přijímaček Hladce",
+        text:"Registrace",
+        explenation:"Založení účtu zabere pouze pár sekund.",
         step:"2"
     },
     {
         text:"Uhrazení objednávky",
-        explenation:"Platba kartou přes platební bránu Stripe",
+        explenation:"Jednoduché uhrazení objednávky přes platební bránu.",
         step:"3"
     },
     {
         text:"Hotovo!",
-        explenation:"Obdržíte email s detailními instrukcemi ke dni Přijímaček Hladce",
+        explenation:"Obdržíte email s potvrzením koupě účasti.",
         step:"4"
     },
 ]

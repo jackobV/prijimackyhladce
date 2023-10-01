@@ -5,10 +5,10 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
 import logo from "../../logo.png"
 const navigation = [
-    { name: 'Ceník', href: '#cenik' },
+    { name: 'Ceník', href: '/#cenik' },
     { name: 'Termíny 2023/24', href: '/kosik' },
     { name: 'Kontakt', href: '/kontakt' },
-    { name: 'Často kladené otázky', href: '#qna' },
+    { name: 'Často kladené otázky', href: '/#qna' },
 
 ]
 

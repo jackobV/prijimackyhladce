@@ -26,6 +26,10 @@ interface Date{
 export interface TestDateProps{
     testDates:Array<Date>;
 }
+export const metadata = {
+    title: 'Košík | na-zkousku.cz',
+    description: 'Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy.',
+}
 export default async function Kosik(){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const records = await pb.collection('testy').getFullList({

@@ -6,7 +6,7 @@ const faqs = [
     {
         question: "Mohu změnit termín účasti?",
         answer:
-            "Bez problému! Pro změnu termínu nás kontaktujte emailem nejpozdějí do čtvrteční půlnoci před testy Na Zkoušku.",
+            "Bez problému! Pro změnu termínu nás kontaktujte emailem nejpozději do čtvrteční půlnoci před testem.",
     },
     {
         question: "Jak probíhá výběr a platba termínu?",
