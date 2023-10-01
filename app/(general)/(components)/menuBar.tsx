@@ -3,7 +3,7 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
-import logo from "../../favicon.ico"
+import logo from "../../logo.png"
 const navigation = [
     { name: 'Ceník', href: '#cenik' },
     { name: 'Termíny 2023/24', href: '/kosik' },

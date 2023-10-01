@@ -1,6 +1,6 @@
 "use client"
 import Image from "next/image";
-import logo from "../../../favicon.ico"
+import logo from "../../../logo.png"
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
 import { ChevronDownIcon } from '@heroicons/react/20/solid'

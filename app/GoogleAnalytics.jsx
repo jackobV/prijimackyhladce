@@ -14,6 +14,7 @@ export default function Analytics() {
             pageview(pathname)
             console.log("fired")
         }
+        console.log(GTM_ID)
     }, [pathname, searchParams])
 
     return (

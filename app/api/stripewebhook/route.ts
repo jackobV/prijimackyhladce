@@ -33,6 +33,7 @@ export async function POST(req: Request){
             const customerEmail: string = event.data.object.email
             const customerId: string = event.data.object.metadata.user_id
             const databaseIds:Array<string> = event.data.object.metadata.database_ids.split(",");
+            const paymentIntent: string = event.data.object.payment_intent
             console.log(databaseIds)
             const user = await pb.collection("users").getOne(customerId)
             const ticketIdArray:Array<string> = []
@@ -62,7 +63,8 @@ export async function POST(req: Request){
             const purchase = await pb.collection("purchase").create({
                 "user":customerId,
                 "tickets":ticketIdArray,
-                "paymentIntent":event.data.object.payment_intent
+                "payment_intent":paymentIntent,
+                "total_price":event.data.object.amount_total
             })
             const emailData:EmailConfirmationData = {
                 email:user.email,
