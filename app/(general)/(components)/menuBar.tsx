@@ -2,12 +2,13 @@
 import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
-
+import Image from "next/image";
+import logo from "../../favicon.ico"
 const navigation = [
-    { name: 'Školní rok 2023/24', href: '#' },
-    { name: 'Testy Nanečisto', href: '#' },
-    { name: 'Testy na zkoušku', href: '#' },
-    { name: 'O nás', href: '#' },
+    { name: 'Ceník', href: '#cenik' },
+    { name: 'Termíny 2023/24', href: '/kosik' },
+    { name: 'Kontakt', href: '/kontakt' },
+    { name: 'Často kladené otázky', href: '#qna' },
 
 ]
 
@@ -18,9 +19,9 @@ export default function MenuBar() {
         <header className="bg-white">
             <nav className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
                 <div className="flex lg:flex-1">
-                    <a href="@/app/(general)/(components)/menuBar#" className="-m-1.5 p-1.5">
+                    <a href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">na-zkousku.cz</span>
-                        <img className="h-8 w-auto" src="https://tailwindui.com/img/logos/mark.svg?color=indigo&shade=600" alt="" />
+                        <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-8" />
                     </a>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
@@ -35,10 +36,10 @@ export default function MenuBar() {
                         Přihlásit se
                     </a>
                     <a
-                        href="/registrace"
+                        href="/kosik"
                         className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     >
-                        Registrovat se
+                        Rezervovat
                     </a>
                 </div>
                 <div className="flex lg:hidden">
@@ -65,10 +66,10 @@ export default function MenuBar() {
                             />
                         </a>
                         <a
-                            href="@/app/(general)/(components)/menuBar#"
+                            href="/kosik"
                             className="ml-auto rounded-md bg-indigo-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
-                            Registrovat se
+                            Rezervovat
                         </a>
                         <button
                             type="button"

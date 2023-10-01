@@ -9,7 +9,7 @@ const includedFeatures = [
 
 export default function Pricing() {
     return (
-        <div className="bg-white">
+        <div className="bg-white" id="cenik">
             <div className="mx-auto max-w-6xl px-6 lg:px-8">
                 <div className="lg:mx-0 mx-auto max-w-2xl">
                     <h2 className="text-2xl font-bold tracking-tight ">Garance spokojenosti a snadná změna termínu!</h2>

@@ -13,10 +13,11 @@ import Qna from "@/app/(general)/(components)/qna";
 import VideoIntroduction from "@/app/(general)/prijimacky-nanecisto/(components)/videoIntroduction";
 import Pricing from "@/app/(general)/(components)/pricing";
 import Footer from "@/app/(general)/(components)/footer";
-
+import GoogleAnalytics from "../GoogleAnalytics"
 export default function Home() {
   return (
     <main>
+        <GoogleAnalytics />
         <section className="pt-20">
             <LandingPageHero />
         </section>

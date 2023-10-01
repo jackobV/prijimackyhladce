@@ -33,7 +33,7 @@ const faqs = [
 
 export default function Qna() {
     return (
-        <div className="bg-white">
+        <div className="bg-white" id="qna">
             <div className="max-w-6xl px-6 lg:px-8 mx-auto">
                 <div className="mx-auto divide-y divide-gray-900/10">
                     <h2 className="text-2xl font-bold leading-10 tracking-tight text-gray-900">Často kladené otázky</h2>
