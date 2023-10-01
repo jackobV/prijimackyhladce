@@ -18,9 +18,7 @@ export default function RootLayout({
   return (
     <html lang="cs">
       <body className="font-sans">
-      <Suspense>
           <GoogleAnalytics />
-      </Suspense>
       <MenuBar />
       {children}
       </body>

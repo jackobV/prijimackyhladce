@@ -12,12 +12,9 @@ export default function Analytics() {
     useEffect(() => {
         if (pathname) {
             pageview(pathname)
+            console.log("fired")
         }
     }, [pathname, searchParams])
-
-    if (process.env.NEXT_PUBLIC_VERCEL_ENV !== "production") {
-        return null
-    }
 
     return (
         <>
