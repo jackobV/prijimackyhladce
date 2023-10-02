@@ -25,7 +25,6 @@ export default function Home() {
         <section className="pt-20">
             <LandingPageHero />
         </section>
-
         <section className="py-20 ">
             <LandingFeaturesOne />
         </section>

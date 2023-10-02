@@ -60,7 +60,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
 
 <p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pokud zvol&iacute;te cestu <strong>autem</strong>, lze zajet př&iacute;mo k budově ulic&iacute; B&iacute;tovsk&aacute;.&nbsp;</span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Tak&eacute; se kousek od &scaron;koly nach&aacute;z&iacute; <strong>parkovi&scaron;tě</strong>, kter&eacute; je přes v&iacute;kend neplacen&eacute;.&nbsp;</span></span></p>
+<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Tak&eacute; se kousek od &scaron;koly nach&aacute;z&iacute; <strong>parkovi&scaron;tě</strong>, kter&eacute; je přes v&iacute;kend bezplatn&eacute;.&nbsp;</span></span></p>
 
 <p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">(B&iacute;tovsk&aacute; 1246, 140 00 Praha 4-Michle)&nbsp;</span></span></p>
 

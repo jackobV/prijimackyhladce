@@ -213,7 +213,7 @@ export default function CheckoutForm({items,numberOfDates}:{items:TestDateProps,
                         </div>
                         :
                             <div>
-                                <div className="flex flex-col w-full gap-y-2">
+                                <div className="flex flex-col w-full gap-y-2 pb-5">
                                     <p className="text-gray-500">Účet</p>
                                     {newCustomer?
                                         <div className="flex flex-row gap-x-5">
@@ -261,6 +261,10 @@ export default function CheckoutForm({items,numberOfDates}:{items:TestDateProps,
                                             {passwordAgainFail === "" ? <p className="hidden"></p>:<p className="text-red-500">{passwordAgainFail}</p>}
 
                                         </div>
+                                        <div className="flex flex-row w-full gap-x-2 items-center">
+                                            <input type={"checkbox"} className="rounded-sm" required={true} />
+                                            <label className="text-sm">Souhlasím se zpracováním osobních údajů (GDPR)</label>
+                                        </div>
                                     </div>
                                     :
                                     <div className="flex flex-col gap-y-5">
@@ -284,9 +288,6 @@ export default function CheckoutForm({items,numberOfDates}:{items:TestDateProps,
                                 }
                             </div>
                         }
-
-
-
                     <div className="flex flex-col w-full gap-y-2">
                         <p className="text-gray-500">Způsob platby</p>
                         {paymentMethod?
@@ -300,6 +301,8 @@ export default function CheckoutForm({items,numberOfDates}:{items:TestDateProps,
                             <p className=""></p>
                         }
                     </div>
+
+
                     </div>
 
                     <div className="flex flex-col w-full md:w-3/4 place-content-between gap-y-10 md:gap-y-0 py-10 border rounded-xl px-6  ">
