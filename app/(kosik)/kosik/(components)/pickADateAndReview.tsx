@@ -18,9 +18,11 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
             }
             return item
         });
+
         setNumberOfDates(numberOfDates+1)
         setIsEmpty(false);
-        setItems({testDates:updatedItems})
+        setItems({location:items.location, testDates:updatedItems})
+
     }
     const handleAddMoreToCart = (itemId:string) => {
         const updatedItems = items.testDates.map(item => {
@@ -29,8 +31,10 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
             }
             return item
         });
+
         setNumberOfDates(numberOfDates+1)
-        setItems({testDates:updatedItems})
+        setItems({location:items.location, testDates:updatedItems})
+
     }
     const handleAddLessToCart = (itemId:string) => {
         const updatedItems = items.testDates.map(item => {
@@ -40,7 +44,9 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
             return item
         });
         setNumberOfDates(numberOfDates-1)
-        setItems({testDates:updatedItems})
+        setItems({location:items.location, testDates:updatedItems})
+
+
     }
     return(
         <div className="mx-auto max-w-6xl px-6 lg:px-8 overflow-hidden pt-16">
@@ -57,7 +63,7 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
                                 {item.inCart == 0?
                                     <div className="w-full pb-3 flex flex-col items-center">
                                         <p className="font-semibold text-blue-700 text-center pb-2 text-sm">690,- CZK</p>
-                                        <button className="border border-black shadow-md rounded-lg flex flex-col w-3/4 py-1 text-sm font-semibold" onClick={()=>handleAddToCart(item.id)}>Do košíku</button>
+                                        <button className="border border-black shadow-md rounded-lg text-center items-center flex flex-col w-3/4 py-1 text-sm font-semibold" onClick={()=>handleAddToCart(item.id)}>Do košíku</button>
                                     </div>:
                                     <div className="flex flex-col gap-y-2 w-3/4">
                                         <div className="bg-blue-400 rounded-md py-1 px-1">
@@ -91,7 +97,7 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
                             {item.inCart == 0?
                                 <div className="w-full pb-3 flex flex-col items-center">
                                     <p className="font-semibold text-blue-700 text-center pb-2 text-sm">690,- CZK</p>
-                                    <button className="border border-black shadow-md rounded-lg flex flex-col w-3/4 py-1 text-sm font-semibold" onClick={()=>handleAddToCart(item.id)}>Do košíku</button>
+                                    <button className="border border-black shadow-md rounded-lg flex flex-col w-3/4 py-1 text-sm text-center items-center font-semibold" onClick={()=>handleAddToCart(item.id)}>Do košíku</button>
                                 </div>:
                                 <div className="flex flex-col gap-y-2 w-3/4">
                                     <div className="bg-blue-400 rounded-md py-1 px-1">

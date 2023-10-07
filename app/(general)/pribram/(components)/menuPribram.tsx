@@ -3,16 +3,17 @@ import { useState } from 'react'
 import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
-import logo from "../../logo.png"
+import logo from "../../../logo.png"
+import logoEduarts from "../(media)/EDUARTS_logokulate_podklad.png"
 const navigation = [
-    { name: 'Ceník', href: '/#cenik' },
-    { name: 'Termíny 2023/24', href: '/kosik' },
+    { name: 'Ceník', href: '/pribram#cenik' },
+    { name: 'Termíny 2023/24', href: '/kosik?pobocka=pribram' },
     { name: 'Kontakt', href: '/kontakt' },
-    { name: 'Často kladené otázky', href: '/#qna' },
+    { name: 'Často kladené otázky', href: '/pribram#qna' },
 
 ]
 
-export default function MenuBar() {
+export default function MenuPribram() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
 
     return (
@@ -21,7 +22,10 @@ export default function MenuBar() {
                 <div className="flex lg:flex-1">
                     <a href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">na-zkousku.cz</span>
-                        <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-8" />
+                        <div className="flex flex-row gap-x-4 items-center">
+                            <Image src={logoEduarts} alt={"logo eduarts"} className="w-auto h-16" />
+                            <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-8" />
+                        </div>
                     </a>
                 </div>
                 <div className="hidden lg:flex lg:gap-x-12">
@@ -36,7 +40,7 @@ export default function MenuBar() {
                         Přihlásit se
                     </a>
                     <a
-                        href="/kosik"
+                        href="/kosik?pobocka=pribram"
                         className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     >
                         Rezervovat
@@ -52,17 +56,20 @@ export default function MenuBar() {
                         <Bars3Icon className="h-6 w-6" aria-hidden="true" />
                     </button>
                 </div>
+
             </nav>
             <Dialog as="div" className="lg:hidden" open={mobileMenuOpen} onClose={setMobileMenuOpen}>
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center gap-x-6">
-                        <a href="@/app/(general)/(components)/menuBar#" className="-m-1.5 p-1.5">
+                        <a href="/pribram" className="-m-1.5 p-1.5">
                             <span className="sr-only">na-zkousku.cz</span>
                             <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-6" />
+                            <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-6" />
+
                         </a>
                         <a
-                            href="/kosik"
+                            href="/kosik?pobocka=pribram"
                             className="ml-auto rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
                             Rezervovat
@@ -100,7 +107,9 @@ export default function MenuBar() {
                         </div>
                     </div>
                 </Dialog.Panel>
+
             </Dialog>
+
         </header>
     )
 }

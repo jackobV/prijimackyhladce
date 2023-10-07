@@ -1,4 +1,4 @@
-export default function CTAbuy() {
+export default function CTAbuyPribram() {
     return (
         <div className="bg-blue-700 py-10">
             <div className="px-4">
@@ -13,7 +13,7 @@ export default function CTAbuy() {
                     </p>
                     <div className="mt-10 flex items-center justify-center gap-x-6">
                         <a
-                            href="/kosik?pobocka=praha"
+                            href="/kosik?pobocka=pribram"
                             className="rounded-md bg-white px-3.5 py-2.5 text-sm font-semibold text-indigo-600 shadow-sm hover:bg-indigo-50 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-white"
                         >
                             Koupit test Na Zkoušku

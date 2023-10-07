@@ -1,10 +1,12 @@
 import {NextRequest, NextResponse} from 'next/server';
 import {redirect} from "next/navigation";
-const stripe = require('stripe')(process.env.STRIPE_SECRET_KEY);
 
 export async function POST(req:Request,res:Response) {
     const requestHeaders = new Headers(req.headers)
     const body = await req.json()
+    const location:string = body.location.toUpperCase()
+    const locationSecretKeyNameOfVar:string = `${location}_STRIPE_SECRET_KEY`
+    const stripe = require('stripe')(process.env[locationSecretKeyNameOfVar]);
     try {
         const session = await stripe.checkout.sessions.create({
             customer_email: body.email,
@@ -15,7 +17,7 @@ export async function POST(req:Request,res:Response) {
             line_items: [
                 {
                     // Provide the exact Price ID (for example, pr_1234) of the product you want to sell
-                    price: 'price_1NrI2qIIKWsIVcizliI1vX0M',
+                    price: body.priceId,
                     quantity: body.numberOfDates,
                 },
             ],

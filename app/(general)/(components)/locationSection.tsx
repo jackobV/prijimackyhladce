@@ -1,23 +1,96 @@
 import edisonaPhoto from "../../(media)/edisona.webp"
+import fotoEduarts from "../pribram/(media)/fotoeduartsprostor.jpg"
 import Image from "next/image";
-export default function LocationSection(){
+import PocketBase from "pocketbase";
+import moment from "moment"
+import Map from "@/app/(general)/(components)/map";
+export default async function LocationSection(){
+    const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
+    const currentDate = moment();
+    const testydateCallPraha = await pb.collection("testy").getList(1,4,{
+        filter:`location = "praha"`
+    })
+    const testydateCallPribram = await pb.collection("testy").getList(1,4,{
+        filter:`location = "pribram"`
+    })
+    const futureDatesForPrague = testydateCallPraha.items.filter(obj => {
+        const dateInFuture = moment(obj.date) >= currentDate;
+        return dateInFuture;
+    })
+    const futureDatesForPribram = testydateCallPribram.items.filter(obj => {
+        const dateInFuture = moment(obj.date) >= currentDate;
+        return dateInFuture;
+    })
+    console.log(futureDatesForPrague)
+    console.log(futureDatesForPribram)
+    function timestampToDayMonthString(timestampString: string): string {
+        const timesTampSanitized = timestampString.replace(" ", "T")
+        const date = new Date(timesTampSanitized);
+        const day = date.getUTCDate();
+        const month = date.getUTCMonth() + 1; // Adding 1 to month as it is 0-indexed
+        // Use template literals to format the day and month with leading zeros if needed
+        const formattedDay = day < 10 ? `0${day}` : `${day}`;
+        const formattedMonth = month < 10 ? `0${month}` : `${month}`;
+        console.log(date)
+        return `${formattedDay}.${formattedMonth}`;
+    }
     return(
         <div className="max-w-6xl px-6 lg:px-8 mx-auto">
-            <h2 className="font-bold text-2xl">Kde testy probíhají?</h2>
-            <p className="pt-2">Testy probíhají v budově základní školy Edisona.</p>
-            <div className="flex flex-col md:flex-row gap-x-10 gap-y-5 pt-10 ">
-                <div className="w-full border-0 rounded-xl overflow-hidden shadow-lg h-48 md:h-72">
-                    <Image src={edisonaPhoto} alt="edisona škola"></Image>
+            <h2 className="font-bold text-2xl pb-5 md:pb-10">Kde testy probíhají?</h2>
+            <div className="flex flex-col md:flex-row w-full">
+                <div className="flex flex-col gap-y-10 w-full ">
+                    <div className="flex flex-col md:flex-row w-full gap-x-4">
+                        <div className="md:w-3/4 w-full">
+                            <Image src={edisonaPhoto} alt={"lokace edisona fotka"} className="" />
+                        </div>
+                        <div className="flex flex-col w-full  justify-between">
+                                <div className="flex flex-col pt-2 md:pt-0">
+                                    <h3 className="w-full font-medium text-xl pb-1">Praha 4 ZŠ Edisona</h3>
+                                    <p className="w-full text-sm">Bítovská 1122/5</p>
+                                    <p className="text-sm">140 00 Praha 4-Michle</p>
+                                </div>
+                            <div className="flex flex-col gap-y-2 pt-5 md:pt-0">
+                                <p className="text-gray-600 font-medium">Nadcházející termíny</p>
+                                <div className="flex flex-row justify-between">
+                                    {futureDatesForPrague.map((item:any)=>(
+                                        <a href="/kosik?pobocka=praha">
+                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500">{timestampToDayMonthString(item.date)}</div>
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+
+                    <div className="flex flex-col md:flex-row w-full gap-x-4">
+                        <div className="md:w-3/4 w-full">
+                            <Image src={fotoEduarts} alt={"lokace Eduarts fotka"} className="" />
+                        </div>
+                        <div className="flex flex-col w-full  justify-between">
+                            <div className="flex flex-col pt-2 md:pt-0">
+                                <h3 className="w-full font-medium text-xl pb-1">Příbram Eduarts</h3>
+                                <p className="w-full text-sm">nám. T. G. Masaryka </p>
+                                <p className="text-sm">čp. 152, Příbram I.</p>
+                            </div>
+                            <div className="flex flex-col gap-y-2 pt-5 md:pt-0">
+                                <p className="text-gray-600 font-medium">Nadcházející termíny</p>
+                                <div className="flex flex-row justify-between">
+                                    {futureDatesForPribram.map((item:any)=>(
+                                        <a className="" href="/kosik?pobocka=pribram">
+                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500">{timestampToDayMonthString(item.date)}</div>
+                                        </a>
+                                    ))}
+                                </div>
+                            </div>
+                        </div>
+                    </div>
                 </div>
 
-            <div className="w-full border-0 rounded-xl overflow-hidden shadow-lg h-48 md:h-72">
-                <iframe
-                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d286.15191293246585!2d14.453917866469183!3d50.04607985442279!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x470b9392b96b0c2b%3A0x29f60eb76551773f!2sB%C3%ADtovsk%C3%A1%201122%2F5%2C%20140%2000%20Praha%204-Michle!5e0!3m2!1sen!2scz!4v1675337575958!5m2!1sen!2scz"
-                    width="100%" height="100%" loading="lazy"
-                    referrerPolicy="no-referrer-when-downgrade"></iframe>
+                <div className="w-full md:w-3/4">
+                    <Map />
+                </div>
             </div>
-        </div>
-
         </div>
     )
 }

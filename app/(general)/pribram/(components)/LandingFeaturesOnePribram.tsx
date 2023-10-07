@@ -11,13 +11,14 @@ let features:Array<Feature> = [
     },
     {
         uptitle:"(Kde)",
-        title:"V Příbrami.",
-        text:"Prosím o doplnění."
+        title:"V Příbrami",
+        text:"nám. T. G. Masaryka čp. 152, Příbram I.\n" +
+            "Můžete k nám odjet autem i autobusem. Parkování je poblíž pobočky Eduarts, přímo na náměstí. Vchod je v průchodu.\n"
     },
     {
         uptitle:"(Kdy)",
-        title:"Vybrané soboty ((prosím o doplnění) termínů)",
-        text:"(prosím o doplnění)."
+        title:"Vybrané soboty",
+        text:"V období listopad - duben pořádáme přijímačky na zkoušku každou sobotu. Všechny termíny najdete níže v kalendáři."
     },
 ]
 export default function LandingFeaturesOnePribram(){

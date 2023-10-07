@@ -13,6 +13,7 @@ interface TestDate{
     archived:boolean;
     full:boolean;
     price:string;
+    location:string;
 }
 
 export default function CheckoutContainer({ testDates, }:{testDates:TestDateProps}){
@@ -28,7 +29,7 @@ export default function CheckoutContainer({ testDates, }:{testDates:TestDateProp
                 <div><PickADateAndReview step={step} setStep={setStep} setItems={setItems} items={items} numberOfDates={numberOfDates} setNumberOfDates={setNumberOfDates} /></div>
                 :
                 <div>
-                    <CheckoutForm items={items} numberOfDates={numberOfDates} />
+                    <CheckoutForm items={items} numberOfDates={numberOfDates} location={testDates.location} />
                 </div>
             }
         </div>

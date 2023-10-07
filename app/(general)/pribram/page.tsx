@@ -12,14 +12,22 @@ import LocationSection from "@/app/(general)/(components)/locationSection";
 import JsmeSVami from "@/app/(general)/(components)/jsmeSVami";
 import Qna from "@/app/(general)/(components)/qna";
 import Footer from "@/app/(general)/(components)/footer";
-
+import LandingPageHeroPribram from "@/app/(general)/pribram/(components)/landingPageHeroPribram";
+import CTAbuyPribram from "@/app/(general)/pribram/(components)/CTAbuyPribram";
+import MenuPribram from "@/app/(general)/pribram/(components)/menuPribram";
+import pruh from "../pribram/(media)/pruh.png"
+import Image from "next/image";
 export default function Page(){
     return(
         <div>
+            <MenuPribram />
             <section className="pt-20">
-               <LandingPageHero />
+               <LandingPageHeroPribram />
             </section>
-            <section className="py-20">
+            <section className="py-10 max-w-6xl px-8 mx-auto">
+                <Image src={pruh} alt={""} />
+            </section>
+            <section className="">
                 <LandingFeaturesOnePribram />
             </section>
             <section className="bg-gray-50 py-20">
@@ -41,7 +49,7 @@ export default function Page(){
                 <JakFungujeKoupe />
             </section>
             <section className="pt-20">
-                <CTAbuy />
+                <CTAbuyPribram />
             </section>
             <section className="">
                 <div className="bg-gray-50 py-20">

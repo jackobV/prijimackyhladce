@@ -11,13 +11,13 @@ let features:Array<Feature> = [
     },
     {
         uptitle:"(Kde)",
-        title:"V Praze (u metra Budějovická).",
+        title:"V Praze (u metra Budějovická)",
         text:"Testy na zkoušku pořádáme v prostorech školy Edisona. Můžete k nám dojet autem a zaparkovat přímo v ulici. Od stanice Budějovická (metro C) je to k nám deset minut pěšky."
     },
     {
         uptitle:"(Kdy)",
         title:"Vybrané soboty (24 termínů)",
-        text:"V období listopad - duben pořádáme přijímačky na zkoušku každou sobotu. Pokud si chcete vyzkoušet testy ještě dříve, přihlašte se na vybranné soboty v září a říjnu. Všechny termíny najdete níže v kalendáři."
+        text:"V období listopad - duben pořádáme přijímačky na zkoušku každou sobotu. Všechny termíny najdete níže v kalendáři."
     },
 ]
 export default function LandingFeaturesOne(){

@@ -3,29 +3,26 @@ import logo from "@/app/logo.png";
 
 type SVGProps = React.SVGProps<SVGSVGElement>;
 const navigation = {
-    solutions: [
-        { name: 'Marketing', href: '#' },
-        { name: 'Analytics', href: '#' },
-        { name: 'Commerce', href: '#' },
-        { name: 'Insights', href: '#' },
+    nazkousku: [
+        { name: 'Kontakt', href: '/kontakt' },
+        { name: 'Košík', href: '/kosik' },
+        { name: 'Qna', href: '/#qna' },
+        { name: 'Ceník', href: '/#cenik' },
+
+
     ],
-    support: [
-        { name: 'Pricing', href: '#' },
-        { name: 'Documentation', href: '#' },
-        { name: 'Guides', href: '#' },
-        { name: 'API Status', href: '#' },
+    aplikace: [
+        { name: 'Aplikace', href: '/aplikace' },
+        { name: 'Přihlášení', href: '/neautorizovan' },
+        { name: 'Zapomenuté heslo', href: '/zapomenuteheslo' },
     ],
-    company: [
-        { name: 'About', href: '#' },
-        { name: 'Blog', href: '#' },
-        { name: 'Jobs', href: '#' },
-        { name: 'Press', href: '#' },
-        { name: 'Partners', href: '#' },
+    pobocky: [
+        { name: 'Praha', href: '/' },
+        { name: 'Příbram', href: '/pribram' },
     ],
-    legal: [
-        { name: 'Claim', href: '#' },
-        { name: 'Privacy', href: '#' },
-        { name: 'Terms', href: '#' },
+    pravni: [
+        { name: 'GDPR', href: '/gdpr' },
+        { name: 'Obchodní podmínky', href: '/obchodnipodminky' },
     ],
     social: [
         {
@@ -103,7 +100,7 @@ export default function Footer() {
                     <div className="space-y-8">
                         <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-8" />
                         <p className="text-sm leading-6 text-gray-600">
-                            Making the world a better place through constructing elegant hierarchies.
+                            Naší misí je posunout vzdělávací systém do 21.století.
                         </p>
                         <div className="flex space-x-6">
                             {navigation.social.map((item) => (
@@ -117,9 +114,9 @@ export default function Footer() {
                     <div className="mt-16 grid grid-cols-2 gap-8 xl:col-span-2 xl:mt-0">
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Solutions</h3>
+                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Na zkoušku</h3>
                                 <ul role="list" className="mt-6 space-y-4">
-                                    {navigation.solutions.map((item) => (
+                                    {navigation.nazkousku.map((item) => (
                                         <li key={item.name}>
                                             <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                                                 {item.name}
@@ -129,9 +126,9 @@ export default function Footer() {
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">
-                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Support</h3>
+                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Aplikace</h3>
                                 <ul role="list" className="mt-6 space-y-4">
-                                    {navigation.support.map((item) => (
+                                    {navigation.aplikace.map((item) => (
                                         <li key={item.name}>
                                             <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                                                 {item.name}
@@ -143,9 +140,9 @@ export default function Footer() {
                         </div>
                         <div className="md:grid md:grid-cols-2 md:gap-8">
                             <div>
-                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Company</h3>
+                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Pobočky</h3>
                                 <ul role="list" className="mt-6 space-y-4">
-                                    {navigation.company.map((item) => (
+                                    {navigation.pobocky.map((item) => (
                                         <li key={item.name}>
                                             <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                                                 {item.name}
@@ -155,9 +152,9 @@ export default function Footer() {
                                 </ul>
                             </div>
                             <div className="mt-10 md:mt-0">
-                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Legal</h3>
+                                <h3 className="text-sm font-semibold leading-6 text-gray-900">Právní dokumenty</h3>
                                 <ul role="list" className="mt-6 space-y-4">
-                                    {navigation.legal.map((item) => (
+                                    {navigation.pravni.map((item) => (
                                         <li key={item.name}>
                                             <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                                                 {item.name}
@@ -170,7 +167,7 @@ export default function Footer() {
                     </div>
                 </div>
                 <div className="mt-16 border-t border-gray-900/10 pt-8 sm:mt-20 lg:mt-24">
-                    <p className="text-xs leading-5 text-gray-500">&copy; 2020 Your Company, Inc. All rights reserved.</p>
+                    <p className="text-xs leading-5 text-gray-500">&copy; 2023 na-zkousku.cz</p>
                 </div>
             </div>
         </footer>

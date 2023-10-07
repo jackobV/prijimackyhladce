@@ -3,6 +3,7 @@ import MenuBar from "@/app/(general)/(components)/menuBar";
 import CheckoutContainer from "@/app/(kosik)/kosik/(components)/checkoutContainer";
 import PocketBase from 'pocketbase';
 import Footer from "@/app/(general)/(components)/footer";
+import MenuPribram from "@/app/(general)/pribram/(components)/menuPribram";
 
 interface TestDate{
     id:string;
@@ -13,6 +14,7 @@ interface TestDate{
     archived:boolean;
     full:boolean;
     price:string;
+    location:string;
 }
 
 interface Date{
@@ -22,22 +24,27 @@ interface Date{
     available:boolean;
     active:boolean;
     inCart:number;
+    stripe_price_id:string;
+    stripe_test_price_id:string;
+    location:string;
 }
 export interface TestDateProps{
     testDates:Array<Date>;
+    location:string;
 }
 export const metadata = {
     title: 'Košík | na-zkousku.cz',
     description: 'Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy.',
 }
-export default async function Kosik(){
+export default async function Kosik({searchParams}:{searchParams:any}){
+    const location:string = searchParams.pobocka;
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const records = await pb.collection('testy').getFullList({
         sort: '-date',
+        filter:`location = "${location}"`
     });
     function extractDayAndMonth(utcDateString: string): { day: string, month: string } {
         const date = new Date(utcDateString);
-
         // Get day and month. Note that getMonth() returns months from 0-11.
         const day = date.getUTCDate().toString();
         const month = (date.getUTCMonth() + 1).toString(); // Adding 1 to get months from 1-12.
@@ -53,6 +60,7 @@ export default async function Kosik(){
         archived:item.archived,
         full:item.full,
         price:item.price,
+        location:item.location
     }))
     console.log(testDates)
 
@@ -63,13 +71,20 @@ export default async function Kosik(){
             month:item.month,
             available:!(item.archived && item.full),
             active:false,
-            inCart:0
+            inCart:0,
+            stripe_test_price_id:item.stripe_test_price_id,
+            stripe_price_id:item.stripe_price_id,
+            location:item.location,
         })) || [];
     }
-    const propsForClient: TestDateProps = { testDates: transformArray(testDates)}
+    const propsForClient: TestDateProps = { testDates: transformArray(testDates), location: location}
     return(
         <main>
-            <MenuBar />
+            {
+                location == "pribram" ?
+                    <MenuPribram />:
+                    <MenuBar />
+            }
             <section className="pb-20">
                 <CheckoutContainer testDates={propsForClient} />
             </section>

@@ -1,8 +1,8 @@
 import Image from "next/image";
-import pictureStudent from "../../(media)/student-.webp"
+import pictureStudent from "../../../(media)/student-.webp"
 
 
-export default function LandingPageHero() {
+export default function LandingPageHeroPribram() {
 
     return (
         <div className="bg-white">
@@ -23,7 +23,7 @@ export default function LandingPageHero() {
                             </p>
                             <div className="mt-10 flex items-center gap-x-6">
                                 <a
-                                    href="/kosik?pobocka=praha"
+                                    href="/kosik?pobocka=pribram"
                                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     Vyber si termín.

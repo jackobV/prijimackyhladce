@@ -14,7 +14,6 @@ export default function RootLayout({
     <html lang="cs">
       <body className="font-sans">
           <GoogleAnalytics />
-      <MenuBar />
       {children}
       </body>
     </html>

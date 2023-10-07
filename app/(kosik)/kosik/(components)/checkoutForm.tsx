@@ -14,7 +14,7 @@ interface Date{
     active:boolean;
     inCart:number;
 }
-export default function CheckoutForm({items,numberOfDates}:{items:TestDateProps,numberOfDates:number}){
+export default function CheckoutForm({items,numberOfDates, location}:{items:TestDateProps,numberOfDates:number,location:string}){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const [email,setEmail] = useState("")
     const [emailFail, setEmailFail] = useState("")
@@ -48,6 +48,8 @@ export default function CheckoutForm({items,numberOfDates}:{items:TestDateProps,
                     userId: pb.authStore.model?.id,
                     dateIds: inCartIds,
                     numberOfDates: numberOfDates,
+                    location: location,
+                    priceId: items.testDates[0].stripe_test_price_id,
                 })
             });
             if (response.ok) {

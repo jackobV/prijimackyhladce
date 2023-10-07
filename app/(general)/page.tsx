@@ -22,6 +22,7 @@ export const metadata = {
 export default function Home() {
   return (
     <main>
+        <MenuBar />
         <section className="pt-20">
             <LandingPageHero />
         </section>
