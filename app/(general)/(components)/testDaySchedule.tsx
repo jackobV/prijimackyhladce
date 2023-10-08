@@ -25,13 +25,13 @@ let timeSlots:Array<timeSlot> = [
     },
     {
         title:"Psaní testu",
-        subtitle:"Test z Českého jazyka",
+        subtitle:"Test z českého jazyka",
         start:"12:00",
         end:"13:00"
     },
     {
         title:"Vyhodnocení a oprava",
-        subtitle:"Vyhodnocení testu z Českého jazyka",
+        subtitle:"Vyhodnocení testu z českého jazyka",
         start:"13:00",
         end:"14:00"
     },
@@ -45,15 +45,15 @@ let timeSlots:Array<timeSlot> = [
 export default function TestDaySchedule(){
     return(
         <div className="max-w-6xl px-6 lg:px-8 mx-auto">
-            <h2 className="font-bold text-lg md:text-2xl pb-5 md:pb-10">Časový hormonogram testového dne</h2>
+            <h2 className="font-bold text-lg md:text-2xl pb-5 md:pb-10">Časový harmonogram testového dne</h2>
             <ol className="bg-sky-50 px-4 rounded-lg py-8 gap-y-6 flex flex-col">
                 {timeSlots.map((item)=>(
                     <li className="text-center">
                         <p className="text-sky-700 font-medium text-xs md:text-sm md:pb-2">{item.title}</p>
                         <p className="font-semibold tracking-tight pb-1 md:pb-3 md:text-lg">{item.subtitle}</p>
-                        <div className="flex flex-row  justify-center gap-x-1 font-light">
+                        <div className="flex flex-row  justify-center font-light">
                             <p>{item.start}</p>
-                            <p>-</p>
+                            <p>–</p>
                             <p>{item.end}</p>
                         </div>
                     </li>

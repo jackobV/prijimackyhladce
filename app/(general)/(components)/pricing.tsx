@@ -3,7 +3,7 @@ import { CheckIcon } from '@heroicons/react/20/solid'
 const includedFeatures = [
     'Test z ČJ a MAT',
     'Prostor pro dotazy ',
-    '2x hodina doučování látky obsažené v testu',
+    '120 minut vyhrazených na doučování látky obsažené v testu',
     'Přístup do studentského portálu s historií výsledků.',
 ]
 

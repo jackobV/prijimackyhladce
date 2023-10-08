@@ -19,7 +19,7 @@ export default function LandingPageHero() {
                         </h1>
                         <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
                             <p className="text-lg leading-8 text-gray-600">
-                                Jsme tým zkušených lektorů, který pořádá testy nanečisto. Naše testy slouží jako přesná simulace testů CERMAT. Zaměřujeme se na přípravu pro devátou třídu - přijímačky na střední školy a čtyřletá gymnázia
+                                Jsme tým zkušených lektorů, který pořádá testy nanečisto. Naše testy slouží jako přesná simulace testů CERMAT. Zaměřujeme se na přípravu pro devátou třídu - přijímačky na střední školy a čtyřletá gymnázia.
                             </p>
                             <div className="mt-10 flex items-center gap-x-6">
                                 <a

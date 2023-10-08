@@ -6,7 +6,7 @@ interface Feature {
 let features:Array<Feature> = [
     {
         uptitle:"(Co)",
-        title:"Přijímačky na zkoušku pro 9.třídu",
+        title:"Přijímačky na zkoušku pro 9. třídu",
         text:"Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy."
     },
     {

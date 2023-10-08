@@ -100,7 +100,7 @@ export default function Footer() {
                     <div className="space-y-8">
                         <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-8" />
                         <p className="text-sm leading-6 text-gray-600">
-                            Naší misí je posunout vzdělávací systém do 21.století.
+                            Naší misí je posunout vzdělávací systém do 21. století.
                         </p>
                         <div className="flex space-x-6">
                             {navigation.social.map((item) => (

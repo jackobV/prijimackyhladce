@@ -14,17 +14,12 @@ const faqs = [
             "Po registraci budete odkázáni na stránku s výběrem termínů. Následně stačí termín zaplatit přes platební bránu. Celý proces zabere méně než dvě minuty.",
     },
     {
-        question: "Kolikrát bych na přijímačky Na Zkoušku měl jít?",
+        question: "Kolikrát bych na přijímačky Na zkoušku měl jít?",
         answer:
             "Počet účastí se u každého studenta liší. Doporučujeme si přijímačky vyzkoušet alespoň sedmkrát. Rozdíl však většinou uvidíte již po třech účastích. Mnoho žáků k nám dochází skoro každý týden.",
     },
     {
-        question: "Kdy je dobré s přijímačkamy Na Zkoušku začít?",
-        answer:
-            "Čím dříve tím lépe. Začít s přípravou brzo se vždy vyplatí, protože to znamená méně stresu na jaře. Také je prokázáno, že průběžná příprava s pravidelným testováním je nejefektivnější metodou učení.",
-    },
-    {
-        question: "Kdy je dobré s přijímačkamy Na Zkoušku začít?",
+        question: "Kdy je dobré s přijímačkami Na zkoušku začít?",
         answer:
             "Čím dříve tím lépe. Začít s přípravou brzo se vždy vyplatí, protože to znamená méně stresu na jaře. Také je prokázáno, že průběžná příprava s pravidelným testováním je nejefektivnější metodou učení.",
     },

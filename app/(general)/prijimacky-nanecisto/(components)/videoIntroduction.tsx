@@ -1,7 +1,7 @@
 let features:Array<string> = [
     "Dodržení formátu CERMAT",
     "Důkladné vysvětlení profesionály",
-    "Přátelská a uvolněná atmoséra",
+    "Přátelská a uvolněná atmosféra",
     "Prostor pro dotazy k nepochopené látce",
     "Přístup do studentského portálu s historií výsledků",
 

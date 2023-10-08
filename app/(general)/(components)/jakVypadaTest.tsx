@@ -3,7 +3,7 @@ const features = [
     {
         name: 'Srovnatelné s testy CERMAT.',
         description:
-            'Testy skládáme přesně podle specifikací přijímaček CERMAT. Vycházíme ze zkušenosti a hluboké analýzy předešlých přijímaček. ',
+            'Testy skládáme přesně podle specifikací přijímaček CERMAT. Vycházíme ze zkušeností a hluboké analýzy předešlých přijímaček. ',
     },
     {
         name: 'Vědomosti v souvislostech.',
@@ -18,7 +18,7 @@ const features = [
     {
         name: 'Simulace prostředí.',
         description:
-            'Učení v klidu domácnosti dítě nepřipraví na reálné podmínky ostrého testu. U nás si děti vyzkouší jaké je psát přijímačky v kolektivu a v časovém pressu.',
+            'Učení v klidu domácnosti dítě nepřipraví na reálné podmínky skutečného testu. U nás si děti vyzkouší jaké je psát přijímačky v kolektivu a v časovém presu.',
     },
     {
         name: 'Dovednost tipování.',
@@ -40,7 +40,7 @@ export default function Example() {
                 <div className="mx-auto max-w-2xl lg:mx-0">
                     <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">Celostní příprava na přijímačky</h2>
                     <p className="mt-6 text-lg leading-8 font-light">
-                        Víme, které faktory dokáží ovlivnit výsledek dítěte. <br />Pravidelné docházení žáky připraví na ostré přijímačky lépe než jiné metody učení.
+                        Víme, které faktory dokáží ovlivnit výsledek dítěte. <br />Pravidelné docházení žáky připraví na skutečné přijímačky lépe než jiné metody učení.
                     </p>
                 </div>
                 <dl className="mx-auto mt-16 grid max-w-2xl grid-cols-1 gap-x-8 gap-y-16 text-base leading-7 sm:grid-cols-2 lg:mx-0 lg:max-w-none lg:grid-cols-3">

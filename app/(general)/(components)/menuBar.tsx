@@ -32,11 +32,11 @@ export default function MenuBar() {
                     ))}
                 </div>
                 <div className="flex flex-1 items-center justify-end gap-x-6">
-                    <a href="@/app/(general)/(components)/menuBar#" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
+                    <a href="/aplikace" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
                         Přihlásit se
                     </a>
                     <a
-                        href="/kosik"
+                        href="/kosik?pobocka=praha"
                         className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     >
                         Rezervovat
@@ -57,7 +57,7 @@ export default function MenuBar() {
                 <div className="fixed inset-0 z-10" />
                 <Dialog.Panel className="fixed inset-y-0 right-0 z-10 w-full overflow-y-auto bg-white px-6 py-6 sm:max-w-sm sm:ring-1 sm:ring-gray-900/10">
                     <div className="flex items-center gap-x-6">
-                        <a href="@/app/(general)/(components)/menuBar#" className="-m-1.5 p-1.5">
+                        <a href="/" className="-m-1.5 p-1.5">
                             <span className="sr-only">na-zkousku.cz</span>
                             <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-6" />
                         </a>

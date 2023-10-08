@@ -4,7 +4,7 @@ import { Dialog } from '@headlessui/react'
 import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
 import logo from "../../../logo.png"
-import logoEduarts from "../(media)/EDUARTS_logokulate_podklad.png"
+import logoEduarts from "../(media)/EDUARTS_logonasirku.png"
 const navigation = [
     { name: 'Ceník', href: '/pribram#cenik' },
     { name: 'Termíny 2023/24', href: '/kosik?pobocka=pribram' },
@@ -22,9 +22,10 @@ export default function MenuPribram() {
                 <div className="flex lg:flex-1">
                     <a href="/" className="-m-1.5 p-1.5">
                         <span className="sr-only">na-zkousku.cz</span>
-                        <div className="flex flex-row gap-x-4 items-center">
-                            <Image src={logoEduarts} alt={"logo eduarts"} className="w-auto h-16" />
-                            <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-8" />
+                        <div className="flex flex-col xl:flex-row gap-x-4 lg:items-center h-full gap-y-2">
+                            <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-10 object-cover" />
+                            <Image src={logoEduarts} alt={"logo eduarts"} className="w-auto h-8 object-scale-down" />
+
                         </div>
                     </a>
                 </div>
@@ -36,7 +37,7 @@ export default function MenuPribram() {
                     ))}
                 </div>
                 <div className="flex flex-1 items-center justify-end gap-x-6">
-                    <a href="@/app/(general)/(components)/menuBar#" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
+                    <a href="/aplikace" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
                         Přihlásit se
                     </a>
                     <a
