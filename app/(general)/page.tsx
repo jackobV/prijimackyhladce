@@ -18,7 +18,8 @@ export const metadata = {
     title: 'Na-zkoušku | na-zkousku.cz',
     description: 'Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy.',
 }
-
+export const dynamic = 'force-dynamic'
+export const revalidate = 0
 export default function Home() {
   return (
     <main>

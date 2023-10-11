@@ -6,7 +6,7 @@ import Image from "next/image";
 import logo from "../../logo.png"
 const navigation = [
     { name: 'Ceník', href: '/#cenik' },
-    { name: 'Termíny 2023/24', href: '/kosik' },
+    { name: 'Termíny 2023/24', href: '/kosik?pobocka=praha' },
     { name: 'Kontakt', href: '/kontakt' },
     { name: 'Často kladené otázky', href: '/#qna' },
 
@@ -62,7 +62,7 @@ export default function MenuBar() {
                             <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-6" />
                         </a>
                         <a
-                            href="/kosik"
+                            href="/kosik?pobocka=praha"
                             className="ml-auto rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
                             Rezervovat

@@ -1,9 +1,10 @@
-import edisonaPhoto from "../../(media)/edisona.webp"
-import fotoEduarts from "../pribram/(media)/fotoeduartsprostor.jpg"
+import edisonaPhoto from "../../(media)/edisona-trida-1.jpg"
+import fotoEduarts from "../pribram/(media)/eduarts-prostor.jpg"
 import Image from "next/image";
 import PocketBase from "pocketbase";
 import moment from "moment"
-import Map from "@/app/(general)/(components)/map";
+import Map from "@/app/(general)/(components)/map"
+
 export default async function LocationSection(){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const currentDate = moment();
@@ -38,10 +39,10 @@ export default async function LocationSection(){
         <div className="max-w-6xl px-6 lg:px-8 mx-auto">
             <h2 className="font-bold text-2xl pb-5 md:pb-10">Kde testy probíhají?</h2>
             <div className="flex flex-col md:flex-row w-full">
-                <div className="flex flex-col gap-y-10 w-full ">
+                <div className="flex flex-col gap-y-10 w-full">
                     <div className="flex flex-col md:flex-row w-full gap-x-4">
                         <div className="md:w-3/4 w-full">
-                            <Image src={edisonaPhoto} alt={"lokace edisona fotka"} className="" />
+                            <Image src={edisonaPhoto} alt={"lokace edisona fotka"} className="rounded-md" />
                         </div>
                         <div className="flex flex-col w-full  justify-between">
                                 <div className="flex flex-col pt-2 md:pt-0">
@@ -51,7 +52,7 @@ export default async function LocationSection(){
                                 </div>
                             <div className="flex flex-col gap-y-2 pt-5 md:pt-0">
                                 <p className="text-gray-600 font-medium">Nadcházející termíny</p>
-                                <div className="flex flex-row justify-between">
+                                <div className="flex flex-row gap-x-3">
                                     {futureDatesForPrague.map((item:any)=>(
                                         <a href="/kosik?pobocka=praha">
                                             <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500">{timestampToDayMonthString(item.date)}</div>
@@ -65,7 +66,7 @@ export default async function LocationSection(){
 
                     <div className="flex flex-col md:flex-row w-full gap-x-4">
                         <div className="md:w-3/4 w-full">
-                            <Image src={fotoEduarts} alt={"lokace Eduarts fotka"} className="" />
+                            <Image src={fotoEduarts} alt={"lokace Eduarts fotka"} className="rounded-md" />
                         </div>
                         <div className="flex flex-col w-full  justify-between">
                             <div className="flex flex-col pt-2 md:pt-0">
@@ -75,7 +76,7 @@ export default async function LocationSection(){
                             </div>
                             <div className="flex flex-col gap-y-2 pt-5 md:pt-0">
                                 <p className="text-gray-600 font-medium">Nadcházející termíny</p>
-                                <div className="flex flex-row justify-between">
+                                <div className="flex flex-row gap-x-3">
                                     {futureDatesForPribram.map((item:any)=>(
                                         <a className="" href="/kosik?pobocka=pribram">
                                             <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500">{timestampToDayMonthString(item.date)}</div>

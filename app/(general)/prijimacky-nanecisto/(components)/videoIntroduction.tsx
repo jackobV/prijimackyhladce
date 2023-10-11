@@ -21,7 +21,7 @@ export default function VideoIntroduction(){
                 </div>
                 <div className=" flex flex-col items-center w-full">
                     <div className="relative rounded-xl overflow-auto p-6 bg-slate-100 max-w-xl w-full shadow-lg">
-                        <iframe src="https://www.youtube.com/embed/L18s_gwM_nM"
+                        <iframe src="https://www.youtube.com/embed/Hu65QCI8P2c?si=8bGJs_SZpx1LHFh-"
                                 title="YouTube video player" frameBorder="0"
                                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
                                 allowFullScreen className="w-full aspect-video rounded-lg shadow-lg ">

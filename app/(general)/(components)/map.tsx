@@ -20,7 +20,7 @@ export default function Map() {
     function MapF(){
         const center = useMemo(()=>({lat:50.049370,lng:14.453360}),[]);
         return(
-            <div className="w-full h-full">
+            <div className="w-full h-full rounded-md overflow-hidden">
                 <GoogleMap zoom={8} center={center} mapContainerClassName="map-container">
                     <Marker position={{lat:49.68749,lng:14.00868}} />
                     <Marker position={{lat:50.049370,lng:14.453360}} />

@@ -1,7 +1,6 @@
 import Image from "next/image";
 import pictureStudent from "../../(media)/student-.webp"
 
-
 export default function LandingPageHero() {
 
     return (
