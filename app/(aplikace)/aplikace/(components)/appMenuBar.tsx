@@ -7,7 +7,7 @@ import { ChevronDownIcon } from '@heroicons/react/20/solid'
 const solutions = [
 
 
-    { name: 'Rezervovat termíny', href: '/kosik' },
+    { name: 'Rezervovat termíny', href: '/kosik?pobocka=praha' },
     { name: 'Osobní údaje', href: '/aplikace/uzivatel' },
     { name: 'Podpora', href: '/kontakt' },
 ]

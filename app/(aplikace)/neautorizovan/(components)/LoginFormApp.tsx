@@ -115,7 +115,7 @@ export default function LoginFormApp() {
 
                     <p className="text-center text-sm leading-6 text-gray-500">
                         Nejste členem?{' '}
-                        <a href="/kosik" className="font-semibold text-indigo-600 hover:text-indigo-500">
+                        <a href="/kosik?pobocka=praha" className="font-semibold text-indigo-600 hover:text-indigo-500">
                             Zarezervujte si termín
                         </a>
                     </p>

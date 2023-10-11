@@ -36,7 +36,7 @@ export default async function LocationSection(){
         return `${formattedDay}.${formattedMonth}`;
     }
     return(
-        <div className="max-w-6xl px-6 lg:px-8 mx-auto">
+        <div className="max-w-6xl px-6 lg:px-8 mx-auto" id="pobocky">
             <h2 className="font-bold text-2xl pb-5 md:pb-10">Kde testy probíhají?</h2>
             <div className="flex flex-col md:flex-row w-full">
                 <div className="flex flex-col gap-y-10 w-full">

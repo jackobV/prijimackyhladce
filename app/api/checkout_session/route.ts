@@ -22,8 +22,8 @@ export async function POST(req:Request,res:Response) {
                 },
             ],
             mode: 'payment',
-            success_url: `${requestHeaders.get("origin")?.valueOf()}/?success=true`,
-            cancel_url: `${requestHeaders.get("origin")?.valueOf()}/?canceled=true`,
+            success_url: `${requestHeaders.get("origin")?.valueOf()}/rezervacepotvrzena?success=true`,
+            cancel_url: `${requestHeaders.get("origin")?.valueOf()}/rezervacepotvrzena?canceled=true`,
         });
         let url = new URL(session.url)
         return new Response(JSON.stringify({

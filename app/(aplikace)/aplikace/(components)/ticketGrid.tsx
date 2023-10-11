@@ -54,7 +54,9 @@ export default function TicketGrid(){
                     ))}
                 </ul>
                 :
-                <div></div>
+                <div>
+                    Termín testů si můžete zakoupit <a href="/kosik" className="underline">zde</a>
+                </div>
             }
         </div>
     )

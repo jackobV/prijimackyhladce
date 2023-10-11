@@ -49,7 +49,7 @@ export default function CheckoutForm({items,numberOfDates, location}:{items:Test
                     dateIds: inCartIds,
                     numberOfDates: numberOfDates,
                     location: location,
-                    priceId: items.testDates[0].stripe_test_price_id,
+                    priceId: items.testDates[0].stripe_price_id,
                 })
             });
             if (response.ok) {

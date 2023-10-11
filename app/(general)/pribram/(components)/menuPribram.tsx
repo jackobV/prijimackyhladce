@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
 import logo from "../../../logo.png"
 import logoEduarts from "../(media)/EDUARTS_logonasirku.png"
+import PocketBase from "pocketbase";
 const navigation = [
     { name: 'Ceník', href: '/pribram#cenik' },
     { name: 'Termíny 2023/24', href: '/kosik?pobocka=pribram' },
@@ -15,6 +16,7 @@ const navigation = [
 
 export default function MenuPribram() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
+    const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
 
     return (
         <header className="bg-white">
@@ -37,9 +39,16 @@ export default function MenuPribram() {
                     ))}
                 </div>
                 <div className="flex flex-1 items-center justify-end gap-x-6">
-                    <a href="/aplikace" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
-                        Přihlásit se
-                    </a>
+                    {
+                        pb.authStore.isValid ?
+                            <a href="/aplikace" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
+                                Osobní zóna
+                            </a>
+                            :
+                            <a href="/aplikace" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
+                                Přihlásit se
+                            </a>
+                    }
                     <a
                         href="/kosik?pobocka=pribram"
                         className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -98,12 +107,20 @@ export default function MenuPribram() {
                                 ))}
                             </div>
                             <div className="py-6">
-                                <a
-                                    href="/aplikace"
-                                    className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                >
-                                    Přihlásit se
-                                </a>
+                                {pb.authStore.isValid?
+                                    <a
+                                        href="/aplikace"
+                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    >
+                                        Osobní zóna
+                                    </a>:
+                                    <a
+                                        href="/aplikace"
+                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
+                                    >
+                                        Přihlásit se
+                                    </a>
+                                }
                             </div>
                         </div>
                     </div>

@@ -1,6 +1,7 @@
 import KontaktSection from "@/app/(general)/kontakt/(components)/kontaktSection";
 import KontaktSectionHeader from "@/app/(general)/kontakt/(components)/kontaktSectionHeader";
 import Footer from "@/app/(general)/(components)/footer";
+import MenuBar from "@/app/(general)/(components)/menuBar";
 
 export const metadata = {
     title: 'Na-zkoušku - Kontakt | na-zkousku.cz',
@@ -9,6 +10,9 @@ export const metadata = {
 export default function Page(){
     return(
         <div>
+            <section>
+                <MenuBar />
+            </section>
             <KontaktSection />
             <section className="border-t">
                 <Footer />
