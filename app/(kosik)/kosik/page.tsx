@@ -36,14 +36,12 @@ export const metadata = {
     title: 'Košík | na-zkousku.cz',
     description: 'Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy.',
 }
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+export const revalidate = 43200
 export default async function Kosik({searchParams}:{searchParams:any}){
     const location:string = searchParams.pobocka;
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const records = await pb.collection('testy').getFullList({
         sort: 'date',
-        filter:`location = "${location}"`
     });
     function extractDayAndMonth(utcDateString: string): { day: string, month: string } {
         const date = new Date(utcDateString);

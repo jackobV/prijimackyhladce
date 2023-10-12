@@ -40,6 +40,8 @@ export default function CheckoutForm({items,numberOfDates, location}:{items:Test
     const handlePay = async () => {
         const inCartIds: Array<string> = items.testDates.flatMap(item =>
         Array(item.inCart).fill(item.id))
+        const stipePriceId = items.testDates.find(obj => obj.location === location);
+        console.log(items)
         try {
             const response = await fetch("/api/checkout_session", {
                 method: "POST",
@@ -49,7 +51,7 @@ export default function CheckoutForm({items,numberOfDates, location}:{items:Test
                     dateIds: inCartIds,
                     numberOfDates: numberOfDates,
                     location: location,
-                    priceId: items.testDates[0].stripe_price_id,
+                    priceId: stipePriceId?.stripe_price_id,
                 })
             });
             if (response.ok) {

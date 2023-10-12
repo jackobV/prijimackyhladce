@@ -34,7 +34,7 @@ export default function TicketBrick({test}:{test:testInstance}){
             </div>
             <div className="flex flex-row justify-between px-6 pb-3">
                 <p className="text-gray-500">Místo</p>
-                <div className="text-yellow-700 bg-yellow-50 ring-yellow-600/20 rounded-md py-1 px-2 text-xs font-medium ring-1 ring-inset">Praha</div>
+                <div className="text-yellow-700 bg-yellow-50 ring-yellow-600/20 rounded-md py-1 px-2 text-xs font-medium ring-1 ring-inset">{test.location}</div>
             </div>
         </div>
     )

@@ -26,7 +26,7 @@ export default function CheckoutContainer({ testDates, }:{testDates:TestDateProp
         <div>
             <ProgressBar step={step} />
             {step === 0?
-                <div><PickADateAndReview step={step} setStep={setStep} setItems={setItems} items={items} numberOfDates={numberOfDates} setNumberOfDates={setNumberOfDates} /></div>
+                <div><PickADateAndReview step={step} setStep={setStep} setItems={setItems} items={items} numberOfDates={numberOfDates} setNumberOfDates={setNumberOfDates} location={testDates.location} /></div>
                 :
                 <div>
                     <CheckoutForm items={items} numberOfDates={numberOfDates} location={testDates.location} />

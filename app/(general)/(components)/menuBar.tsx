@@ -15,7 +15,6 @@ const navigation = [
 
 export default function MenuBar() {
     const [mobileMenuOpen, setMobileMenuOpen] = useState(false)
-    const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     return (
         <header className="bg-white">
             <nav className="mx-auto flex max-w-7xl items-center justify-between gap-x-6 p-6 lg:px-8" aria-label="Global">
@@ -33,16 +32,9 @@ export default function MenuBar() {
                     ))}
                 </div>
                 <div className="flex flex-1 items-center justify-end gap-x-6">
-                    {
-                        pb.authStore.isValid ?
                             <a href="/aplikace" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
                                 Osobní zóna
                             </a>
-                            :
-                            <a href="/aplikace" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
-                                Přihlásit se
-                            </a>
-                    }
                     <a
                         href="/kosik?pobocka=praha"
                         className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
@@ -98,20 +90,12 @@ export default function MenuBar() {
                                 ))}
                             </div>
                             <div className="py-6">
-                                {pb.authStore.isValid?
                                     <a
                                         href="/aplikace"
                                         className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
                                     >
                                         Osobní zóna
-                                    </a>:
-                                    <a
-                                        href="/aplikace"
-                                        className="-mx-3 block rounded-lg px-3 py-2.5 text-base font-semibold leading-7 text-gray-900 hover:bg-gray-50"
-                                    >
-                                        Přihlásit se
                                     </a>
-                                }
 
                             </div>
                         </div>

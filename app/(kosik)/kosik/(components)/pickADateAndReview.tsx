@@ -4,10 +4,12 @@ import DateBrick from "@/app/(kosik)/kosik/(components)/dateBrick";
 import { Disclosure } from '@headlessui/react'
 import React, {useEffect, useState} from "react";
 import {TestDateProps} from "@/app/(kosik)/kosik/page";
+import ChangeLocation from "@/app/(kosik)/kosik/(components)/changeLocation";
 
-export default function PickADateAndReview({step, setStep, items, setItems,numberOfDates,setNumberOfDates} : {step:number,items:TestDateProps,numberOfDates:number,setItems: React.Dispatch<React.SetStateAction<TestDateProps>>,setStep: React.Dispatch<React.SetStateAction<number>>,setNumberOfDates: React.Dispatch<React.SetStateAction<number>>}){
+export default function PickADateAndReview({step, setStep, items, setItems,numberOfDates,setNumberOfDates,location} : {step:number,items:TestDateProps,numberOfDates:number,setItems: React.Dispatch<React.SetStateAction<TestDateProps>>,setStep: React.Dispatch<React.SetStateAction<number>>,setNumberOfDates: React.Dispatch<React.SetStateAction<number>>,location:string}){
     const [show, setShow] = useState(false)
     const [isEmpty, setIsEmpty] = useState(true)
+    const itemsForLocation = items.testDates.filter(obj => obj.location === location);
     const handleShow = () => {
         setShow(!show)
     }
@@ -45,16 +47,17 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
         });
         setNumberOfDates(numberOfDates-1)
         setItems({location:items.location, testDates:updatedItems})
-
-
     }
     return(
         <div className="mx-auto max-w-6xl px-6 lg:px-8 overflow-hidden pt-16">
-            <h2 className=" font-bold pb-5">Volné termíny</h2>
+            <h2 className=" font-bold pb-2">Volné termíny pro</h2>
+            <div className="w-48 pb-10">
+                <ChangeLocation location={location} />
+            </div>
             {show?
                 <div className="py-2 bg-gray-100 flex flex-col items-center gap-y-2 rounded-md">
                     <div className="flex flex-row w-full overflow-x-auto sm:inline sm:grid sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-x-4 sm:overflow-hidden px-4 gap-y-8 py-2">
-                        {items.testDates.map((item)=>(
+                        {itemsForLocation.map((item)=>(
                             <div className="flex flex-col items-center justify-between bg-white px-4 h-56 w-36 shrink-0 rounded-md shadow-md">
                                 <div className="flex flex-col items-center pt-7">
                                     <p className="font-semibold text-2xl ">{item.day}.{item.month}</p>
@@ -88,7 +91,7 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
                 :
                 <div className="py-2 bg-gray-100 flex flex-col items-center gap-y-10 rounded-md">
                 <div className="flex flex-row w-full overflow-x-auto sm:inline sm:grid sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-x-4 sm:overflow-hidden px-4 h-60 gap-y-10 py-2">
-                    {items.testDates.map((item)=>(
+                    {itemsForLocation.map((item)=>(
                         <div className="flex flex-col items-center justify-between bg-white px-4 h-56 w-36 shrink-0 rounded-md shadow-md">
                             <div className="flex flex-col items-center pt-7">
                                 <p className="font-semibold text-2xl ">{item.day}.{item.month}</p>

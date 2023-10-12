@@ -7,6 +7,7 @@ export interface testInstance {
     date: string;
     paid: boolean;
     created: string;
+    location:string;
 }
 export default function TicketGrid(){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
@@ -17,6 +18,7 @@ export default function TicketGrid(){
     const handleDataFetch = async () => {
         try {
             if(pb.authStore.model?.id){
+                const authData = await pb.collection('users').authRefresh();
                 const userData = await pb.collection("users").getOne(pb.authStore.model.id,{
                     expand: "tickets.testy"
                 })
@@ -32,7 +34,8 @@ export default function TicketGrid(){
                                 date: testyObject.date,
                                 paid:true,
                                 created:ticket.created,
-                                qty:1
+                                qty:1,
+                                location:testyObject.location
                             })
                         }
                     })
