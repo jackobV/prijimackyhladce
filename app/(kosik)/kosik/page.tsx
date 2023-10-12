@@ -42,7 +42,7 @@ export default async function Kosik({searchParams}:{searchParams:any}){
     const location:string = searchParams.pobocka;
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const records = await pb.collection('testy').getFullList({
-        sort: '-date',
+        sort: 'date',
         filter:`location = "${location}"`
     });
     function extractDayAndMonth(utcDateString: string): { day: string, month: string } {
