@@ -13,7 +13,6 @@ import Qna from "@/app/(general)/(components)/qna";
 import VideoIntroduction from "@/app/(general)/prijimacky-nanecisto/(components)/videoIntroduction";
 import Pricing from "@/app/(general)/(components)/pricing";
 import Footer from "@/app/(general)/(components)/footer";
-import GoogleAnalytics from "../GoogleAnalytics"
 export const metadata = {
     title: 'Na-zkoušku | na-zkousku.cz',
     description: 'Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy.',
