@@ -19,8 +19,8 @@ export const metadata = {
     title: 'Na-zkoušku | na-zkousku.cz',
     description: 'Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy.',
 }
-export const dynamic = 'force-dynamic'
-export const revalidate = 0
+export const revalidate = 43200
+
 export default function Home() {
     return (
         <main>
@@ -35,11 +35,18 @@ export default function Home() {
             <section className="py-20 ">
                 <LandingFeaturesOne />
             </section>
+            <section className="">
+                <div className="bg-gray-50 py-20">
+                    <section>
+                        <LocationSection />
+                    </section>
+                </div>
+            </section>
+            <section className="py-20">
+                <Pricing />
+            </section>
             <section className="bg-gray-50 py-20">
                 <VideoIntroduction />
-            </section>
-            <section className="pt-20">
-                <Pricing />
             </section>
             <section className="pt-20">
                 <Testimonials />
@@ -56,13 +63,7 @@ export default function Home() {
             <section className="pt-20">
                 <CTAbuy />
             </section>
-            <section className="">
-                <div className="bg-gray-50 py-20">
-                    <section>
-                        <LocationSection />
-                    </section>
-                </div>
-            </section>
+
 
             <section className="pt-20">
                 <JsmeSVami />
