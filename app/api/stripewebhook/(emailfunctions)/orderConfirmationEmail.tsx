@@ -30,7 +30,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
             template_id: "d-76b782bfda1e449c9592a5551421bd08 ",
             dynamic_template_data: {
                 "orderid":emailData.purchaseId,
-                "qty":emailData.ticketIds.length,
+                "qty":emailData.ticketIds.length.toString(),
                 "dates":formatDateArray(emailData.itemDates)
             }
         }
