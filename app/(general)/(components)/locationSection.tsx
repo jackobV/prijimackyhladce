@@ -73,7 +73,7 @@ export default async function LocationSection(){
                         <div className="flex flex-col w-full  justify-between">
                             <div className="flex flex-col pt-2 md:pt-0">
                                 <h3 className="w-full font-medium text-xl pb-1">Příbram Eduarts</h3>
-                                <p className="w-full text-sm">nám. T. G. Masaryka </p>
+                                <p className="w-full text-sm">Nám. T. G. Masaryka </p>
                                 <p className="text-sm">čp. 152, Příbram I.</p>
                             </div>
                             <div className="flex flex-col gap-y-2 pt-5 md:pt-0">

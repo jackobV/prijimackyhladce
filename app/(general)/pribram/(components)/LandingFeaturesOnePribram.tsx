@@ -13,7 +13,7 @@ let features:Array<Feature> = [
         uptitle:"(Kde)",
         title:"V Příbrami",
         text:"Nám. T. G. Masaryka čp. 152, Příbram I.\n" +
-            "Můžete k nám odjet autem i autobusem. Parkování je poblíž pobočky Eduarts, přímo na náměstí. Vchod je v průchodu.\n"
+            "Můžete k nám dojet autem i autobusem. Parkování je poblíž pobočky Eduarts, přímo na náměstí. Vchod je v průchodu.\n"
     },
     {
         uptitle:"(Kdy)",
