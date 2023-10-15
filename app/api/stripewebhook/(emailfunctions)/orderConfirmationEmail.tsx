@@ -39,7 +39,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
             console.log("sending email")
             return true
         } catch (e){
-            console.log("error")
+            console.log(e)
             return false
         }
 }
