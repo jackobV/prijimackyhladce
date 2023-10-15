@@ -42,7 +42,7 @@ export default async function LocationSection(){
                 <div className="flex flex-col gap-y-10 w-full">
                     <div className="flex flex-col md:flex-row w-full gap-x-4">
                         <div className="md:w-3/4 w-full">
-                            <Image src={edisonaPhoto} alt={"lokace edisona fotka"} className="rounded-md" />
+                            <Image src={edisonaPhoto} alt={"lokace edisona fotka"} className="rounded-md" quality={10} />
                         </div>
                         <div className="flex flex-col w-full  justify-between">
                                 <div className="flex flex-col pt-2 md:pt-0">
@@ -68,7 +68,7 @@ export default async function LocationSection(){
 
                     <div className="flex flex-col md:flex-row w-full gap-x-4">
                         <div className="md:w-3/4 w-full">
-                            <Image src={fotoEduarts} alt={"lokace Eduarts fotka"} className="rounded-md" />
+                            <Image src={fotoEduarts} alt={"lokace Eduarts fotka"} className="rounded-md" quality={10} />
                         </div>
                         <div className="flex flex-col w-full  justify-between">
                             <div className="flex flex-col pt-2 md:pt-0">
