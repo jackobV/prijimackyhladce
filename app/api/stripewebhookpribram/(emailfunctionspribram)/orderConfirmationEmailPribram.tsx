@@ -11,7 +11,7 @@ export interface EmailConfirmationData {
     totalPrice:number;
 }
 
-export default async function OrderConfirmationEmail({ emailData } : {emailData:EmailConfirmationData}){
+export default async function OrderConfirmationEmailPribram({ emailData } : {emailData:EmailConfirmationData}){
     function formatDateArray(dates: string[]): string {
         return dates.map(date => {
             const d = new Date(date);
@@ -22,25 +22,26 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
         }).join(', ');
     }
 
-        console.log("trying to send email")
-        const sgMail = require('@sendgrid/mail')
-        sgMail.setApiKey(process.env.SENDGRID_API_KEY)
-        const msg = {
-            to: `${emailData.email}`, // Change to your recipient
-            from: 'info@na-zkousku.cz', // Change to your verified sender
-            subject: `🎉 Potvrzení objednávky - na-zkousku.cz`,
-            text: `Děkujeme za Vaši objednávku! Tento email slouží jako potvrzení Vaší objednávky ${emailData.purchaseId}.`,
-            html: `<div>
-                    <h2><span style="font-size:12px"><strong>V&aacute;žen&iacute; &uacute;častn&iacute;ci, rodiče,</strong></span></h2>
+    console.log("trying to send email")
+    const sgMail = require('@sendgrid/mail')
+    sgMail.setApiKey(process.env.SENDGRID_API_KEY)
+    const msg = {
+        to: `${emailData.email}`, // Change to your recipient
+        from: 'info@na-zkousku.cz', // Change to your verified sender
+        subject: `🎉 Potvrzení objednávky - na-zkousku.cz`,
+        text: `Děkujeme za Vaši objednávku! Tento email slouží jako potvrzení Vaší objednávky ${emailData.purchaseId}.`,
+        html: `<h2><span style="font-size:12px"><strong>V&aacute;žen&iacute; &uacute;častn&iacute;ci, rodiče,</strong></span></h2>
 
-                    <p><span style="font-size:12px">Děkujeme za Va&scaron;i objedn&aacute;vku! Tento email slouž&iacute; jako potvrzen&iacute; Va&scaron;&iacute; objedn&aacute;vky <strong>${emailData.purchaseId}.</strong></span></p>
-                    <p><strong>📦 Detaily Objednávky:</strong></p>
-                    <ul>
-                        <li><strong>Produkt</strong> : Test na zkoušku</li>
-                        <li><strong>Množství</strong> : ${emailData.ticketIds.length}</li>
-                        <li><strong>Datum testu</strong> : ${formatDateArray(emailData.itemDates)}</li>
-                        <li><strong>Způsob platby</strong> : Online platba</li>
-                    </ul>
+<p><span style="font-size:12px">Děkujeme za Va&scaron;i objedn&aacute;vku! Tento email slouž&iacute; jako potvrzen&iacute; Va&scaron;&iacute; objedn&aacute;vky <strong>${emailData.purchaseId}.</strong></span></p>
+
+<p><strong>📦 Detaily Objedn&aacute;vky:</strong></p>
+
+<ul>
+	<li><strong>Produkt</strong> : Test na zkou&scaron;ku</li>
+	<li><strong>Množstv&iacute;</strong> : ${emailData.ticketIds.length}</li>
+	<li><strong>Datum testu</strong> : ${formatDateArray(emailData.itemDates)}</li>
+	<li><strong>Způsob platby</strong> : Online platba</li>
+</ul>
 
 <p>&nbsp;</p>
 
@@ -54,15 +55,11 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
 
 <p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pros&iacute;me dostavte se na m&iacute;sto kon&aacute;n&iacute; v <strong>8:45</strong>.&nbsp;</span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Doporučujeme využ&iacute;t spoje <strong>hromadn&eacute; dopravy</strong>.</span></span></p>
+<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Adresa:</span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Budova Z&aacute;kladn&iacute; &scaron;koly Edisona se nach&aacute;z&iacute; <strong>8 minut pě&scaron;ky</strong> (500 metrů) od stanice <strong>metra Budějovick&aacute;</strong>.&nbsp;</span></span></p>
+<p>N&aacute;m. T. G. Masaryka</p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pokud zvol&iacute;te cestu <strong>autem</strong>, lze zajet př&iacute;mo k budově ulic&iacute; B&iacute;tovsk&aacute;.&nbsp;</span></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Tak&eacute; se kousek od &scaron;koly nach&aacute;z&iacute; <strong>parkovi&scaron;tě</strong>, kter&eacute; je přes v&iacute;kend bezplatn&eacute;.&nbsp;</span></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">(B&iacute;tovsk&aacute; 1246, 140 00 Praha 4-Michle)&nbsp;</span></span></p>
+<p>čp. 152, Př&iacute;bram I.</p>
 
 <p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Předpokl&aacute;dan&yacute;<strong> konec akce je 14:00</strong>.</span></span></p>
 
@@ -81,10 +78,10 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
 <p><span style="font-size:12px"><span style="font-family:Arial,sans-serif"><u>Shrnut&iacute;</u>&nbsp;</span></span></p>
 
 <ul>
-\t<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Propiska/pero (modr&aacute;/čern&aacute;, negumovac&iacute;)</span></span></strong></li>
-\t<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Trojuheln&iacute;k s ryskou</span></span></strong></li>
-\t<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">&Uacute;hloměr&nbsp;</span></span></strong></li>
-\t<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">kruž&iacute;tko&nbsp;</span></span></strong></li>
+	<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Propiska/pero (modr&aacute;/čern&aacute;, negumovac&iacute;)</span></span></strong></li>
+	<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Trojuheln&iacute;k s ryskou</span></span></strong></li>
+	<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">&Uacute;hloměr&nbsp;</span></span></strong></li>
+	<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">kruž&iacute;tko&nbsp;</span></span></strong></li>
 </ul>
 
 <p>&nbsp;</p>
@@ -137,16 +134,15 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
 T&yacute;m Na zkou&scaron;ku</span></p>
 
 <p><span style="font-size:12px"><a href="mailto:info@na-zkousku.cz" style="text-decoration:none"><span style="font-family:Arial,sans-serif"><u>info@na-zkousku.cz</u></span></a></span></p>
-
-                    </div>`,
-        }
-        console.log(msg)
-        try {
-            console.log("sending email")
-            await sgMail.send(msg)
-            return true
-        } catch (e){
-            console.log("error")
-            return false
-        }
+`,
+    }
+    console.log(msg)
+    try {
+        console.log("sending email")
+        await sgMail.send(msg)
+        return true
+    } catch (e){
+        console.log("error")
+        return false
+    }
 }

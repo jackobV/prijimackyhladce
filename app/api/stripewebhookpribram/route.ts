@@ -10,6 +10,8 @@ import sgMail from "@sendgrid/mail";
 import OrderConfirmationEmail, {
     EmailConfirmationData
 } from "@/app/api/stripewebhook/(emailfunctions)/orderConfirmationEmail";
+import OrderConfirmationEmailPribram
+    from "@/app/api/stripewebhookpribram/(emailfunctionspribram)/orderConfirmationEmailPribram";
 const stripe = require("stripe")(process.env.STRIPE_SECRET_KEY)
 const cors = Cors({
     allowMethods: ["POST", "HEAD"],
@@ -75,7 +77,7 @@ export async function POST(req: Request){
                 totalPrice:event.data.object.amount_total,
                 ticketIds:ticketIdArray
             }
-            await OrderConfirmationEmail({emailData:emailData})
+            await OrderConfirmationEmailPribram({emailData:emailData})
         }
         return NextResponse.json({result:event,ok:true})
     }catch (error){
