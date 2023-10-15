@@ -345,7 +345,7 @@ export default function CheckoutForm({items,numberOfDates, location}:{items:Test
                             </div>
                         </div>
                         <div className="pt-5 flex flex-col w-full">
-                            <button className="bg-blue-600 py-3 rounded-xl text-white " type="submit">Přejít na platbu</button>
+                            <button className="bg-blue-600 py-3 rounded-xl text-white " type="submit" id="gotopayment">Přejít na platbu</button>
 
                         </div>
                     </div>

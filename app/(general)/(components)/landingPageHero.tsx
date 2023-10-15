@@ -20,14 +20,19 @@ export default function LandingPageHero() {
                             <p className="text-lg leading-8 text-gray-600">
                                 Jsme tým zkušených lektorů, který pořádá testy nanečisto. Naše testy slouží jako přesná simulace testů CERMAT. Zaměřujeme se na přípravu pro devátou třídu - přijímačky na střední školy a čtyřletá gymnázia.
                             </p>
-                            <div className="mt-10 flex items-center gap-x-6">
+                            <div className="mt-10 flex items-center gap-x-6"
+                            >
                                 <a
+                                    id="vyberterminhero"
                                     href="/kosik?pobocka=praha"
                                     className="rounded-md bg-indigo-600 px-3.5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                                 >
                                     Vyber si termín.
                                 </a>
-                                <a href="#cenik" className="text-sm font-semibold leading-6 text-gray-900">
+                                <a href="#cenik" className="text-sm font-semibold leading-6 text-gray-900"
+                                   id="ceniklandinghero"
+
+                                >
                                     Ceník <span aria-hidden="true">→</span>
                                 </a>
                             </div>
