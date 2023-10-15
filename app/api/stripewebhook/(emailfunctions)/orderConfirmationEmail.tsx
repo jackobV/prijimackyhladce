@@ -27,9 +27,9 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
         const msg = {
             to: emailData.email,
             from: "info@na-zkousku.cz",
-            template_id: "d-76b782bfda1e449c9592a5551421bd08 ",
+            templateId: "d-76b782bfda1e449c9592a5551421bd08 ",
             subject: 'Děkujeme za objednávku!',
-            dynamic_template_data: {
+            dynamicTemplateData: {
                 orderid:emailData.purchaseId,
                 qty:emailData.ticketIds.length.toString(),
                 dates:formatDateArray(emailData.itemDates)
