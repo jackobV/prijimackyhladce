@@ -28,10 +28,11 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
             to: emailData.email,
             from: "info@na-zkousku.cz",
             template_id: "d-76b782bfda1e449c9592a5551421bd08 ",
+            subject: 'Děkujeme za objednávku!',
             dynamic_template_data: {
-                "orderid":emailData.purchaseId,
-                "qty":emailData.ticketIds.length.toString(),
-                "dates":formatDateArray(emailData.itemDates)
+                orderid:emailData.purchaseId,
+                qty:emailData.ticketIds.length.toString(),
+                dates:formatDateArray(emailData.itemDates)
             }
         }
         try {
@@ -40,7 +41,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
             return true
         } catch (e){
             // @ts-ignore
-            console.log(e.errors)
+            console.log(e)
             return false
         }
 }
