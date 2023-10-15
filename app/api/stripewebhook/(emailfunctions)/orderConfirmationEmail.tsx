@@ -22,7 +22,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
         }).join(', ');
     }
         console.log("trying to send email")
-        // @ts-ignore
+        const sgMail = require('@sendgrid/mail')
         sgMail.setApiKey(process.env.SENDGRID_API_KEY)
         const msg = {
             to: emailData.email,
@@ -35,13 +35,12 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
                 dates:formatDateArray(emailData.itemDates)
             }
         }
-        try {
-            await sgMail.send(msg);
-            console.log("sending email")
-            return true
-        } catch (e){
-            // @ts-ignore
-            console.log(e)
-            return false
-        }
+        sgMail
+            .send(msg)
+            .then(() => {
+                console.log('Email sent')
+            })
+            .catch((error: any) => {
+                console.error(error)
+            })
 }
