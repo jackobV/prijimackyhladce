@@ -35,6 +35,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
             }
         }
         try {
+            await sgMail.send(msg);
             console.log("sending email")
             return true
         } catch (e){
