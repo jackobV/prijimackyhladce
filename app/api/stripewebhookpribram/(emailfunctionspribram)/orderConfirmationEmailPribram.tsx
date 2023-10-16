@@ -45,95 +45,97 @@ export default async function OrderConfirmationEmailPribram({ emailData } : {ema
 
 <p>&nbsp;</p>
 
-<p><span style="font-size:14px"><strong>Prok&aacute;z&aacute;n&iacute; zakoupen&iacute; &uacute;časti</strong></span></p>
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Prok&aacute;z&aacute;n&iacute; zakoupen&iacute; &uacute;časti</strong></span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Ž&aacute;ci se při př&iacute;chodu prokazuj&iacute; jm&eacute;nem použit&yacute;m při registraci. Doporučujeme tak&eacute; m&iacute;t u sebe tento email v elektronick&eacute;, či ti&scaron;těn&eacute; podobě.&nbsp;</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Ž&aacute;ci se při př&iacute;chodu prokazuj&iacute; jm&eacute;nem použit&yacute;m při registraci. Doporučujeme tak&eacute; m&iacute;t u sebe tento email v elektronick&eacute; či ti&scaron;těn&eacute; podobě.&nbsp;</span></span></span></p>
 
-<p>&nbsp;</p>
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
 
-<p><span style="font-size:14px"><strong><span style="font-family:Arial,sans-serif">Informace k dopravě</span></strong></span></p>
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Informace k dopravě</strong></span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pros&iacute;me dostavte se na m&iacute;sto kon&aacute;n&iacute; v <strong>8:45</strong>.&nbsp;</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Pros&iacute;me dostavte se na m&iacute;sto kon&aacute;n&iacute; v </span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>8:45</strong></span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">.&nbsp;</span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Adresa:</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Vzděl&aacute;vac&iacute; centrum Eduarts s&iacute;dl&iacute; na n&aacute;m. T. G. Masaryka, čp. 152. Př&iacute;bram I.&nbsp;</span></span></span></p>
 
-<p>N&aacute;m. T. G. Masaryka</p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Vchod do centra je&nbsp; ve dvoře, hned pod kav&aacute;rnou Rynk.</span></span></span></p>
 
-<p>čp. 152, Př&iacute;bram I.</p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Doporučujeme parkov&aacute;n&iacute; na n&aacute;měst&iacute;.</span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Předpokl&aacute;dan&yacute;<strong> konec akce je 14:00</strong>.</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Předpokl&aacute;dan&yacute;</span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong> konec akce je 14:00</strong></span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">.</span></span></span></p>
 
-<p>&nbsp;</p>
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
 
-<p><span style="font-size:14px"><strong><span style="font-family:Arial,sans-serif">Psac&iacute; a r&yacute;sovac&iacute; potřeby&nbsp;</span></strong></span></p>
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Psac&iacute; a r&yacute;sovac&iacute; potřeby&nbsp;</strong></span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Do z&aacute;znamov&eacute;ho archu je povoleno ps&aacute;t pouze modře, či černě p&iacute;&scaron;&iacute;c&iacute; propiskou / perem.</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Do z&aacute;znamov&eacute;ho archu je povoleno ps&aacute;t pouze modře nebo černě p&iacute;&scaron;&iacute;c&iacute; propiskou / perem.</span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Při ostr&eacute;m testu nen&iacute; povoleno použ&iacute;vat gumovac&iacute; pera, či psac&iacute; potřeby, kter&eacute; pap&iacute;r mohou prop&iacute;t.&nbsp;</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Při ostr&eacute;m testu nen&iacute; povoleno použ&iacute;vat gumovac&iacute; pera, psac&iacute; potřeby, kter&eacute; pap&iacute;r mohou prop&iacute;t.&nbsp;</span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">K testu matematiky budete potřebovat standardn&iacute; r&yacute;sovac&iacute; potřeby (trojuheln&iacute;k s ryskou, &uacute;hloměr a kruž&iacute;tko.)</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">K testu matematiky budete potřebovat standardn&iacute; r&yacute;sovac&iacute; potřeby (troj&uacute;heln&iacute;k s ryskou, &uacute;hloměr a kruž&iacute;tko).</span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">K testu matematiky můžete využ&iacute;t obyčejnou tužku, ale je třeba fin&aacute;ln&iacute; ře&scaron;en&iacute; obt&aacute;hnout propiskou.&nbsp;</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">K testu matematiky můžete využ&iacute;t obyčejnou tužku, ale fin&aacute;ln&iacute; ře&scaron;en&iacute; je třeba obt&aacute;hnout propiskou.&nbsp;</span></span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif"><u>Shrnut&iacute;</u>&nbsp;</span></span></p>
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><u>Shrnut&iacute;</u></span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
 
 <ul>
-	<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Propiska/pero (modr&aacute;/čern&aacute;, negumovac&iacute;)</span></span></strong></li>
-	<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Trojuheln&iacute;k s ryskou</span></span></strong></li>
-	<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">&Uacute;hloměr&nbsp;</span></span></strong></li>
-	<li style="list-style-type:disc"><strong><span style="font-size:12px"><span style="font-family:Arial,sans-serif">kruž&iacute;tko&nbsp;</span></span></strong></li>
+\t<li style="list-style-type:disc"><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Propiska/pero (modr&aacute;/čern&aacute;, negumovac&iacute;)</strong></span></span></span></li>
+\t<li style="list-style-type:disc"><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Troj&uacute;heln&iacute;k s ryskou</strong></span></span></span></li>
+\t<li style="list-style-type:disc"><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>&Uacute;hloměr&nbsp;</strong></span></span></span></li>
+\t<li style="list-style-type:disc"><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Kruž&iacute;tko&nbsp;</strong></span></span></span></li>
 </ul>
 
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
+
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Před testem</strong></span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Před testem dbejte na dostatek </span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>stravy</strong></span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"> a </span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>sp&aacute;nku</strong></span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">, protože tyto faktory tak&eacute; mohou ovlivnit v&yacute;sledek.&nbsp;</span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
+
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Svačina</strong></span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Mezi jednotliv&yacute;mi testy budou m&iacute;t děti pauzu na svačinu. V are&aacute;lu je možn&eacute; zakoupit pit&iacute; a lehk&eacute; občerstven&iacute;.&nbsp;</span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Ž&aacute;ci budou m&iacute;t možnost doplnit si l&aacute;hev na vodu.</span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
+
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Zach&aacute;zen&iacute; se zad&aacute;n&iacute;m testu</strong></span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><u>Pořizov&aacute;n&iacute; obrazov&eacute;ho z&aacute;znamu zad&aacute;n&iacute; testu je př&iacute;sně zak&aacute;z&aacute;no.</u></span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Distribuce testov&eacute;ho zad&aacute;n&iacute; je trestn&yacute;m činem poru&scaron;en&iacute; autorsk&eacute;ho pr&aacute;va podle &sect; 152 trestn&iacute;ho z&aacute;kona.</span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
+
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Speci&aacute;ln&iacute; potřeby</strong></span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Pokud ž&aacute;k vyžaduje speci&aacute;ln&iacute; potřeby, pros&iacute;me kontaktujte n&aacute;s emailem.&nbsp;</span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
+
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Přesunut&iacute; term&iacute;nu&nbsp;</strong></span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Pro změnu term&iacute;nu n&aacute;s kontaktujte emailem </span></span></span><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>nejpozději do čtvrtečn&iacute; půlnoci před testem.</strong></span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
+
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Kontaktn&iacute; informace</strong></span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Pros&iacute;me použijte prim&aacute;rně email: nazkousku@eduarts.cz</span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">Pro př&iacute;pad, že email nestač&iacute;, můžete zavolat na č&iacute;slo organiz&aacute;tora: 775 041 929, 775 610 273.</span></span></span></p>
+
+<p><span style="font-size:11pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">&nbsp;</span></span></span></p>
+
+<p><span style="font-size:10.5pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><strong>Přejeme V&aacute;m a Va&scaron;im dětem &uacute;spě&scaron;n&yacute; testovac&iacute; den!</strong></span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">S pozdravem,</span></span></span><br />
+<span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000">T&yacute;m Na zkou&scaron;ku Eduarts, Př&iacute;bram</span></span></span></p>
+
+<p><span style="font-size:9pt"><span style="font-family:Arial,sans-serif"><span style="color:#000000"><u>nazkousku@eduarts.cz</u></span></span></span></p>
+
 <p>&nbsp;</p>
-
-<p><span style="font-size:14px"><strong><span style="font-family:Arial,sans-serif">Před testem</span></strong></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Před testem dbejte na dostatek <strong>stravy</strong> a <strong>sp&aacute;nku</strong>, protože tyto faktory tak&eacute; mohou ovlivnit v&yacute;sledek.&nbsp;</span></span></p>
-
-<p>&nbsp;</p>
-
-<p><span style="font-size:14px"><strong><span style="font-family:Arial,sans-serif">Svačina</span></strong></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Mezi jednotliv&yacute;mi testy budou m&iacute;t děti pauzu na svačinu. V are&aacute;lu nen&iacute; možnost koupě stravy.&nbsp;</span></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Ž&aacute;ci budou m&iacute;t možnost doplnit si l&aacute;hev na vodu.</span></span></p>
-
-<p>&nbsp;</p>
-
-<p><strong><span style="font-size:14px"><span style="font-family:Arial,sans-serif">Zach&aacute;zen&iacute; se zad&aacute;n&iacute;m testu</span></span></strong></p>
-
-<p><u><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pořizov&aacute;n&iacute; obrazov&eacute;ho z&aacute;znamu zad&aacute;n&iacute; testu je př&iacute;sně zak&aacute;z&aacute;no.</span></span></u></p>
-
-<p>Distribuce testov&eacute;ho zad&aacute;n&iacute; je trestn&yacute;m činem poru&scaron;en&iacute; autorsk&eacute;ho pr&aacute;va podle &sect; 152 trestn&iacute;ho z&aacute;kona.</p>
-
-<p>&nbsp;</p>
-
-<p><span style="font-size:14px"><strong><span style="font-family:Arial,sans-serif">Speci&aacute;ln&iacute; potřeby</span></strong></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pokud ž&aacute;k vyžaduje speci&aacute;ln&iacute; potřeby, pros&iacute;me kontaktujte n&aacute;s emailem.&nbsp;</span></span></p>
-
-<p>&nbsp;</p>
-
-<p><span style="font-size:14px"><strong><span style="font-family:Arial,sans-serif">Přesunut&iacute; term&iacute;nu&nbsp;</span></strong></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pro změnu term&iacute;nu n&aacute;s kontaktujte emailem <strong>nejpozději do čtvrtečn&iacute; půlnoci před testem.</strong></span></span></p>
-
-<p>&nbsp;</p>
-
-<p><span style="font-size:14px"><strong><span style="font-family:Arial,sans-serif">Kontaktn&iacute; informace</span></strong></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pros&iacute;me použijte prim&aacute;rn&iacute; email </span><a href="mailto:info@na-zkousku.cz" style="text-decoration:none"><span style="font-family:Arial,sans-serif"><u>info@na-zkousku.cz</u></span></a><span style="font-family:Arial,sans-serif">.</span></span></p>
-
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Pro př&iacute;pad, že email nestač&iacute;, můžete zavolat na č&iacute;slo organiz&aacute;tora 734110818</span>.</span></p>
-
-<p>&nbsp;</p>
-
-<p><strong><span style="font-size:14px">Přejeme V&aacute;m a Va&scaron;im dětem &uacute;spě&scaron;n&yacute; testovac&iacute; den!</span></strong></p>
-
-<p><span style="font-size:12px">S pozdravem,<br />
-T&yacute;m Na zkou&scaron;ku</span></p>
-
-<p><span style="font-size:12px"><a href="mailto:info@na-zkousku.cz" style="text-decoration:none"><span style="font-family:Arial,sans-serif"><u>info@na-zkousku.cz</u></span></a></span></p>
 `,
     }
     console.log(msg)
