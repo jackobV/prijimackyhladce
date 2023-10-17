@@ -7,9 +7,11 @@ import PocketBase from "pocketbase";
 export default function Page() {
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const [email, setEmail] = useState("")
+    const [didRequest,setDidRequest] = useState(false)
     const emailRef = useRef<HTMLInputElement | null>(null);
     const handleLogin = async (e: { preventDefault: () => void; }) =>{
         e.preventDefault()
+        setDidRequest(true)
         try{
             await pb.collection("users").requestPasswordReset(email)
         } catch (e) {
@@ -56,12 +58,21 @@ export default function Page() {
                         </div>
 
                         <div>
-                            <button
-                                type="submit"
-                                className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
-                            >
-                                Zažádat o obnovu hesla
-                            </button>
+                            {didRequest ?
+                                <button
+                                    className="flex w-full justify-center rounded-md bg-indigo-300 px-3 py-1.5 text-sm font-semibold leading-6 text-white focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600 cursor-default"
+                                >
+                                    Email byl odeslán
+                                </button>
+                                :
+                                <button
+                                    type="submit"
+                                    className="flex w-full justify-center rounded-md bg-indigo-600 px-3 py-1.5 text-sm font-semibold leading-6 text-white hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+                                >
+                                    Zažádat o obnovu hesla
+                                </button>
+                            }
+
                         </div>
                     </form>
 
