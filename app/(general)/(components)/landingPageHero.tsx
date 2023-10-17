@@ -19,7 +19,7 @@ export default function LandingPageHero() {
                         </h1>
                         <div className="mt-6 max-w-xl lg:mt-0 xl:col-end-1 xl:row-start-1">
                             <p className="text-lg leading-8 text-gray-700">
-                                Vyzkoušej si <strong>CERMAT příjímačky nenečisto!</strong> Napíšeš si s námi test z češtiny a matematiky, který s tebou následně <strong>důkladně rozebereme. </strong>
+                                Vyzkoušej si <strong>CERMAT příjímačky nanečisto!</strong> Napíšeš si s námi test z češtiny a matematiky, který s tebou následně <strong>důkladně rozebereme. </strong>
                                 Dozvíš se také mnoho rad, jak u přijímaček podat <strong>nejlepší výkon!</strong>
                             </p>
                             <div className="mt-10 flex items-center gap-x-6"
