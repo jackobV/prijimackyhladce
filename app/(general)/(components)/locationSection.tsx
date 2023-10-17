@@ -57,7 +57,7 @@ export default async function LocationSection(){
                                         <a href="/kosik?pobocka=praha"
                                         id="vyberterminlokace"
                                         >
-                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500">{timestampToDayMonthString(item.date)}</div>
+                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500 hover:bg-blue-700 duration-75">{timestampToDayMonthString(item.date)}</div>
                                         </a>
                                     ))}
                                 </div>
@@ -81,7 +81,7 @@ export default async function LocationSection(){
                                 <div className="flex flex-row gap-x-3">
                                     {futureDatesForPribram.map((item:any)=>(
                                         <a className="" href="/kosik?pobocka=pribram">
-                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500">{timestampToDayMonthString(item.date)}</div>
+                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500 hover:bg-blue-700 duration-75">{timestampToDayMonthString(item.date)}</div>
                                         </a>
                                     ))}
                                 </div>

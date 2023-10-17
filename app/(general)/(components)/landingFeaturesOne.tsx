@@ -7,7 +7,7 @@ let features:Array<Feature> = [
     {
         uptitle:"(Co)",
         title:"Přijímačky na zkoušku pro 9. třídu",
-        text:"Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy."
+        text:"Pořádáme přesné simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi ten samý den rozebereme a vysvětlíme jednotlivé úlohy."
     },
     {
         uptitle:"(Kde)",
@@ -16,7 +16,7 @@ let features:Array<Feature> = [
     },
     {
         uptitle:"(Kdy)",
-        title:"Vybrané soboty (24 termínů)",
+        title:"Vybrané soboty",
         text:"V období listopad - duben pořádáme přijímačky na zkoušku každou sobotu. Všechny termíny najdete níže v kalendáři."
     },
 ]

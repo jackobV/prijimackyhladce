@@ -38,7 +38,7 @@ export default async function OrderConfirmationEmailPribram({ emailData } : {ema
 
 <ul>
 	<li><strong>Produkt</strong> : Test na zkou&scaron;ku</li>
-	<li><strong>Množstv&iacute;</strong> : ${emailData.ticketIds.length}</li>
+	<li><strong>Množstv&iacute;</strong> : ${emailData.ticketIds.length-1}</li>
 	<li><strong>Datum testu</strong> : ${formatDateArray(emailData.itemDates)}</li>
 	<li><strong>Způsob platby</strong> : Online platba</li>
 </ul>

@@ -37,7 +37,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
                     <p><strong>📦 Detaily Objednávky:</strong></p>
                     <ul>
                         <li><strong>Produkt</strong> : Test na zkoušku</li>
-                        <li><strong>Množství</strong> : ${emailData.ticketIds.length}</li>
+                        <li><strong>Množství</strong> : ${emailData.ticketIds.length-1}</li>
                         <li><strong>Datum testu</strong> : ${formatDateArray(emailData.itemDates)}</li>
                         <li><strong>Způsob platby</strong> : Online platba</li>
                     </ul>
