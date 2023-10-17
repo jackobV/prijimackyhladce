@@ -9,6 +9,12 @@ export default function KontaktSection() {
                             <p className="mt-4 leading-7 text-gray-600">
                                 Ke spojení prosíme využijte jednu z následujících možností.
                             </p>
+                            <div className="">
+                                <p className="mt-4 leading-7 text-gray-600">
+                                    IČO: 19805403
+                                </p>
+                            </div>
+
                         </div>
                         <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:col-span-2 lg:gap-8">
                             <div className="rounded-2xl bg-gray-50 p-10">
@@ -19,6 +25,12 @@ export default function KontaktSection() {
                                         <dd>
                                             <a className="font-semibold text-indigo-600" href="mailto:podpora@na-zkousku.cz">
                                                 podpora@na-zkousku.cz
+                                            </a>
+                                        </dd>
+                                        <dt className="sr-only">Telefon</dt>
+                                        <dd>
+                                            <a className=" text-indigo-600" href="mailto:podpora@na-zkousku.cz">
+                                                +420 734 110 818
                                             </a>
                                         </dd>
                                     </div>

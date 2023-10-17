@@ -4,7 +4,7 @@ export default function ProgressBar({step}:{step:number}){
         <div className="mx-auto max-w-6xl px-6 lg:px-8 overflow-hidden pt-10">
             <div className="flex flex-row justify-between text-sm text-gray-600 pb-2">
                 <p className="">Výběr termínů</p>
-                <p className="">Platební detaily</p>
+                <p className="">Osobní údaje</p>
                 <p className="">Dokončení platby</p>
             </div>
             <div className="w-full h-1 rounded-full bg-gray-300">

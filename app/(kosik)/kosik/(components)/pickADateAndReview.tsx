@@ -45,6 +45,9 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
             }
             return item
         });
+        if(numberOfDates-1 == 0){
+            setIsEmpty(true)
+        }
         setNumberOfDates(numberOfDates-1)
         setItems({location:items.location, testDates:updatedItems})
     }
@@ -123,7 +126,26 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
                 </div>
             }
             {isEmpty ?
-                <div></div> :
+                <div>
+                    <h2 className="pt-10 font-bold pb-5">Přehled objednávky</h2>
+                    <div className="flex flex-col md:flex-row w-full gap-x-10 gap-y-5">
+                        <div
+                            className="bg-gray-100 w-full md:w-2/3 py-4 px-4 md:px-4 flex flex-col gap-y-4 rounded-md">
+                                    <div
+                                        className="flex flex-row items-center justify-between bg-white py-3 md:py-6 px-4 rounded-md">
+                                        <div className="flex flex-col gap-y-2 md:flex-row md:items-center md:gap-x-4">
+                                            <p className="text-sm">Přidejte si termín do košíku</p>
+                                        </div>
+                                    </div>
+                        </div>
+                        <div className="bg-gray-100 w-full md:w-1/3 rounded-md flex flex-col gap-y-3 h-fit px-4 py-3">
+                            <p className="font-medium text-sm">Posledních pár detailů</p>
+                            <button className="bg-blue-300 py-3 w-full rounded-lg text-white cursor-default" onClick={()=>setStep(step+1)}>
+                                Přejít k souhrnu objednávky
+                            </button>
+                        </div>
+                    </div>
+                </div> :
                 <div>
                     <h2 className="pt-10 font-bold pb-5">Přehled objednávky</h2>
                     <div className="flex flex-col md:flex-row w-full gap-x-10 gap-y-5">
