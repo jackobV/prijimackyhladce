@@ -21,8 +21,8 @@ const navigation = {
         { name: 'Příbram', href: '/pribram' },
     ],
     pravni: [
-        { name: 'GDPR', href: '/gdpr' },
-        { name: 'Obchodní podmínky', href: '/obchodnipodminky' },
+        { name: 'GDPR', href: '/gdpr.pdf' },
+        { name: 'Obchodní podmínky', href: '/op.pdf' },
     ],
     social: [
         {
