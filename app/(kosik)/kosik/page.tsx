@@ -4,6 +4,7 @@ import CheckoutContainer from "@/app/(kosik)/kosik/(components)/checkoutContaine
 import PocketBase from 'pocketbase';
 import Footer from "@/app/(general)/(components)/footer";
 import MenuPribram from "@/app/(general)/pribram/(components)/menuPribram";
+import KosikMenu from "@/app/(kosik)/kosik/(components)/KosikMenu";
 
 interface TestDate{
     id:string;
@@ -80,11 +81,7 @@ export default async function Kosik({searchParams}:{searchParams:any}){
     const propsForClient: TestDateProps = { testDates: transformArray(testDates), location: location}
     return(
         <main>
-            {
-                location == "pribram" ?
-                    <MenuPribram />:
-                    <MenuBar />
-            }
+                    <KosikMenu />
             <section className="pb-20">
                 <CheckoutContainer testDates={propsForClient} />
             </section>
