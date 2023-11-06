@@ -43,6 +43,7 @@ export default async function Kosik({searchParams}:{searchParams:any}){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const records = await pb.collection('testy').getFullList({
         sort: 'date',
+        filter: 'archived = false'
     });
     function extractDayAndMonth(utcDateString: string): { day: string, month: string } {
         const date = new Date(utcDateString);
