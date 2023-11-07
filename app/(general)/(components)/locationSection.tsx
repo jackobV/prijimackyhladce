@@ -9,10 +9,12 @@ export default async function LocationSection(){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const currentDate = moment();
     const testydateCallPraha = await pb.collection("testy").getList(1,4,{
-        filter:`location = "praha" && archived = false`
+        filter:`location = "praha" && archived = false`,
+        sort:`date`
     })
     const testydateCallPribram = await pb.collection("testy").getList(1,4,{
-        filter:`location = "pribram && archived = false"`
+        filter:`location = "pribram" && archived = false`,
+        sort:`date`
     })
     const futureDatesForPrague = testydateCallPraha.items.filter(obj => {
         const dateInFuture = moment(obj.date) >= currentDate;

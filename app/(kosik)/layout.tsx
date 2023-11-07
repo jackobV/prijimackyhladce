@@ -1,5 +1,6 @@
 import './global.css';
 import GoogleAnalytics from "@/app/GoogleAnalytics";
+export const revalidate = 36000
 export default function RootLayout({
                                        children,
                                    }: {
