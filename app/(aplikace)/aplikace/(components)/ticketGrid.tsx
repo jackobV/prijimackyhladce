@@ -8,6 +8,9 @@ export interface testInstance {
     paid: boolean;
     created: string;
     location:string;
+    marked:boolean;
+    cjMark:number;
+    matMark:number;
 }
 export default function TicketGrid(){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
@@ -35,7 +38,10 @@ export default function TicketGrid(){
                                 paid:true,
                                 created:ticket.created,
                                 qty:1,
-                                location:testyObject.location
+                                location:testyObject.location,
+                                marked:ticket.is_marked,
+                                cjMark:ticket.cj,
+                                matMark:ticket.mat
                             })
                         }
                     })
