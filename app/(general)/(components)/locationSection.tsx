@@ -4,7 +4,7 @@ import Image from "next/image";
 import PocketBase from "pocketbase";
 import moment from "moment"
 import Map from "@/app/(general)/(components)/map"
-
+export const revalidate = 3600
 export default async function LocationSection(){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const currentDate = moment();
