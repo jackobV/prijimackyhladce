@@ -4,7 +4,7 @@ import MenuBar from "@/app/(general)/(components)/menuBar";
 import GoogleAnalytics from "@/app/GoogleAnalytics";
 import { Suspense } from 'react'
 const inter = Inter({ subsets: ['latin'] })
-export const revalidate = 3600
+export const revalidate = 3700
 export default function RootLayout({
   children,
 }: {
