@@ -1,4 +1,3 @@
-import MenuBar from "@/app/(general)/(components)/menuBar";
 import Image from "next/image";
 import logo from "../../logo.png"
 export default function Page({searchParams}:{searchParams:any}){

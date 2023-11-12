@@ -1,4 +1,5 @@
 import { CheckIcon } from '@heroicons/react/20/solid'
+import Link from "next/link";
 
 const includedFeatures = [
     'Test z ČJ a MAT',
@@ -47,13 +48,13 @@ export default function Pricing() {
                                     <span className="text-5xl font-bold tracking-tight text-gray-900">690,-</span>
                                     <span className="text-sm font-semibold leading-6 tracking-wide text-gray-600">CZK</span>
                                 </p>
-                                <a
+                                <Link
                                     id="vyberterminpricing"
                                     href="/kosik?pobocka=praha"
                                     className="mt-10 block w-full rounded-md bg-blue-600 px-3 py-2 text-center text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                                 >
                                     Rezervovat
-                                </a>
+                                </Link>
                                 <p className="mt-6 text-xs leading-5 text-gray-600">
                                     Platba online po registraci a výběru termínů.
                                 </p>

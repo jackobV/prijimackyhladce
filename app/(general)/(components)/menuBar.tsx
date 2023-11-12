@@ -5,6 +5,7 @@ import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/outline'
 import Image from "next/image";
 import logo from "../../logo.png"
 import PocketBase from "pocketbase";
+import Link from "next/link";
 const navigation = [
     { name: 'Ceník', href: '/#cenik' },
     { name: 'Termíny 2023/24', href: '/kosik?pobocka=praha' },
@@ -35,12 +36,12 @@ export default function MenuBar() {
                             <a href="/aplikace" className="hidden lg:block lg:text-sm lg:font-semibold lg:leading-6 lg:text-gray-900">
                                 Osobní zóna
                             </a>
-                    <a
+                    <Link
                         href="/kosik?pobocka=praha"
                         className="rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     >
-                        Rezervovat
-                    </a>
+                        Vybrat termín
+                    </Link>
                 </div>
                 <div className="flex lg:hidden">
                     <button
@@ -61,12 +62,12 @@ export default function MenuBar() {
                             <span className="sr-only">na-zkousku.cz</span>
                             <Image src={logo} alt={"logo na-zkousku.cz"} className="w-auto h-6" />
                         </a>
-                        <a
+                        <Link
                             href="/kosik?pobocka=praha"
                             className="ml-auto rounded-md bg-blue-600 px-3 py-2 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
                         >
-                            Rezervovat
-                        </a>
+                            Vybrat termín
+                        </Link>
                         <button
                             type="button"
                             className="-m-2.5 rounded-md p-2.5 text-gray-700"

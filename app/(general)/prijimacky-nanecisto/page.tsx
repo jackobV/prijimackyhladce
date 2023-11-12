@@ -1,13 +1,9 @@
-import LandingFeatures1 from "@/app/(general)/prijimacky-nanecisto/(components)/landingFeatures1";
-import TestDaySchedule from "@/app/(general)/(components)/testDaySchedule";
 import VideoIntroduction from "@/app/(general)/prijimacky-nanecisto/(components)/videoIntroduction";
 import Calendar from "@/app/(general)/(components)/calendar";
-import TestCardItemCTA from "@/app/(general)/(components)/testCardItemCTA";
 import DetailedIntroductionText from "@/app/(general)/prijimacky-nanecisto/(components)/detailedIntroductionText";
 import Testimonials from "@/app/(general)/(components)/testimonials";
 import JakFungujeKoupe from "@/app/(general)/(components)/jakFungujeKoupe";
 import LocationSection from "@/app/(general)/(components)/locationSection";
-import TestLanding from "@/app/(general)/prijimacky-nanecisto/(components)/testLanding";
 import LandingPageHero from "@/app/(general)/(components)/landingPageHero";
 
 export default function Page(){

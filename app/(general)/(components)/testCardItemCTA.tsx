@@ -1,4 +1,5 @@
 import { CheckCircleIcon } from '@heroicons/react/20/solid'
+import Link from "next/link";
 
 const includedFeatures = [
     'Test z Českého jazyka a matematiky ',
@@ -46,9 +47,9 @@ export default function TestCardItemCTA() {
                                     <span className="ml-3 text-xl font-medium tracking-normal text-gray-500">CZK</span>
                                 </div>
                                 <p className="mt-4 text-sm">
-                                    <a href="/testy" className="font-medium text-gray-500 underline">
+                                    <Link href="/testy" className="font-medium text-gray-500 underline">
                                         Zjisti více o tom co získáš.
-                                    </a>
+                                    </Link>
                                 </p>
                                 <div className="mt-6">
                                     <div className="rounded-md shadow">

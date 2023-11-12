@@ -1,5 +1,4 @@
 import KontaktSection from "@/app/(general)/kontakt/(components)/kontaktSection";
-import KontaktSectionHeader from "@/app/(general)/kontakt/(components)/kontaktSectionHeader";
 import Footer from "@/app/(general)/(components)/footer";
 import MenuBar from "@/app/(general)/(components)/menuBar";
 

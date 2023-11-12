@@ -1,5 +1,6 @@
 import Image from "next/image";
 import logo from "@/app/logo.png";
+import Link from "next/link";
 
 type SVGProps = React.SVGProps<SVGSVGElement>;
 const navigation = {
@@ -110,9 +111,9 @@ export default function Footer() {
                                 <ul role="list" className="mt-6 space-y-4">
                                     {navigation.nazkousku.map((item) => (
                                         <li key={item.name}>
-                                            <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                                            <Link href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                                                 {item.name}
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>
@@ -122,9 +123,9 @@ export default function Footer() {
                                 <ul role="list" className="mt-6 space-y-4">
                                     {navigation.aplikace.map((item) => (
                                         <li key={item.name}>
-                                            <a href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
+                                            <Link href={item.href} className="text-sm leading-6 text-gray-600 hover:text-gray-900">
                                                 {item.name}
-                                            </a>
+                                            </Link>
                                         </li>
                                     ))}
                                 </ul>

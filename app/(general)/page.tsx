@@ -1,7 +1,6 @@
 import LandingPageHero from "@/app/(general)/(components)/landingPageHero";
 import MenuBar from "@/app/(general)/(components)/menuBar";
 import LandingFeaturesOne from "@/app/(general)/(components)/landingFeaturesOne";
-import TestCardItemCTA from "@/app/(general)/(components)/testCardItemCTA";
 import LocationSection from "@/app/(general)/(components)/locationSection";
 import TestDaySchedule from "@/app/(general)/(components)/testDaySchedule";
 import Testimonials from "@/app/(general)/(components)/testimonials";

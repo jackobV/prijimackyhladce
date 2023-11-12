@@ -1,5 +1,6 @@
 import Image from "next/image";
 import pictureStudent from "../../(media)/student-.webp"
+import Link from "next/link";
 
 export default function LandingPageHero() {
 
@@ -24,13 +25,13 @@ export default function LandingPageHero() {
                             </p>
                             <div className="mt-10 flex items-center gap-x-6"
                             >
-                                <a
+                                <Link
                                     id="vyberterminhero"
                                     href="/kosik?pobocka=praha"
                                     className="rounded-md bg-blue-600 px-5 py-3  font-semibold text-white shadow-sm hover:bg-blue-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                                 >
                                     Vyber si termín.
-                                </a>
+                                </Link>
                             </div>
                         </div>
                         <Image

@@ -4,6 +4,7 @@ import Image from "next/image";
 import PocketBase from "pocketbase";
 import moment from "moment"
 import Map from "@/app/(general)/(components)/map"
+import Link from "next/link";
 export const revalidate = 3600
 export default async function LocationSection(){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
@@ -56,11 +57,11 @@ export default async function LocationSection(){
                                 <p className="text-gray-600 font-medium">Nadcházející termíny</p>
                                 <div className="flex flex-row gap-x-3">
                                     {futureDatesForPrague.map((item:any)=>(
-                                        <a href="/kosik?pobocka=praha"
+                                        <Link href="/kosik?pobocka=praha"
                                         id="vyberterminlokace"
                                         >
                                             <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500 hover:bg-blue-700 duration-75">{timestampToDayMonthString(item.date)}</div>
-                                        </a>
+                                        </Link>
                                     ))}
                                 </div>
                             </div>
