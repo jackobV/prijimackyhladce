@@ -22,6 +22,8 @@ export async function POST(req:Request,res:Response) {
                 },
             ],
             mode: 'payment',
+            allow_promotion_codes:true,
+            locale:"auto",
             success_url: `${requestHeaders.get("origin")?.valueOf()}/rezervacepotvrzena?success=true`,
             cancel_url: `${requestHeaders.get("origin")?.valueOf()}/rezervacepotvrzena?canceled=true`,
         });
