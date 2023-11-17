@@ -1,23 +1,25 @@
+import {ReactElement} from "react";
+
 interface Feature {
     uptitle:string;
     title:string;
-    text:string;
+    text:React.ReactNode;
 }
 let features:Array<Feature> = [
     {
         uptitle:"(Co)",
-        title:"Přijímačky na zkoušku pro 9. třídu",
-        text:"Pořádáme přesné simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi ten samý den rozebereme a vysvětlíme jednotlivé úlohy."
+        title:"Přijímačky nanečisto pro 9. třídu",
+        text:<p>Pořádáme <span className="font-medium">přesné simulace testů,</span> které Vás potkají u přijímaček na <span className="font-medium">střední školu / gymnázium</span>. Přijímačky nanečisto s Vámi ten samý den <span className="font-medium">rozebereme</span> a vysvětlíme jednotlivé úlohy.</p>
     },
     {
         uptitle:"(Kde)",
         title:"V Praze (u metra Budějovická)",
-        text:"Testy na zkoušku pořádáme v prostorech školy Edisona. Můžete k nám dojet autem a zaparkovat přímo v ulici. Od stanice Budějovická (metro C) je to k nám deset minut pěšky."
+        text:<p>Testy na zkoušku se konají v prostorech školy <span className="font-medium">Edisona.</span> Můžete k nám dojet autem a zaparkovat přímo v ulici. Od stanice <span className="font-medium">Budějovická</span> (metro C) je to k nám deset minut pěšky.</p>
     },
     {
-        uptitle:"(Kdy)",
-        title:"Vybrané soboty",
-        text:"V období listopad - duben pořádáme přijímačky na zkoušku každou sobotu. Všechny termíny najdete níže v kalendáři."
+        uptitle:"(Proč)",
+        title:"Celostní příprava",
+        text:<p>Přijímačky na zkoušku slouží jako <span className="font-medium">komplexní příprava.</span> Opakovanou účastí žáci pochopí <span className="font-medium">látku v souvislostech</span> a budou připraveni na všechny druhy úloh, které je mohou u přijímaček potkat. </p>
     },
 ]
 export default function LandingFeaturesOne(){
@@ -30,7 +32,7 @@ export default function LandingFeaturesOne(){
                         <p className="text-xs md:text-sm text-sky-700 font-medium">{item.uptitle}</p>
                         <h2 className="font-semibold tracking-tight text-lg pt-[2px]">{item.title}</h2>
                         </div>
-                        <p className="font-light pt-2 tracking-wide text-sm leading-relaxed">{item.text}</p>
+                        <div className="font-light pt-2 tracking-wide text-sm leading-relaxed">{item.text}</div>
                     </li>
             ))}
             </ul>
@@ -41,7 +43,7 @@ export default function LandingFeaturesOne(){
                             <p className="text-xs md:text-sm text-sky-700 font-medium">{item.uptitle}</p>
                             <h2 className="font-semibold tracking-tight md:text-xl pt-3">{item.title}</h2>
                         </div>
-                        <p className="font-light pt-5 tracking-wide text-sm md:text-base">{item.text}</p>
+                        <div className="font-light pt-5 tracking-wide text-sm md:text-base">{item.text}</div>
                     </li>
                 ))}
             </ul>

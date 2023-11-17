@@ -1,8 +1,8 @@
 import nazkouskufoto from "../../../(media)/na-zkousku-banner-w-testy.jpg"
 import Image from "next/image";
 let features:Array<string> = [
-    "Dodržení formátu CERMAT",
-    "Důkladné vysvětlení profesionály",
+    "Naučíš se pracovat s časem",
+    "Zákeřné úlohy ti srozumitelně vysvětlíme",
     "Přátelská a uvolněná atmosféra",
     "Prostor pro dotazy k nepochopené látce",
     "Přístup do studentského portálu s historií výsledků",

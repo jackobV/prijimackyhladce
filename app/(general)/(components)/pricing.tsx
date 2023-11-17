@@ -10,15 +10,13 @@ const includedFeatures = [
 
 export default function Pricing() {
     return (
-        <div className="bg-white" id="cenik">
+        <div className="" id="cenik">
             <div className="mx-auto max-w-6xl px-6 lg:px-8">
                 <div className="lg:mx-0 mx-auto max-w-2xl">
-                    <h2 className="text-2xl font-bold tracking-tight ">Garance spokojenosti a snadná změna termínu!</h2>
-                    <p className="pt-4 text-lg leading-8 text-gray-600">
-                        Pokud u nás nebudete spokojeni, vrátíme Vám peníze. Termín lze změnit do dvou dnů před přijímačkami na zkoušku.
-                    </p>
+                    <h2 className="text-2xl font-bold tracking-tight ">Nebudete spokojeni? Vrátíme Vám peníze!</h2>
+
                 </div>
-                <div className="mx-auto mt-10 max-w-2xl rounded-3xl ring-1 ring-gray-200  lg:mx-0 lg:flex lg:max-w-none">
+                <div className="mx-auto mt-10 max-w-2xl rounded-3xl ring-1 ring-gray-200  lg:mx-0 lg:flex lg:max-w-none bg-white">
                     <div className="p-8 sm:p-10 lg:flex-auto">
                         <h3 className="text-xl font-bold tracking-tight ">Přijímačky na zkoušku.</h3>
                         <p className="mt-6 text-base leading-7 text-gray-600">

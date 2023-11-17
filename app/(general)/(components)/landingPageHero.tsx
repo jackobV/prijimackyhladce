@@ -1,5 +1,5 @@
 import Image from "next/image";
-import pictureStudent from "../../(media)/student-.webp"
+import pictureStudent from "../../(media)/heroimagelanding.jpg"
 import Link from "next/link";
 
 export default function LandingPageHero() {
@@ -37,7 +37,7 @@ export default function LandingPageHero() {
                         <Image
                             src={pictureStudent}
                             alt=""
-                            className="mt-10 aspect-[6/5] w-full max-w-lg rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
+                            className="mt-10 aspect-[6/4] w-full max-w-xl rounded-2xl object-cover sm:mt-16 lg:mt-0 lg:max-w-none xl:row-span-2 xl:row-end-2 xl:mt-36"
                         />
                     </div>
                 </div>

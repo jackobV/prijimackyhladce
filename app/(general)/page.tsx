@@ -13,6 +13,8 @@ import VideoIntroduction from "@/app/(general)/prijimacky-nanecisto/(components)
 import Pricing from "@/app/(general)/(components)/pricing";
 import Footer from "@/app/(general)/(components)/footer";
 import React from "react";
+import ValueProposition from "@/app/(general)/(components)/valueProposition";
+import SaleModal from "@/app/(general)/(components)/SaleModal";
 export const metadata = {
     title: 'Na-zkoušku | na-zkousku.cz',
     description: 'Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy.',
@@ -28,16 +30,21 @@ export default function Home() {
         <section className="py-20 ">
             <LandingFeaturesOne />
         </section>
+
+        <section className="py-20 bg-gray-50">
+            <ValueProposition />
+        </section>
+        <section className="py-20">
+            <Pricing />
+        </section>
         <section className="">
-            <div className="bg-gray-50 py-20">
+            <div className=" py-20">
                 <section>
                     <LocationSection />
                 </section>
             </div>
         </section>
-        <section className="py-20">
-            <Pricing />
-        </section>
+
         <section className="bg-gray-50 py-20">
             <VideoIntroduction />
         </section>

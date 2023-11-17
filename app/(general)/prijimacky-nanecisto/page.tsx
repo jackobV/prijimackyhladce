@@ -5,6 +5,7 @@ import Testimonials from "@/app/(general)/(components)/testimonials";
 import JakFungujeKoupe from "@/app/(general)/(components)/jakFungujeKoupe";
 import LocationSection from "@/app/(general)/(components)/locationSection";
 import LandingPageHero from "@/app/(general)/(components)/landingPageHero";
+import SaleModal from "@/app/(general)/(components)/SaleModal";
 
 export default function Page(){
     return(
