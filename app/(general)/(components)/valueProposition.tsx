@@ -35,7 +35,7 @@ const features:Array<features> = [
     {
         name: 'Poradíš si i s tím co neumíš',
         description:
-            'Když u přijímaček narazíš na látku, která ti nejde, nerozhodí tě to na celý zbytek testu. Naučíš se jak si nejlépe tipnout, nebo zhodnotíš, že je lepší úlohu přeskočit.  ',
+            'Když u přijímaček narazíš na látku, která ti nejde, nerozhodí tě to na celý zbytek testu. Naučíš se, jak si nejlépe tipnout, nebo zhodnotíš, že je lepší úlohu přeskočit.  ',
         icon: ExclamationTriangleIcon,
     },
     {
