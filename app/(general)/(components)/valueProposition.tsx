@@ -1,5 +1,6 @@
-import { ClockIcon, KeyIcon, ChartBarIcon } from '@heroicons/react/24/outline'
+import { ClockIcon, KeyIcon, ChartBarIcon, BoltIcon, ExclamationTriangleIcon, PuzzlePieceIcon } from '@heroicons/react/24/outline'
 import {ForwardRefExoticComponent, RefAttributes, SVGProps} from "react";
+import Link from "next/link";
 interface features {
     description: string;
     icon : ForwardRefExoticComponent<Omit<SVGProps<SVGSVGElement>, "ref"> & {     title?: string | undefined;     titleId?: string | undefined; } & RefAttributes<SVGSVGElement>>;
@@ -10,7 +11,7 @@ const features:Array<features> = [
     {
         name: 'Naučíš se pracovat s časem',
         description:
-            'Zjistíš jak dlouho ti trvají jednotlivé druhy úloh. Díky tomu se nedostaneš do situace, kdy nad cvičením strávíš deset minut a ze stresu, že test nestíháš, vše zapomeneš.',
+            'Zjistíš jak dlouho ti trvají jednotlivé části testu. Díky tomu se nedostaneš do situace, kdy z pocitu, že test nestíháš, vše zapomeneš.',
         icon: ClockIcon,
     },
     {
@@ -22,8 +23,26 @@ const features:Array<features> = [
     {
         name: 'Zjistíš, co nezvládáš na 100%',
         description:
-            'Jedna z nejtěžších oblastí přípravy je vědět, co se učit. Je důležité přesně znát své silné a slabé stránky. U nás zjistíš, na jakou látku se zaměřit.',
+            'Jedna z nejtěžších oblastí přípravy je vědět, co se učit. Je důležité přesně znát své silné a slabé stránky. U nás zjistíš, na kterou látku se zaměřit.',
         icon: ChartBarIcon,
+    },
+    {
+        name: 'K přijímačkám nepůjdeš ve stresu',
+        description:
+            'K přijímačkám nepůjdeš na cizí půdu. Budeš vědět přesně jak na tom jsi a co očekávat. S čistou hlavou a bez stresu podáš svůj nejlepší výkon.',
+        icon: BoltIcon,
+    },
+    {
+        name: 'Poradíš si i s tím co neumíš',
+        description:
+            'Když u přijímaček narazíš na látku, která ti nejde, nerozhodí tě to na celý zbytek testu. Naučíš se jak si nejlépe tipnout, nebo zhodnotíš, že je lepší úlohu přeskočit.  ',
+        icon: ExclamationTriangleIcon,
+    },
+    {
+        name: 'Úlohy vyřešíš intuitivně',
+        description:
+            'Ke správné odpovědi se nebudeš muset dobírat dlouho. Poznáš druh úlohy a řešení ti naskočí intuitivně. Ušetřený čas tak využiješ u náročnějších cvičení.',
+        icon: PuzzlePieceIcon,
     },
 ]
 
@@ -45,7 +64,7 @@ export default function ValueProposition() {
                         {features.map((feature:features) => (
                             <div key={feature.name} className="flex flex-col">
                                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                                    <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-blue-600">
+                                    <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500">
                                         <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                                     </div>
                                     {feature.name}
@@ -57,7 +76,17 @@ export default function ValueProposition() {
                         ))}
                     </dl>
                 </div>
+                <div className="mx-auto max-w-md flex flex-col items-center pt-20">
+                    <Link
+                        id="vyberterminhero"
+                        href="/kosik?pobocka=praha"
+                        className="rounded-xl bg-orange-500 w-full text-center text-lg py-3  font-semibold text-white shadow-sm hover:bg-orange-700 duration-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                    >
+                        Přihlaš se na termín!
+                    </Link>
+                </div>
             </div>
+
         </div>
     )
 }
