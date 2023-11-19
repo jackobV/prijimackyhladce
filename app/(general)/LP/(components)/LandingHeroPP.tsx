@@ -19,10 +19,8 @@ export default function LandingHeroPP(){
                     <div className="mx-auto max-w-6xl px-6 lg:px-8">
                         <div className="flex flex-col lg:flex-row gap-x-16 items-center justify-center">
                             <div className="flex flex-col max-w-xl w-full">
-                                <h1 className="max-w-2xl text-5xl font-bold  text-gray-900 sm:text-6xl sm:leading-tight leading-tight text-center pb-5">
-                                    Přijímačky 2024?
-                                    <br/>
-                                    Vyzkoušej si je!
+                                <h1 className="max-w-2xl text-5xl font-semibold  text-gray-900 sm:text-6xl sm:leading-tight leading-tight text-center pb-5">
+                                    Zvládní přijímačky bez stresu!
                                 </h1>
                                 <p className="text-lg leading-8 text-gray-700 text-center pb-5">
                                     Vyzkoušej si <strong>CERMAT příjímačky nanečisto!</strong> Napíšeš si s námi test z češtiny a matematiky, který s tebou následně <strong>důkladně rozebereme. </strong>
