@@ -64,7 +64,7 @@ export default function ValueProposition() {
                         {features.map((feature:features) => (
                             <div key={feature.name} className="flex flex-col">
                                 <dt className="text-base font-semibold leading-7 text-gray-900">
-                                    <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-500">
+                                    <div className="mb-6 flex h-10 w-10 items-center justify-center rounded-lg bg-orange-400">
                                         <feature.icon className="h-6 w-6 text-white" aria-hidden="true" />
                                     </div>
                                     {feature.name}
@@ -80,7 +80,7 @@ export default function ValueProposition() {
                     <Link
                         id="vyberterminhero"
                         href="/kosik?pobocka=praha"
-                        className="rounded-xl bg-orange-500 w-full text-center text-lg py-3  font-semibold text-white shadow-sm hover:bg-orange-700 duration-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                        className="rounded-xl bg-orange-500 w-full text-center text-lg py-3  font-semibold text-white shadow-sm hover:bg-blue-700 duration-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     >
                         Přihlaš se na termín!
                     </Link>

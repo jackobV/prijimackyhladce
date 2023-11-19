@@ -16,6 +16,7 @@ import Footer from "@/app/(general)/(components)/footer";
 import Pricing from "@/app/(general)/(components)/pricing";
 import PricingPP from "@/app/(general)/LP/(components)/PricingPP";
 import TestDaySchedulePP from "@/app/(general)/LP/(components)/TestDayScheadulePP";
+import SocialProof from "@/app/(general)/LP/(components)/SocialProof";
 
 
 
@@ -26,13 +27,13 @@ export const metadata = {
 
 export default function Page(){
 return <main>
-    <section className="pt-5 pb-10">
+    <section className="pt-5">
         <LandingHeroPP />
     </section>
-    <section className="py-20">
-        <LandingFeaturesOnePP />
+    <section className="md:pt-40  md:pb-32 py-10">
+        <SocialProof />
     </section>
-    <section className="py-20 bg-sky-100">
+    <section className="py-20 bg-orange-400/10">
         <ValueProposition />
     </section>
     <section className="py-20">
