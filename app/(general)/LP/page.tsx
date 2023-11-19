@@ -13,6 +13,12 @@ import CTAbuy from "@/app/(general)/(components)/CTAbuy";
 import JsmeSVami from "@/app/(general)/(components)/jsmeSVami";
 import Qna from "@/app/(general)/(components)/qna";
 import Footer from "@/app/(general)/(components)/footer";
+import Pricing from "@/app/(general)/(components)/pricing";
+import PricingPP from "@/app/(general)/LP/(components)/PricingPP";
+import TestDaySchedulePP from "@/app/(general)/LP/(components)/TestDayScheadulePP";
+
+
+
 
 export default function Page(){
 return <main>
@@ -32,14 +38,18 @@ return <main>
         <Testimonials />
     </section>
     <section className="py-10">
-        <TestDaySchedule />
+        <TestDaySchedulePP />
     </section>
-    <section className="py-20">
-        <JakVypadaTest />
+    <section className="py-10">
+        <PricingPP />
     </section>
     <section className="py-20">
         <JakFungujeKoupe />
     </section>
+    <section className="py-20">
+        <JakVypadaTest />
+    </section>
+
     <section className="">
         <CTAbuy />
     </section>
