@@ -17,9 +17,10 @@ interface TestDate{
     full:boolean;
     price:string;
     location:string;
+    fullnessLevel:number;
 }
 
-interface Date{
+export interface Date{
     id:string;
     day:string;
     month:string;
@@ -29,6 +30,7 @@ interface Date{
     stripe_price_id:string;
     stripe_test_price_id:string;
     location:string;
+    fullnessLevel:number;
 }
 export interface TestDateProps{
     testDates:Array<Date>;
@@ -63,7 +65,8 @@ export default async function Kosik({searchParams}:{searchParams:any}){
         archived:item.archived,
         full:item.full,
         price:item.price,
-        location:item.location
+        location:item.location,
+        fullnessLevel:item.fullnessLevel
     }))
     console.log(testDates)
 
@@ -78,6 +81,7 @@ export default async function Kosik({searchParams}:{searchParams:any}){
             stripe_test_price_id:item.stripe_test_price_id,
             stripe_price_id:item.stripe_price_id,
             location:item.location,
+            fullnessLevel:item.fullnessLevel
         })) || [];
     }
     const propsForClient: TestDateProps = { testDates: transformArray(testDates), location: location}

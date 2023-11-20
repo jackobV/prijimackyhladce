@@ -5,6 +5,7 @@ import { Disclosure } from '@headlessui/react'
 import React, {useEffect, useState} from "react";
 import {TestDateProps} from "@/app/(kosik)/kosik/page";
 import ChangeLocation from "@/app/(kosik)/kosik/(components)/changeLocation";
+import DateBrickTall from "@/app/(kosik)/kosik/(components)/DateBrickTall";
 
 export default function PickADateAndReview({step, setStep, items, setItems,numberOfDates,setNumberOfDates,location} : {step:number,items:TestDateProps,numberOfDates:number,setItems: React.Dispatch<React.SetStateAction<TestDateProps>>,setStep: React.Dispatch<React.SetStateAction<number>>,setNumberOfDates: React.Dispatch<React.SetStateAction<number>>,location:string}){
     const [show, setShow] = useState(false)
@@ -52,7 +53,7 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
         setItems({location:items.location, testDates:updatedItems})
     }
     return(
-        <div className="mx-auto max-w-6xl px-6 lg:px-8 overflow-hidden pt-16">
+        <div className="mx-auto max-w-6xl px-6 lg:px-8 overflow-hidden">
             <h2 className=" font-bold pb-2">Volné termíny pro</h2>
             <div className="w-48 pb-10">
                 <ChangeLocation location={location} />
@@ -61,31 +62,7 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
                 <div className="py-2 bg-gray-100 flex flex-col items-center gap-y-2 rounded-md">
                     <div className="flex flex-row w-full overflow-x-auto sm:inline sm:grid sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-x-4 sm:overflow-hidden px-4 gap-y-8 py-2">
                         {itemsForLocation.map((item)=>(
-                            <div className="flex flex-col items-center justify-between bg-white px-4 h-56 w-36 shrink-0 rounded-md shadow-md">
-                                <div className="flex flex-col items-center pt-7">
-                                    <p className="font-semibold text-2xl ">{item.day}.{item.month}</p>
-                                    <p className="text-xs text-center pt-2">přijímačky na zkoušku</p>
-                                </div>
-                                {item.inCart == 0?
-                                    <div className="w-full pb-3 flex flex-col items-center">
-                                        <p className="font-semibold text-blue-700 text-center pb-2 text-sm">690,- CZK</p>
-                                        <button className="border border-black shadow-md rounded-lg text-center items-center flex flex-col w-3/4 py-1 text-sm font-semibold" onClick={()=>handleAddToCart(item.id)}>Do košíku</button>
-                                    </div>:
-                                    <div className="flex flex-col gap-y-2 w-3/4">
-                                        <div className="bg-blue-400 rounded-md py-1 px-1">
-                                            <p className="font-semibold tracking-tight text-xs text-center">
-                                                {item.inCart}ks <span className="font-normal">za</span><br /> {item.inCart*690},- Kč
-
-                                            </p>
-                                        </div>
-                                        <div className="flex flex-row justify-between items-center  w-full pb-4">
-                                            <button className="flex flex-col items-center justify-center h-6 w-6 rounded-md border border-black font-bold" onClick={()=>{handleAddLessToCart(item.id)}}>–</button>
-                                            <p className="font-bold text-xl">{item.inCart}</p>
-                                            <button className="flex flex-col items-center justify-center h-6 w-6 rounded-md font-bold bg-blue-500 text-white" onClick={()=>{handleAddMoreToCart(item.id)}}>+</button>
-                                        </div>
-                                    </div>
-                                }
-                            </div>
+                            <DateBrickTall item={item} handleAddLessToCart={handleAddLessToCart} handleAddToCart={handleAddToCart} handleAddMoreToCart={handleAddMoreToCart} />
                         ))}
 
                     </div>
@@ -95,30 +72,7 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
                 <div className="py-2 bg-gray-100 flex flex-col items-center gap-y-10 rounded-md">
                 <div className="flex flex-row w-full overflow-x-auto sm:inline sm:grid sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-6 gap-x-4 sm:overflow-hidden px-4 h-60 gap-y-10 py-2">
                     {itemsForLocation.map((item)=>(
-                        <div className="flex flex-col items-center justify-between bg-white px-4 h-56 w-36 shrink-0 rounded-md shadow-md">
-                            <div className="flex flex-col items-center pt-7">
-                                <p className="font-semibold text-2xl ">{item.day}.{item.month}</p>
-                                <p className="text-xs text-center pt-2">přijímačky na zkoušku</p>
-                            </div>
-                            {item.inCart == 0?
-                                <div className="w-full pb-3 flex flex-col items-center">
-                                    <p className="font-semibold text-blue-700 text-center pb-2 text-sm">690,- CZK</p>
-                                    <button className="border border-black shadow-md rounded-lg flex flex-col w-3/4 py-1 text-sm text-center items-center font-semibold" onClick={()=>handleAddToCart(item.id)}>Do košíku</button>
-                                </div>:
-                                <div className="flex flex-col gap-y-2 w-3/4">
-                                    <div className="bg-blue-400 rounded-md py-1 px-1">
-                                        <p className="font-semibold tracking-tight text-xs text-center">
-                                            {item.inCart}ks <span className="font-normal">za</span><br /> {item.inCart*690},- Kč
-                                        </p>
-                                    </div>
-                                    <div className="flex flex-row justify-between items-center  w-full pb-4">
-                                        <button className="flex flex-col items-center justify-center h-6 w-6 rounded-md border border-black font-bold" onClick={()=>{handleAddLessToCart(item.id)}}>–</button>
-                                        <p className="font-bold text-xl">{item.inCart}</p>
-                                        <button className="flex flex-col items-center justify-center h-6 w-6 rounded-md font-bold bg-blue-500 text-white" onClick={()=>{handleAddMoreToCart(item.id)}}>+</button>
-                                    </div>
-                                </div>
-                            }
-                        </div>
+                        <DateBrickTall item={item} handleAddLessToCart={handleAddLessToCart} handleAddToCart={handleAddToCart} handleAddMoreToCart={handleAddMoreToCart} />
                     ))}
 
                 </div>

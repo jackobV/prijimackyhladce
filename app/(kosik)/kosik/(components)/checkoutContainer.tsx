@@ -4,6 +4,8 @@ import PickADateAndReview from "@/app/(kosik)/kosik/(components)/pickADateAndRev
 import CheckoutForm from "@/app/(kosik)/kosik/(components)/checkoutForm";
 import ProgressBar from "@/app/(kosik)/kosik/(components)/progressBar";
 import {TestDateProps} from "@/app/(kosik)/kosik/page";
+import ObjectionHandle from "@/app/(kosik)/kosik/(components)/ObjectionHandle";
+import ObjectionHandleTop from "@/app/(kosik)/kosik/(components)/ObjectionHandleTop";
 interface TestDate{
     id:string;
     day:string;
@@ -25,6 +27,9 @@ export default function CheckoutContainer({ testDates, }:{testDates:TestDateProp
     return(
         <div>
             <ProgressBar step={step} />
+            <section className="py-10">
+                <ObjectionHandleTop />
+            </section>
             {step === 0?
                 <div><PickADateAndReview step={step} setStep={setStep} setItems={setItems} items={items} numberOfDates={numberOfDates} setNumberOfDates={setNumberOfDates} location={testDates.location} /></div>
                 :
@@ -32,6 +37,9 @@ export default function CheckoutContainer({ testDates, }:{testDates:TestDateProp
                     <CheckoutForm items={items} numberOfDates={numberOfDates} location={testDates.location} />
                 </div>
             }
+            <section className="py-10">
+                <ObjectionHandle />
+            </section>
         </div>
     )
 }
