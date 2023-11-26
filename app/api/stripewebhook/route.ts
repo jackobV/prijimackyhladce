@@ -36,16 +36,15 @@ export async function POST(req: Request){
             const paymentIntent: string = event.data.object.payment_intent
             console.log(databaseIds)
             const user = await pb.collection("users").getOne(customerId)
-            const ticketIdArray:Array<string> = []
+            const userNewTickets:Array<string> = []
             const ticketDateArray: Array<string> = []
-            ticketIdArray.push(user.tickets)
             for (const databaseId of databaseIds){
                 try{
                     const ticket = await pb.collection("ticket").create({
                         "user":customerId,
                         "testy":databaseId
                     })
-                    ticketIdArray.push(ticket.id)
+                    userNewTickets.push(ticket.id)
                     const testDate = await pb.collection("testy").getOne(databaseId)
                     ticketDateArray.push(testDate.date)
                     console.log(testDate.date)
@@ -57,12 +56,13 @@ export async function POST(req: Request){
                     console.log(e)
                 }
             }
+            const userCombinedTickets = [...user.tickets,userNewTickets]
             await pb.collection("users").update(customerId,{
-                "tickets":ticketIdArray
+                "tickets":userCombinedTickets
             })
             const purchase = await pb.collection("purchase").create({
                 "user":customerId,
-                "tickets":ticketIdArray,
+                "tickets":userNewTickets,
                 "payment_intent":paymentIntent,
                 "total_price":event.data.object.amount_total
             })
@@ -73,7 +73,7 @@ export async function POST(req: Request){
                 purchaseId:purchase.id,
                 itemDates:ticketDateArray,
                 totalPrice:event.data.object.amount_total,
-                ticketIds:ticketIdArray
+                ticketIds:userNewTickets
             }
             await OrderConfirmationEmail({emailData:emailData})
         }
