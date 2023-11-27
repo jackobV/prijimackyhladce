@@ -27,14 +27,19 @@ export default function CheckoutContainer({ testDates, }:{testDates:TestDateProp
     return(
         <div>
             <ProgressBar step={step} />
-            <section className="py-10">
-                <ObjectionHandleTop />
-            </section>
             {step === 0?
-                <div><PickADateAndReview step={step} setStep={setStep} setItems={setItems} items={items} numberOfDates={numberOfDates} setNumberOfDates={setNumberOfDates} location={testDates.location} /></div>
+                <div>
+                    <section className="py-10">
+                        <ObjectionHandleTop />
+                    </section>
+                    <PickADateAndReview step={step} setStep={setStep} setItems={setItems} items={items} numberOfDates={numberOfDates} setNumberOfDates={setNumberOfDates} location={testDates.location} /></div>
                 :
                 <div>
+
                     <CheckoutForm items={items} numberOfDates={numberOfDates} location={testDates.location} />
+                    <section className="py-10">
+                        <ObjectionHandleTop />
+                    </section>
                 </div>
             }
             <section className="py-10">

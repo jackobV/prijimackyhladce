@@ -4,6 +4,7 @@ import {redirect} from "next/navigation";
 import {useEffect, useState} from "react";
 import TicketGrid from "@/app/(aplikace)/aplikace/(components)/ticketGrid";
 import AppMenuBar from "@/app/(aplikace)/aplikace/(components)/appMenuBar";
+import ResultsChartWrapper from "@/app/(aplikace)/aplikace/(chart-components)/resultsChartWrapper";
 
 
 export default function Page(){
@@ -17,10 +18,13 @@ export default function Page(){
     },[])
     return(
         <div>
-            <section className="pt-10">
+            <section className="py-12">
                 <AppMenuBar />
             </section>
-            <section className="pt-24">
+            <section className="py-12">
+                <ResultsChartWrapper />
+            </section>
+            <section className="pt-12">
                 <TicketGrid />
             </section>
         </div>
