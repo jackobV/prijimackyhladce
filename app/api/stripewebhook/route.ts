@@ -59,7 +59,7 @@ export async function POST(req: Request){
             console.log("user tickets" + user.tickets)
             console.log("user tickets" + userNewTickets)
 
-            const userCombinedTickets = [...user.tickets,userNewTickets]
+            const userCombinedTickets = [...user.tickets,...userNewTickets]
             console.log("user tickets new to push  " + userCombinedTickets)
 
             await pb.collection("users").update(customerId,{
