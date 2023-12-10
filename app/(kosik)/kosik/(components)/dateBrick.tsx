@@ -4,6 +4,7 @@ interface Date{
     id:string;
     day:string;
     month:string;
+    year:string;
     available:boolean;
     active:boolean;
 }

@@ -9,9 +9,10 @@ export default function DateBrickTall({item, handleAddLessToCart, handleAddToCar
             <div className="flex flex-col items-center justify-between bg-white px-4 h-56 w-36 shrink-0 rounded-md shadow-md">
                 <div className="flex flex-col items-center pt-7">
                     <p className="font-semibold text-2xl ">{item.day}.{item.month}</p>
+                    <p className="text-sm text-gray-600">{item.year}</p>
                     {item.fullnessLevel == 0?
-                        <div className="text-green-600 text-sm pt-3 flex flex-col justify-between items-center gap-y-2 font-medium"><div><FaceSmileIcon className="w-4 h-4 font-bold" /></div><p>Volno</p></div>:
-                        <div className="text-orange-600 text-sm pt-3 flex flex-col justify-between items-center gap-y-2 font-medium text-center"><div><FaceFrownIcon className="w-4 h-4 font-bold" /></div><p>Posledních pár volných míst</p></div>
+                        <div className="text-green-600 text-xs pt-2 flex flex-col justify-between items-center gap-y-2 font-medium"><div><FaceSmileIcon className="w-4 h-4 font-bold" /></div><p>Volno</p></div>:
+                        <div className="text-orange-600 text-xs pt-2 flex flex-col justify-between items-center gap-y-2 font-medium text-center"><div><FaceFrownIcon className="w-4 h-4 font-bold" /></div><p>Posledních pár volných míst</p></div>
 
                     }
                 </div>

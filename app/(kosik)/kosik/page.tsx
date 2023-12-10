@@ -11,6 +11,7 @@ interface TestDate{
     id:string;
     day:string;
     month:string;
+    year:string;
     stripe_price_id:string;
     stripe_test_price_id:string;
     archived:boolean;
@@ -24,6 +25,7 @@ export interface Date{
     id:string;
     day:string;
     month:string;
+    year:string;
     available:boolean;
     active:boolean;
     inCart:number;
@@ -48,18 +50,20 @@ export default async function Kosik({searchParams}:{searchParams:any}){
         sort: 'date',
         filter: 'archived = false'
     });
-    function extractDayAndMonth(utcDateString: string): { day: string, month: string } {
+    function extractDayMonthYear(utcDateString: string): { day: string, month: string, year: string } {
         const date = new Date(utcDateString);
-        // Get day and month. Note that getMonth() returns months from 0-11.
+        // Get day, month, and year. Note that getMonth() returns months from 0-11.
         const day = date.getUTCDate().toString();
         const month = (date.getUTCMonth() + 1).toString(); // Adding 1 to get months from 1-12.
+        const year = date.getUTCFullYear().toString();
 
-        return { "day":day, "month":month };
+        return { day, month, year };
     }
     const testDates:Array<TestDate> = records.map((item:any)=>({
         id:item.id,
-        day:extractDayAndMonth(item.date).day,
-        month:extractDayAndMonth(item.date).month,
+        day:extractDayMonthYear(item.date).day,
+        month:extractDayMonthYear(item.date).month,
+        year:extractDayMonthYear(item.date).year,
         stripe_price_id:item.stripe_price_id,
         stripe_test_price_id:item.stripe_test_price_id,
         archived:item.archived,
@@ -75,6 +79,7 @@ export default async function Kosik({searchParams}:{searchParams:any}){
             id:item.id,
             day:item.day,
             month:item.month,
+            year:item.year,
             available:!(item.archived && item.full),
             active:false,
             inCart:0,
