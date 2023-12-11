@@ -52,7 +52,7 @@ export default function TicketBrick({test}:{test:testInstance}){
 
                                         <div className="mt-3 text-center sm:mt-5">
                                             <Dialog.Title as="h3" className="text-base font-semibold leading-6 text-gray-900">
-                                                Výsledku testu
+                                                Výsledky testu
                                             </Dialog.Title>
                                             <div className="mt-5">
                                                 <div className="flex flex-col gap-y-3">
@@ -85,9 +85,9 @@ export default function TicketBrick({test}:{test:testInstance}){
                     </div>
                 </Dialog>
             </Transition.Root>
-                    <div className="overflow-hidden flex flex-col rounded-xl  bg-gray-50 max-w-md">
+                    <div className="overflow-hidden flex flex-col rounded-xl  bg-gray-50 max-w-md dark:bg-gray-900 dark:text-gray-200">
                         <div className="py-6 px-6">
-                            <div className="flex flex-row justify-between">
+                            <div className="flex flex-row justify-between dark:text-gray-200">
                                 <div>
                                     Test dne <span className="font-medium">{formatDate(test.date)}</span>
                                 </div>

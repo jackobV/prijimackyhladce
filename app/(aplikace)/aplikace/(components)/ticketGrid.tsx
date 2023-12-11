@@ -46,7 +46,11 @@ export default function TicketGrid(){
                         }
                     })
                 }
-                setTickets(resultArray);
+                if(resultArray.length == 0){
+                    setTickets(undefined)
+                }else{
+                    setTickets(resultArray);
+                }
             }
         } catch (e){
             console.log(e)

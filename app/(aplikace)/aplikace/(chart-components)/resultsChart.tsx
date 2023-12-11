@@ -57,6 +57,7 @@ export default function ResultsChart({results}:{results:dataPointsSet}){
     return(
 
         <div className="h-60 bg-gray-50 max-w-xl rounded-lg">
+            {results.cj.length}
             <VictoryChart height={200} width={500}>
                 <VictoryLegend x={400} y={0}
                                orientation="vertical"

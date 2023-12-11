@@ -35,7 +35,7 @@ export default function Osuform(){
         }
     }
     return(
-        <div className="max-w-6xl mx-auto">
+        <div className="max-w-6xl mx-auto dark:text-gray-200">
             <div className="flex flex-col md:flex-row gap-x-10 w-full gap-y-5">
                 <div className="md:w-1/4">
                     <h2 className="font-semibold text-lg">Obecné nastavení</h2>
@@ -45,17 +45,17 @@ export default function Osuform(){
                         <div className="flex flex-col md:flex-row gap-x-10 gap-y-2">
                             <div className="flex flex-col gap-y-1">
                                 <p>Jméno</p>
-                                <input type="text" className="md:w-72 rounded-md border border-gray-300" value={name} ref={nameRef} onChange={e => setEmail(e.target.value)} />
+                                <input type="text" className="md:w-72 rounded-md border border-gray-300 text-gray-800" value={name} ref={nameRef} onChange={e => setName(e.target.value)} />
                             </div>
                             <div className="flex flex-col">
                                 <p>Přijímení</p>
-                                <input type="text" className="md:w-72 rounded-md border border-gray-300" value={surname} ref={surnameRef} onChange={e => setSurname(e.target.value)} />
+                                <input type="text" className="md:w-72 rounded-md border border-gray-300 text-gray-800" value={surname} ref={surnameRef} onChange={e => setSurname(e.target.value)} />
                             </div>
                         </div>
                         <div className="flex flex-col md:flex-row w-full gap-y-1">
                             <div className="flex flex-col w-full">
                                 <p>Email</p>
-                                <input type="text" className="md:w-72 rounded-md border border-gray-300" value={email} onChange={e => setEmail(e.target.value)} ref={emailRef} />
+                                <input type="text" className="md:w-72 rounded-md border border-gray-300 text-gray-800" value={email} onChange={e => setEmail(e.target.value)} ref={emailRef} />
                             </div>
                         </div>
                         <button className="md:w-72 rounded-md text-center py-2 bg-blue-600 text-white font-semibold text-sm hover:bg-blue-700" type="submit">Uložit změny</button>

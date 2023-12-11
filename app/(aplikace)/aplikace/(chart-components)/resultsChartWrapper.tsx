@@ -62,6 +62,7 @@ export default function ResultsChartWrapper(){
             {dataset?
                 <div className="">
                     <ResultsChart results={dataset} />
+                    {}
                 </div>
                 :
                 <div></div>
