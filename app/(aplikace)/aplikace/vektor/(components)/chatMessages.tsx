@@ -32,9 +32,9 @@ const ChatMessages: FC<ChatMessagesProps> = ({ className, ...props }) => {
                                     'order-2 items-start': !message.isUserMessage,
                                 })}>
                                 <p
-                                    className={cn('px-4 py-2 rounded-lg', {
+                                    className={cn('px-4 py-2 rounded-xl', {
                                         'bg-blue-600 text-white': message.isUserMessage,
-                                        'bg-gray-200 text-gray-900': !message.isUserMessage,
+                                        'bg-gray-200 text-gray-900 py-4': !message.isUserMessage,
                                     })}>
                                     <TextWithLatex text={message.text} />
                                 </p>

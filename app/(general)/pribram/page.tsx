@@ -1,5 +1,5 @@
 import LandingFeaturesOnePribram from "@/app/(general)/pribram/(components)/LandingFeaturesOnePribram";
-import VideoIntroduction from "@/app/(general)/prijimacky-nanecisto/(components)/videoIntroduction";
+import VideoIntroduction from "@/app/(general)/(components)/videoIntroduction";
 import PricingPribram from "@/app/(general)/pribram/(components)/pricingPribram";
 import Testimonials from "@/app/(general)/(components)/testimonials";
 import TestDaySchedule from "@/app/(general)/(components)/testDaySchedule";

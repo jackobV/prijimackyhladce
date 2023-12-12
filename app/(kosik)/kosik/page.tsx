@@ -1,10 +1,8 @@
-import PickADateAndReview from "@/app/(kosik)/kosik/(components)/pickADateAndReview";
-import MenuBar from "@/app/(general)/(components)/menuBar";
 import CheckoutContainer from "@/app/(kosik)/kosik/(components)/checkoutContainer";
 import PocketBase from 'pocketbase';
 import Footer from "@/app/(general)/(components)/footer";
-import MenuPribram from "@/app/(general)/pribram/(components)/menuPribram";
 import KosikMenu from "@/app/(kosik)/kosik/(components)/KosikMenu";
+import formateUTCDateString from "@/app/helperFunctions/formateUTCDateString";
 export const revalidate = 0
 export const dynamic = 'force-dynamic'
 interface TestDate{
@@ -50,20 +48,11 @@ export default async function Kosik({searchParams}:{searchParams:any}){
         sort: 'date',
         filter: 'archived = false'
     });
-    function extractDayMonthYear(utcDateString: string): { day: string, month: string, year: string } {
-        const date = new Date(utcDateString);
-        // Get day, month, and year. Note that getMonth() returns months from 0-11.
-        const day = date.getUTCDate().toString();
-        const month = (date.getUTCMonth() + 1).toString(); // Adding 1 to get months from 1-12.
-        const year = date.getUTCFullYear().toString();
-
-        return { day, month, year };
-    }
     const testDates:Array<TestDate> = records.map((item:any)=>({
         id:item.id,
-        day:extractDayMonthYear(item.date).day,
-        month:extractDayMonthYear(item.date).month,
-        year:extractDayMonthYear(item.date).year,
+        day:formateUTCDateString(item.date).day,
+        month:formateUTCDateString(item.date).month,
+        year:formateUTCDateString(item.date).year,
         stripe_price_id:item.stripe_price_id,
         stripe_test_price_id:item.stripe_test_price_id,
         archived:item.archived,

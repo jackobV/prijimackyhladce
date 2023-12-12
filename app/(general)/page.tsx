@@ -9,12 +9,11 @@ import CTAbuy from "@/app/(general)/(components)/CTAbuy";
 import JsmeSVami from "@/app/(general)/(components)/jsmeSVami";
 import JakFungujeKoupe from "@/app/(general)/(components)/jakFungujeKoupe";
 import Qna from "@/app/(general)/(components)/qna";
-import VideoIntroduction from "@/app/(general)/prijimacky-nanecisto/(components)/videoIntroduction";
+import VideoIntroduction from "@/app/(general)/(components)/videoIntroduction";
 import Pricing from "@/app/(general)/(components)/pricing";
 import Footer from "@/app/(general)/(components)/footer";
 import React from "react";
 import ValueProposition from "@/app/(general)/(components)/valueProposition";
-import SaleModal from "@/app/(general)/(components)/SaleModal";
 export const metadata = {
     title: 'Na-zkoušku | na-zkousku.cz',
     description: 'Pořádáme simulace testů, které Vás potkají u přijímaček na střední školu/gymnázium. Přijímačky nanečisto s Vámi v ten samý den rozebereme a vysvětlíme jednotlivé úlohy.',

@@ -2,25 +2,11 @@ import {testInstance} from "@/app/(aplikace)/aplikace/(components)/ticketGrid";
 import {Dialog, Transition} from "@headlessui/react";
 import {Fragment, useRef, useState} from "react";
 import {CheckIcon} from "@heroicons/react/20/solid";
+import formateUTCDateString from "@/app/helperFunctions/formateUTCDateString";
 
 export default function TicketBrick({test}:{test:testInstance}){
     const [open, setOpen] = useState(false)
-
     const cancelButtonRef = useRef(null)
-    function formatDate(datetime: string): string {
-        datetime.replace(" ","")
-        try {
-            const date = new Date(datetime);
-            const day = date.getDate();
-            const month = date.getMonth() + 1; // Months are zero-based
-            const year = date.getFullYear();
-
-            return `${day}. ${month}. ${year}`;
-        } catch (error) {
-            console.error("Invalid datetime string", error);
-            return "";
-        }
-    }
     return(
         <div>
             <Transition.Root show={open} as={Fragment}>
@@ -89,7 +75,7 @@ export default function TicketBrick({test}:{test:testInstance}){
                         <div className="py-6 px-6">
                             <div className="flex flex-row justify-between dark:text-gray-200">
                                 <div>
-                                    Test dne <span className="font-medium">{formatDate(test.date)}</span>
+                                    Test dne <span className="font-medium">{`${formateUTCDateString(test.date).day}.${formateUTCDateString(test.date).month}.${formateUTCDateString(test.date).year}`}</span>
                                 </div>
                                 <div className="">
                                     {test.marked ?
@@ -102,7 +88,7 @@ export default function TicketBrick({test}:{test:testInstance}){
                         </div>
                         <div className="flex flex-row justify-between px-6 pb-4">
                             <p className="text-gray-500">Zakoupeno</p>
-                            <p>{formatDate(test.created)}</p>
+                            <p>{`${formateUTCDateString(test.date).day}.${formateUTCDateString(test.date).month}.${formateUTCDateString(test.date).year}`}</p>
                         </div>
                         <div className="flex flex-row justify-between px-6 pb-3">
                             <p className="text-gray-500">Množství</p>

@@ -3,8 +3,11 @@ import Link from 'next/link';
 import katex from 'katex';
 
 const TextWithLatex = ({ text }: { text: string }) => {
-    const regex = /(?:\[(.+?)\]\((.+?)\))|(?:\$\$(.*?)\$\$)|(?:\\\[([^]*?)\\\])|(?:\\\(([^]*?)\\\))|(?:\*\*(.+?)\*\*)/gs;
-    const lines = text.split('\n'); // Split text into lines
+    const regex = /(?:\[(.+?)\]\((.+?)\))|(?:\$\$(.*?)\$\$)|(?:\\\\\[([^]*?)\\\\\])|(?:\\\\\(([^]*?)\\\\\))|(?:\*\*(.+?)\*\*)/gs;
+    const joinedText = text.replace(/(\\\\\[|\\\\\()([^]*?)(\\\\\]|\\\\\))/g, (match) => {
+        return match.replace(/\n/g, ' ');
+    });
+    const lines = joinedText.split('\n'); // Split text into lines
     const parts = [];
 
     lines.forEach((line, index) => {

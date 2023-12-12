@@ -29,9 +29,8 @@ const navigation = [
     { name: 'Vektor', href: '/aplikace/vektor', icon: ChatBubbleOvalLeftEllipsisIcon, current: false },
 ]
 const teams = [
-    { id: 1, name: 'Heroicons', href: '#', initial: 'H', current: false },
-    { id: 2, name: 'Tailwind Labs', href: '#', initial: 'T', current: false },
-    { id: 3, name: 'Workcation', href: '#', initial: 'W', current: false },
+    { id: 1, name: 'Rezervovat termíny', href: '/kosik?pobocka=praha', initial: 'T', current: false },
+    { id: 2, name: 'Kontakt', href: '/kontakt', initial: 'K', current: false },
 ]
 const userNavigation = [
     { name: 'Profil', href: 'uzivatel' },
@@ -137,7 +136,7 @@ export default function AppWrapper({
                                                     </ul>
                                                 </li>
                                                 <li>
-                                                    <div className="text-xs font-semibold leading-6 text-indigo-200">Your teams</div>
+                                                    <div className="text-xs font-semibold leading-6 text-indigo-200">Ostatní stránky</div>
                                                     <ul role="list" className="-mx-2 mt-2 space-y-1">
                                                         {teams.map((team) => (
                                                             <li key={team.name}>

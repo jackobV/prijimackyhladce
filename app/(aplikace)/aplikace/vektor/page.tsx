@@ -18,7 +18,7 @@ export default function Page(){
     return(
         <div className="relative w-full">
             <div className="fixed overflow-hidden w-full h-full">
-                <div className="h-full max-w-7xl mx-auto  pb-24 pt-12 px-12 relative flex flex-col">
+                <div className="h-full max-w-7xl mx-auto  pb-24 pt-12 md:px-12 px-4 relative flex flex-col">
                     <div className="h-full flex flex-col gap-y-3">
                         <ChatMessages className="flex-1 overflow-y-scroll" />
                         <ChatInput />

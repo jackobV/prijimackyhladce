@@ -1,4 +1,4 @@
-import nazkouskufoto from "../../../(media)/na-zkousku-banner-w-testy.jpg"
+import nazkouskufoto from "../../(media)/na-zkousku-banner-w-testy.jpg"
 import Image from "next/image";
 let features:Array<string> = [
     "Naučíš se pracovat s časem",

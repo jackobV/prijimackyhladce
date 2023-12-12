@@ -5,6 +5,7 @@ import PocketBase from "pocketbase";
 import moment from "moment"
 import Map from "@/app/(general)/(components)/map"
 import Link from "next/link";
+import formateUTCDateString from "@/app/helperFunctions/formateUTCDateString";
 export const revalidate = 3600
 export default async function LocationSection(){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
@@ -25,19 +26,6 @@ export default async function LocationSection(){
         const dateInFuture = moment(obj.date) >= currentDate;
         return dateInFuture;
     })
-    console.log(futureDatesForPrague)
-    console.log(futureDatesForPribram)
-    function timestampToDayMonthString(timestampString: string): string {
-        const timesTampSanitized = timestampString.replace(" ", "T")
-        const date = new Date(timesTampSanitized);
-        const day = date.getUTCDate();
-        const month = date.getUTCMonth() + 1; // Adding 1 to month as it is 0-indexed
-        // Use template literals to format the day and month with leading zeros if needed
-        const formattedDay = day < 10 ? `0${day}` : `${day}`;
-        const formattedMonth = month < 10 ? `0${month}` : `${month}`;
-        console.log(date)
-        return `${formattedDay}.${formattedMonth}`;
-    }
     return(
         <div className="max-w-6xl px-6 lg:px-8 mx-auto" id="pobocky">
             <h2 className="font-bold text-2xl pb-5 md:pb-10">Kde testy probíhají?</h2>
@@ -60,7 +48,7 @@ export default async function LocationSection(){
                                         <Link href="/kosik?pobocka=praha"
                                         id="vyberterminlokace"
                                         >
-                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500 hover:bg-blue-700 duration-75">{timestampToDayMonthString(item.date)}</div>
+                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500 hover:bg-blue-700 duration-75">{`${formateUTCDateString(item.date).day}.${formateUTCDateString(item.date).month}`}</div>
                                         </Link>
                                     ))}
                                 </div>
@@ -84,7 +72,7 @@ export default async function LocationSection(){
                                 <div className="flex flex-row gap-x-3">
                                     {futureDatesForPribram.map((item:any)=>(
                                         <a className="" href="/kosik?pobocka=pribram">
-                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500 hover:bg-blue-700 duration-75">{timestampToDayMonthString(item.date)}</div>
+                                            <div className="w-fit px-4 py-2 text-white rounded-md bg-blue-500 hover:bg-blue-700 duration-75">{`${formateUTCDateString(item.date).day}.${formateUTCDateString(item.date).month}`}</div>
                                         </a>
                                     ))}
                                 </div>
