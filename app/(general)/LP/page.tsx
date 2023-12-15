@@ -17,7 +17,6 @@ import Pricing from "@/app/(general)/(components)/pricing";
 import PricingPP from "@/app/(general)/LP/(components)/PricingPP";
 import TestDaySchedulePP from "@/app/(general)/LP/(components)/TestDayScheadulePP";
 import SocialProof from "@/app/(general)/LP/(components)/SocialProof";
-import EmailCaptureScrolled from "@/app/(general)/(components)/EmailCaptureScrolled";
 
 
 
@@ -55,7 +54,7 @@ return <main>
     <section className="py-20">
         <JakVypadaTest />
     </section>
-    <EmailCaptureScrolled />
+
     <section className="">
         <CTAbuy />
     </section>
