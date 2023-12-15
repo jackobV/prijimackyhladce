@@ -6,7 +6,7 @@ import { Message } from '../lib/validators/message'
 const defaultValue = [
     {
         id: nanoid(),
-        text: 'Ahoj, jsem Vektor. Jak ti mohu pomoci? Pokud se chceš dozvědět co všechno umím, stačí se mě zeptat.',
+        text: 'Ahoj, jsem Vektor. Jak ti mohu pomoci? Pokud se chceš dozvědět co všechno umím, stačí se mě zeptat. **ALPHA VERZE - předpokládáme chyby v zobrazení některých matematických rovnicí**',
         isUserMessage: false,
     },
 ]

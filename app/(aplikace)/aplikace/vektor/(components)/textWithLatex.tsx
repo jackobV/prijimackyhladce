@@ -8,7 +8,7 @@ const TextWithLatex = ({ text }: { text: string }) => {
         return match.replace(/\n/g, ' ');
     });
     const lines = joinedText.split('\n'); // Split text into lines
-    const parts = [];
+    const parts:any = [];
 
     lines.forEach((line, index) => {
         let lastIndex = 0;
@@ -64,7 +64,7 @@ const TextWithLatex = ({ text }: { text: string }) => {
 
     return (
         <>
-            {parts.map((part, i) => (
+            {parts.map((part:any, i:number) => (
                 <React.Fragment key={i}>{part}</React.Fragment>
             ))}
         </>
