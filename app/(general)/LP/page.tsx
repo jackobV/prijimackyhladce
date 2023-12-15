@@ -54,7 +54,6 @@ return <main>
     <section className="py-20">
         <JakVypadaTest />
     </section>
-
     <section className="">
         <CTAbuy />
     </section>
