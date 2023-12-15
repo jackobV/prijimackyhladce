@@ -3,6 +3,7 @@ import PocketBase from 'pocketbase';
 import Footer from "@/app/(general)/(components)/footer";
 import KosikMenu from "@/app/(kosik)/kosik/(components)/KosikMenu";
 import formateUTCDateString from "@/app/helperFunctions/formateUTCDateString";
+import Qna from "@/app/(general)/(components)/qna";
 export const revalidate = 0
 export const dynamic = 'force-dynamic'
 interface TestDate{
@@ -84,6 +85,9 @@ export default async function Kosik({searchParams}:{searchParams:any}){
                     <KosikMenu />
             <section className="pb-20">
                 <CheckoutContainer testDates={propsForClient} />
+            </section>
+            <section className="pb-10">
+                <Qna />
             </section>
             <section className="border-t">
                 <Footer />

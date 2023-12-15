@@ -14,15 +14,31 @@ const faqs = [
             "Po registraci budete odkázáni na stránku s výběrem termínů. Následně stačí termín zaplatit přes platební bránu. Celý proces zabere méně než dvě minuty.",
     },
     {
-        question: "Kolikrát bych na přijímačky Na zkoušku měl jít?",
+        question: "Kolikrát bych na přijímačky na-zkoušku měl jít?",
         answer:
             "Počet účastí se u každého studenta liší. Doporučujeme si přijímačky vyzkoušet alespoň sedmkrát. Rozdíl však většinou uvidíte již po třech účastích. Mnoho žáků k nám dochází skoro každý týden.",
     },
     {
-        question: "Kdy je dobré s přijímačkami Na zkoušku začít?",
+        question: "Kdy je dobré s přijímačkami na-zkoušku začít?",
         answer:
             "Čím dříve tím lépe. Začít s přípravou brzo se vždy vyplatí, protože to znamená méně stresu na jaře. Také je prokázáno, že průběžná příprava s pravidelným testováním je nejefektivnější metodou učení.",
     },
+    {
+        question: "Jak dlouho trvají přijímačky na-zkoušku?",
+        answer:
+            "Sobotní přijímačky na-zkoušku začínají v 8:45 a končí ve 14:00.",
+    },
+    {
+        question: "Kde se přijímačky na-zkošku konají?",
+        answer:
+            "Můžete si vybrat ze dvou lokací. Praha 4 - v budově ZŠ Edisona, či v Příbrami v centru Eduarts.",
+    },
+    {
+        question: "Lze platit jinak než kartou?",
+        answer:
+            "Pokud z nějakého důvodu nemůžete termíny uhradit platební kartou, kontaktujte nás emailem a najdeme vyhovující řešení.",
+    },
+
     // More questions...
 ]
 
