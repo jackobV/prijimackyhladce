@@ -33,7 +33,7 @@ const teams = [
     { id: 2, name: 'Kontakt', href: '/kontakt', initial: 'K', current: false },
 ]
 const userNavigation = [
-    { name: 'Profil', href: 'uzivatel' },
+    { name: 'Profil', href: '/aplikace//uzivatel' },
     { name: 'Odhlásit se', href: '#' },
 ]
 
