@@ -4,7 +4,8 @@ import {useRef, useState} from "react";
 export default function EmailCaptureUI() {
     const [email, setEmail] = useState("")
     const targetRef = useRef<HTMLInputElement>(null);
-    const handleSubmit = async () => {
+    const handleSubmit = async (e: { preventDefault: () => void; }) => {
+        e.preventDefault()
         const response = await fetch('/api/emailcapturemarketing', {
             method: 'POST',
             headers: {
