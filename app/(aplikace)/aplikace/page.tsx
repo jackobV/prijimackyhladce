@@ -21,12 +21,16 @@ export default function Page(){
     },[])
     return(
         <div className="">
-            <section className="pt-12">
-                <Chart />
-            </section>
-            <section className="pt-12">
-                <TicketGrid />
-            </section>
+            {pb.authStore.isValid?
+            <div>
+                <section className="pt-12">
+                    <Chart />
+                </section>
+                <section className="pt-12">
+                    <TicketGrid />
+                </section>
+            </div>:<div></div>
+            }
         </div>
     )
 }

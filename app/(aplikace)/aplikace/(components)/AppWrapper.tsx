@@ -1,5 +1,5 @@
 "use client"
-import { Fragment, useState } from 'react'
+import {Fragment, useEffect, useState} from 'react'
 import { Dialog, Menu, Transition } from '@headlessui/react'
 import {
     Bars3Icon,
@@ -54,6 +54,12 @@ export default function AppWrapper({
         pb.authStore.clear();
         router.push('/neautorizovan');
     }
+    useEffect(()=>{
+        if (!pb.authStore.isValid) {
+            console.log("user is not logged in ")
+            redirect("/neautorizovan")
+        }
+    },[])
     return (
         <>
             <div className="h-full dark:bg-gray-800">

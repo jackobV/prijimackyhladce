@@ -30,9 +30,7 @@ export default function RootLayout({
                 {children}
             </AppWrapper>
         </Providers>
-
         </body>
-
         </html>
     )
 }
