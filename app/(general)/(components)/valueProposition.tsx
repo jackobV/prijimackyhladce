@@ -80,7 +80,7 @@ export default function ValueProposition() {
                     <Link
                         id="vyberterminhero"
                         href="/kosik?pobocka=praha"
-                        className="rounded-xl bg-orange-500 w-full text-center text-lg py-3  font-semibold text-white shadow-sm hover:bg-blue-700 duration-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
+                        className="rounded-xl bg-orange-500 w-full text-center text-lg py-3  font-semibold text-white shadow-sm hover:bg-orange-700 duration-75 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-blue-600"
                     >
                         Přihlaš se na termín!
                     </Link>
