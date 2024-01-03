@@ -3,6 +3,7 @@ import logo from "../../../logo.png"
 import classPhoto from "../../../(media)/heroimagelanding.jpg"
 import Link from "next/link";
 import pictureStudent from "@/app/(media)/heroimagelanding.jpg";
+import {ChevronRightIcon} from "@heroicons/react/20/solid";
 export default function LandingHeroPP(){
     return <div>
 
@@ -19,12 +20,23 @@ export default function LandingHeroPP(){
                     <div className="mx-auto max-w-6xl px-6 lg:px-8">
                         <div className="flex flex-col lg:flex-row gap-x-24 items-center justify-center">
                             <div className="flex flex-col max-w-xl w-full">
+                                <div className="pb-5 flex flex-col w-full items-center md:items-start">
+                                    <a href="/viceletagymnazia" className="space-x-6">
+                                      <span className="rounded-full bg-indigo-600/10 px-3 py-1 text-sm font-semibold leading-6 text-indigo-600 ring-1 ring-inset ring-indigo-600/10">
+                                        Jsi v páté třídě?
+                                      </span>
+                                        <span className="inline-flex items-center space-x-2 text-sm font-medium leading-6 text-gray-600">
+                                        <span>Koukni, co pro tebe nabízíme</span>
+                                        <ChevronRightIcon className="h-5 w-5 text-gray-400" aria-hidden="true" />
+                                      </span>
+                                    </a>
+                                </div>
                                 <h1 className="max-w-2xl text-5xl font-semibold  text-gray-900 sm:text-6xl sm:leading-tight leading-tight text-center pb-8">
                                     Zvládni přijímačky bez stresu!
                                 </h1>
                                 <p className=" leading-8 text-gray-700 text-center pb-8">
                                     Vyzkoušej si <strong>CERMAT příjímačky nanečisto!</strong> Napíšeš si s námi test z češtiny a matematiky, který s tebou následně <strong>důkladně rozebereme. </strong>
-                                    Dozvíš se také mnoho rad, jak u přijímaček podat <strong>nejlepší výkon!</strong>
+                                    Dozvíš se také mnoho rad, jak u přijímaček na střední podat <strong>nejlepší výkon!</strong>
                                 </p>
                                     <Link
                                         id="vyberterminhero"
@@ -34,8 +46,10 @@ export default function LandingHeroPP(){
                                         Přihlaš se na termín!
                                     </Link>
 
+
                             </div>
                             <div className="w-full flex flex-col items-center pt-10 lg:pt-0">
+
                                 <Image
                                     src={pictureStudent}
                                     alt=""
