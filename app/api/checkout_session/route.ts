@@ -13,6 +13,7 @@ export async function POST(req:Request,res:Response) {
             metadata: {
                 user_id:body.userId,
                 database_ids: body.dateIds.join(","),
+                grade:body.grade,
             },
             line_items: [
                 {

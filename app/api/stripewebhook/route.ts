@@ -32,6 +32,8 @@ export async function POST(req: Request){
             console.log(event.data.object);
             const customerEmail: string = event.data.object.email
             const customerId: string = event.data.object.metadata.user_id
+            const grade: string = event.data.object.metadata.grade
+            console.log("grade" + grade)
             const databaseIds:Array<string> = event.data.object.metadata.database_ids.split(",");
             const paymentIntent: string = event.data.object.payment_intent
             console.log(databaseIds)
@@ -42,7 +44,8 @@ export async function POST(req: Request){
                 try{
                     const ticket = await pb.collection("ticket").create({
                         "user":customerId,
-                        "testy":databaseId
+                        "testy":databaseId,
+                        "is_fifthgrade":grade == "five" || false,
                     })
                     userNewTickets.push(ticket.id)
                     const testDate = await pb.collection("testy").getOne(databaseId)
