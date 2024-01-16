@@ -14,7 +14,7 @@ interface Date{
     active:boolean;
     inCart:number;
 }
-export default function CheckoutForm({items,numberOfDates, location}:{items:TestDateProps,numberOfDates:number,location:string}){
+export default function CheckoutForm({items,numberOfDates, location,grade}:{items:TestDateProps,numberOfDates:number,location:string,grade:string}){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const [email,setEmail] = useState("")
     const [emailFail, setEmailFail] = useState("")
@@ -42,7 +42,7 @@ export default function CheckoutForm({items,numberOfDates, location}:{items:Test
     const handlePay = async () => {
         const inCartIds: Array<string> = items.testDates.flatMap(item =>
         Array(item.inCart).fill(item.id))
-        const stipePriceId = items.testDates.find(obj => obj.location === location);
+        const stipePriceId = items.testDates.find(obj => obj.location === location && obj.grade===grade);
         console.log(items)
         try {
             const response = await fetch("/api/checkout_session", {
@@ -50,6 +50,7 @@ export default function CheckoutForm({items,numberOfDates, location}:{items:Test
                 body: JSON.stringify({
                     email: pb.authStore.model?.email,
                     userId: pb.authStore.model?.id,
+                    grade:grade,
                     dateIds: inCartIds,
                     numberOfDates: numberOfDates,
                     location: location,

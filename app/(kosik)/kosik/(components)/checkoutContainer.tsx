@@ -8,17 +8,7 @@ import ObjectionHandle from "@/app/(kosik)/kosik/(components)/ObjectionHandle";
 import ObjectionHandleTop from "@/app/(kosik)/kosik/(components)/ObjectionHandleTop";
 import IntroKosik from "@/app/(kosik)/kosik/(components)/IntroKosik";
 import Incentive from "@/app/(kosik)/kosik/(components)/incentive";
-interface TestDate{
-    id:string;
-    day:string;
-    month:string;
-    stripe_price_id:string;
-    stripe_test_price_id:string;
-    archived:boolean;
-    full:boolean;
-    price:string;
-    location:string;
-}
+
 
 export default function CheckoutContainer({ testDates, }:{testDates:TestDateProps}){
     console.log(testDates)
@@ -32,15 +22,15 @@ export default function CheckoutContainer({ testDates, }:{testDates:TestDateProp
             {step === 0?
                 <div>
                     <section className="py-12">
-                        <IntroKosik />
+                        <IntroKosik grade={testDates.grade} />
                     </section>
-                    <PickADateAndReview step={step} setStep={setStep} setItems={setItems} items={items} numberOfDates={numberOfDates} setNumberOfDates={setNumberOfDates} location={testDates.location} />
+                    <PickADateAndReview step={step} setStep={setStep} setItems={setItems} items={items} numberOfDates={numberOfDates} setNumberOfDates={setNumberOfDates} location={testDates.location} grade={testDates.grade} />
                 <section className="py-20"><Incentive /></section>
                 </div>
 
                 :
                 <div>
-                    <CheckoutForm items={items} numberOfDates={numberOfDates} location={testDates.location} />
+                    <CheckoutForm items={items} numberOfDates={numberOfDates} location={testDates.location} grade={testDates.grade} />
                 </div>
             }
         </div>

@@ -7,10 +7,10 @@ import {TestDateProps} from "@/app/(kosik)/kosik/page";
 import ChangeLocation from "@/app/(kosik)/kosik/(components)/changeLocation";
 import DateBrickTall from "@/app/(kosik)/kosik/(components)/DateBrickTall";
 
-export default function PickADateAndReview({step, setStep, items, setItems,numberOfDates,setNumberOfDates,location} : {step:number,items:TestDateProps,numberOfDates:number,setItems: React.Dispatch<React.SetStateAction<TestDateProps>>,setStep: React.Dispatch<React.SetStateAction<number>>,setNumberOfDates: React.Dispatch<React.SetStateAction<number>>,location:string}){
+export default function PickADateAndReview({step, setStep, items, setItems,numberOfDates,setNumberOfDates,location,grade} : {step:number,items:TestDateProps,numberOfDates:number,setItems: React.Dispatch<React.SetStateAction<TestDateProps>>,setStep: React.Dispatch<React.SetStateAction<number>>,setNumberOfDates: React.Dispatch<React.SetStateAction<number>>,location:string,grade:string}){
     const [show, setShow] = useState(false)
     const [isEmpty, setIsEmpty] = useState(true)
-    const itemsForLocation = items.testDates.filter(obj => obj.location === location);
+    const itemsForLocation = items.testDates.filter(obj => obj.location === location && obj.grade == grade);
     const handleShow = () => {
         setShow(!show)
     }
@@ -24,7 +24,7 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
 
         setNumberOfDates(numberOfDates+1)
         setIsEmpty(false);
-        setItems({location:items.location, testDates:updatedItems})
+        setItems({location:items.location, testDates:updatedItems,grade:items.grade})
 
     }
     const handleAddMoreToCart = (itemId:string) => {
@@ -36,7 +36,7 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
         });
 
         setNumberOfDates(numberOfDates+1)
-        setItems({location:items.location, testDates:updatedItems})
+        setItems({location:items.location, testDates:updatedItems,grade:items.grade})
 
     }
     const handleAddLessToCart = (itemId:string) => {
@@ -50,13 +50,13 @@ export default function PickADateAndReview({step, setStep, items, setItems,numbe
             setIsEmpty(true)
         }
         setNumberOfDates(numberOfDates-1)
-        setItems({location:items.location, testDates:updatedItems})
+        setItems({location:items.location, testDates:updatedItems,grade:items.grade})
     }
     return(
         <div className="mx-auto max-w-6xl px-6 lg:px-8 overflow-hidden">
             <h2 className=" font-bold pb-2">Volné termíny pro</h2>
             <div className="w-48 pb-10">
-                <ChangeLocation location={location} />
+                <ChangeLocation location={location} grade={grade} />
             </div>
             {show?
                 <div className="py-2 bg-gray-100 flex flex-col items-center gap-y-2 rounded-md">

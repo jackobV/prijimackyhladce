@@ -18,6 +18,8 @@ interface TestDate{
     price:string;
     location:string;
     fullnessLevel:number;
+    grade:string;
+
 }
 
 export interface Date{
@@ -32,10 +34,13 @@ export interface Date{
     stripe_test_price_id:string;
     location:string;
     fullnessLevel:number;
+    grade:string;
+
 }
 export interface TestDateProps{
     testDates:Array<Date>;
     location:string;
+    grade:string;
 }
 export const metadata = {
     title: 'Košík | na-zkousku.cz',
@@ -44,6 +49,8 @@ export const metadata = {
 
 export default async function Kosik({searchParams}:{searchParams:any}){
     const location:string = searchParams.pobocka;
+    const grade:string = searchParams.grade || "nine";
+
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const records = await pb.collection('testy').getFullList({
         sort: 'date',
@@ -60,7 +67,8 @@ export default async function Kosik({searchParams}:{searchParams:any}){
         full:item.full,
         price:item.price,
         location:item.location,
-        fullnessLevel:item.fullnessLevel
+        fullnessLevel:item.fullnessLevel,
+        grade: item.is_fifth_grade ? "five" : "nine"
     }))
     console.log(testDates)
 
@@ -76,10 +84,11 @@ export default async function Kosik({searchParams}:{searchParams:any}){
             stripe_test_price_id:item.stripe_test_price_id,
             stripe_price_id:item.stripe_price_id,
             location:item.location,
-            fullnessLevel:item.fullnessLevel
+            fullnessLevel:item.fullnessLevel,
+            grade:item.grade
         })) || [];
     }
-    const propsForClient: TestDateProps = { testDates: transformArray(testDates), location: location}
+    const propsForClient: TestDateProps = { testDates: transformArray(testDates), location: location,grade:grade}
     return(
         <main>
                     <KosikMenu />
