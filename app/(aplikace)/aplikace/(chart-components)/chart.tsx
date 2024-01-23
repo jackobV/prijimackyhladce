@@ -18,6 +18,8 @@ interface ticketForChart {
     date:string
     cj:number
     mat:number
+    cjAvg:number
+    matAvg:number
 }
 
 
@@ -29,12 +31,14 @@ export const Chart = async () => {
     });
     let filteredItems: Array<ticketForChart> = []; // Initialize as an empty array
     const ticketsRaw = record.expand.tickets;
-
+    console.log(ticketsRaw)
     if (ticketsRaw && ticketsRaw.length > 0) {
-        filteredItems = ticketsRaw.filter((item: { is_marked: any; }) => item.is_marked).map((item: { expand: any; created: any; mat: any; cj: any; }) => ({
+        filteredItems = ticketsRaw.filter((item: { is_marked: any; }) => item.is_marked).map((item: { expand: any; created: any; mat: any; cj: any; cjAvg:any; matAvg:any; }) => ({
             Date: `${formateUTCDateString(item.expand.testy.date).day}.${formateUTCDateString(item.expand.testy.date).month}`,
-            mat: item.mat,
-            cj: item.cj
+            "MAT": item.mat,
+            "ČJ": item.cj,
+            "Průměr ČJ":item.expand.testy.avg_cj,
+            "Průměr MAT":item.expand.testy.avg_mat,
         }));
     } else {
         // Handle the case when no data is found
@@ -52,8 +56,8 @@ export const Chart = async () => {
                     className="h-72 mt-4"
                     data={filteredItems}
                     index="Date"
-                    categories={["cj", "mat"]}
-                    colors={["red", "indigo"]}
+                    categories={["ČJ", "MAT","Průměr ČJ","Průměr MAT"]}
+                    colors={["red", "indigo","zinc","stone"]}
                     yAxisWidth={30}
                     connectNulls={true}
                     noDataText="Zatím nemáte k nahlédnutí žádné výsledky."
