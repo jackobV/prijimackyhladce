@@ -10,7 +10,6 @@ interface Date{
     id:string;
     day:string;
     month:string;
-    available:boolean;
     active:boolean;
     inCart:number;
 }
