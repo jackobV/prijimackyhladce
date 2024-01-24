@@ -27,7 +27,8 @@ export interface Date{
     day:string;
     month:string;
     year:string;
-    available:boolean;
+    full:boolean;
+    archived:boolean;
     active:boolean;
     inCart:number;
     stripe_price_id:string;
@@ -78,7 +79,8 @@ export default async function Kosik({searchParams}:{searchParams:any}){
             day:item.day,
             month:item.month,
             year:item.year,
-            available:!(item.archived && item.full),
+            archived:item.archived,
+            full:item.full,
             active:false,
             inCart:0,
             stripe_test_price_id:item.stripe_test_price_id,
