@@ -76,6 +76,7 @@ export async function POST(req: Request){
                 "payment_intent":paymentIntent,
                 "total_price":event.data.object.amount_total
             })
+            const orderSummaryLink:string = "https://www.na-zkousku.cz/rezervacepotvrzena?success=true&cid="+event.data.object.metadata.checkoutSessionId
             const emailData:EmailConfirmationData = {
                 email:user.email,
                 name: user.name,
@@ -83,7 +84,8 @@ export async function POST(req: Request){
                 purchaseId:purchase.id,
                 itemDates:ticketDateArray,
                 totalPrice:event.data.object.amount_total,
-                ticketIds:userNewTickets
+                ticketIds:userNewTickets,
+                orderSummaryView:orderSummaryLink
             }
             await OrderConfirmationEmail({emailData:emailData})
         }else if(event.type === "checkout.session.expired"){

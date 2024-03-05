@@ -7,6 +7,7 @@ export interface EmailConfirmationData {
     purchaseId:string;
     itemDates:Array<string>;
     ticketIds:Array<string>;
+    orderSummaryView:string;
 
     totalPrice:number;
 }
@@ -34,6 +35,7 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
                     <h2><span style="font-size:12px"><strong>V&aacute;žen&iacute; &uacute;častn&iacute;ci, rodiče,</strong></span></h2>
 
                     <p><span style="font-size:12px">Děkujeme za Va&scaron;i objedn&aacute;vku! Tento email slouž&iacute; jako potvrzen&iacute; Va&scaron;&iacute; objedn&aacute;vky <strong>${emailData.purchaseId}.</strong></span></p>
+                    <p><span style="font-size:12px">Detail objednávky si můžete zobrazit také po kliknutí na <a href={emailData.orderSummaryView}>odkaz</a></span></p>
                     <p><strong>📦 Detaily Objednávky:</strong></p>
                     <ul>
                         <li><strong>Produkt</strong> : Test na zkoušku</li>

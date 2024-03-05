@@ -9,13 +9,14 @@ export interface testInfoSummary{
 }
 export interface orderSummary{
     email:string,
-    testArray: testInfoSummary[]
+    testArray: testInfoSummary[],
+    status:number
 }
 export default function OrderSummary({summary}:{summary:orderSummary}){
     return(
         <div className="flex flex-col max-w-6xl mx-auto px-8 py-20">
             <h1 className="text-center text-3xl font-medium">Děkujeme vám za objednávku!</h1>
-            <div className="py-10"><OrderStatusIndicator status={2} />
+            <div className="py-10"><OrderStatusIndicator status={summary.status} />
                 <p className="text-center pt-2 text-gray-600">Prosím věnujte minutu ověření správnosti vybraných termínů a variant testů.</p>
             </div>
             <div className="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-xl gap-y-5">

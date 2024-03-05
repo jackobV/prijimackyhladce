@@ -7,6 +7,8 @@ import OrderSummary, {
     testInfoSummary
 } from "@/app/(general)/rezervacepotvrzena/(components)/orderSummary";
 import PocketBase from "pocketbase";
+export const revalidate=0
+
 export default async function Page({searchParams}:{searchParams:any}){
     const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
     const orderInfo = await pb.collection("checkout_session").getOne(searchParams.csid,{
@@ -20,7 +22,8 @@ export default async function Page({searchParams}:{searchParams:any}){
     console.log(testInfos)
     const summary:orderSummary={
         email:orderInfo.user,
-        testArray:testInfos
+        testArray:testInfos,
+        status:orderInfo.status
     }
     console.log(orderInfo)
 
