@@ -1,6 +1,7 @@
 import Image from "next/image";
 import logo from "../../../favicon.ico"
 import formateUTCDateString from "@/app/helperFunctions/formateUTCDateString";
+import OrderStatusIndicator from "@/app/(general)/rezervacepotvrzena/(components)/orderStatusIndicator";
 export interface testInfoSummary{
     testDate:string,
     pobocka:string,
@@ -14,9 +15,9 @@ export default function OrderSummary({summary}:{summary:orderSummary}){
     return(
         <div className="flex flex-col max-w-6xl mx-auto px-8 py-20">
             <h1 className="text-center text-3xl font-medium">Děkujeme vám za objednávku!</h1>
-            <p className="mx-auto text-center pt-5 pb-20">Plabta proběhla v pořádku. <br /> Prosím věnujte minutu ověření správnosti vybraných termínů a variant testů.</p>
-
-
+            <div className="py-10"><OrderStatusIndicator status={2} />
+                <p className="text-center pt-2 text-gray-600">Prosím věnujte minutu ověření správnosti vybraných termínů a variant testů.</p>
+            </div>
             <div className="flex flex-col items-center justify-center p-4 bg-slate-50 rounded-xl gap-y-5">
                     {summary.testArray.map((testInstance:any)=>(
                         <div className="grid grid-cols-12 bg-white rounded-xl w-full p-2">

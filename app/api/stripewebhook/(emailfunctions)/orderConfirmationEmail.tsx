@@ -62,8 +62,6 @@ export default async function OrderConfirmationEmail({ emailData } : {emailData:
 
 <p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Tak&eacute; se kousek od &scaron;koly nach&aacute;z&iacute; <strong>parkovi&scaron;tě</strong>, kter&eacute; je přes v&iacute;kend bezplatn&eacute;.&nbsp;</span></span></p>
 
-<p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">(B&iacute;tovsk&aacute; 1246, 140 00 Praha 4-Michle)&nbsp;</span></span></p>
-
 <p><span style="font-size:12px"><span style="font-family:Arial,sans-serif">Předpokl&aacute;dan&yacute;<strong> konec akce je 14:00</strong>.</span></span></p>
 
 <p>&nbsp;</p>

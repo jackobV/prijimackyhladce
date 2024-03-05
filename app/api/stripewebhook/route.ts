@@ -33,6 +33,7 @@ export async function POST(req: Request){
             const customerEmail: string = event.data.object.email
             const customerId: string = event.data.object.metadata.user_id
             const grade: string = event.data.object.metadata.grade
+            const csid: string = event.data.object.metadata.checkoutSessionId
             console.log("grade" + grade)
             const databaseIds:Array<string> = event.data.object.metadata.database_ids.split(",");
             const paymentIntent: string = event.data.object.payment_intent
@@ -68,6 +69,7 @@ export async function POST(req: Request){
             await pb.collection("users").update(customerId,{
                 "tickets":userCombinedTickets
             })
+            await pb.collection("checkout_session").update(csid,{status:1})
             const purchase = await pb.collection("purchase").create({
                 "user":customerId,
                 "tickets":userNewTickets,
@@ -84,8 +86,10 @@ export async function POST(req: Request){
                 ticketIds:userNewTickets
             }
             await OrderConfirmationEmail({emailData:emailData})
+        }else if(event.type === "checkout.session.expired"){
+            const csid: string = event.data.object.metadata.checkoutSessionId
+            await pb.collection("checkout_session").update(csid,{status:2})
         }
-
         return NextResponse.json({result:event,ok:true})
         }catch (error){
         console.log(error)
