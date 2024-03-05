@@ -1,5 +1,6 @@
 import {NextRequest, NextResponse} from 'next/server';
 import {redirect} from "next/navigation";
+import PocketBase from "pocketbase";
 
 export async function POST(req:Request,res:Response) {
     const requestHeaders = new Headers(req.headers)
@@ -7,7 +8,13 @@ export async function POST(req:Request,res:Response) {
     const location:string = body.location.toUpperCase()
     const locationSecretKeyNameOfVar:string = `${location}_STRIPE_SECRET_KEY`
     const stripe = require('stripe')(process.env[locationSecretKeyNameOfVar]);
+    const pb = new PocketBase('https://pocketbase-production-2a51.up.railway.app');
+
     try {
+        const checkou_session_database = await pb.collection("checkout_session").create({
+            user:body.user_id,
+            test_ids:body.dateIds
+        })
         const session = await stripe.checkout.sessions.create({
             customer_email: body.email,
             metadata: {
@@ -25,8 +32,8 @@ export async function POST(req:Request,res:Response) {
             mode: 'payment',
             allow_promotion_codes:true,
             locale:"auto",
-            success_url: `${requestHeaders.get("origin")?.valueOf()}/rezervacepotvrzena?success=true`,
-            cancel_url: `${requestHeaders.get("origin")?.valueOf()}/rezervacepotvrzena?canceled=true`,
+            success_url: `${requestHeaders.get("origin")?.valueOf()}/rezervacepotvrzena?success=true&csid=${checkou_session_database.id}`,
+            cancel_url: `${requestHeaders.get("origin")?.valueOf()}/rezervacepotvrzena?canceled=true&csid=${checkou_session_database.id}`,
         });
         let url = new URL(session.url)
         return new Response(JSON.stringify({
