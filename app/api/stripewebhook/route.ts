@@ -85,7 +85,7 @@ export async function POST(req: Request){
                 itemDates:ticketDateArray,
                 totalPrice:event.data.object.amount_total,
                 ticketIds:userNewTickets,
-                orderSummaryView:orderSummaryLink
+                orderSummaryView:orderSummaryLink,
             }
             await OrderConfirmationEmail({emailData:emailData})
         }else if(event.type === "checkout.session.expired"){
