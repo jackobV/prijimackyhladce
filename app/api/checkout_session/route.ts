@@ -12,7 +12,7 @@ export async function POST(req:Request,res:Response) {
 
     try {
         const checkou_session_database = await pb.collection("checkout_session").create({
-            user:body.user_id,
+            user:body.email,
             test_ids:body.dateIds
         })
         const session = await stripe.checkout.sessions.create({
@@ -21,6 +21,7 @@ export async function POST(req:Request,res:Response) {
                 user_id:body.userId,
                 database_ids: body.dateIds.join(","),
                 grade:body.grade,
+                checkoutSessionId:checkou_session_database.id
             },
             line_items: [
                 {
