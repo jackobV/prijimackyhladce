@@ -1,4 +1,5 @@
 /** @type {import('tailwindcss').Config} */
+import defaultTheme from 'tailwindcss/defaultTheme'
 module.exports = {
   content: [
     './app/***/**/*.{js,ts,jsx,tsx,mdx}',
@@ -87,6 +88,9 @@ module.exports = {
         "tremor-small": "0.375rem",
         "tremor-default": "0.5rem",
         "tremor-full": "9999px",
+        '4xl': '2rem',
+        '5xl': '3rem',
+        '6xl': '5rem',
       },
       fontSize: {
         "tremor-label": ["0.75rem"],
