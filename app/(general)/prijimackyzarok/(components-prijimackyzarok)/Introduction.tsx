@@ -13,24 +13,26 @@ export function Introduction() {
         >
             <Container className="text-lg tracking-tight text-slate-700">
                 <p className="font-se text-3xl font-medium tracking-tight text-slate-900">
-                    “Přijímačky na-zkoušku” jsou pořádané simulace CERMAT testů, jejichž absolvováním postupně ovládneš všechny klíčové dovednosti.
+                    “Přijímačky na-zkoušku” jsou simulace CERMAT testů, jejichž absolvováním postupně ovládneš všechny klíčové dovednosti.
                 </p>
                 <p className="mt-4">
-                    Víme, jak to běžně s přípravou chodí. Na podzim se nakoupí různé učební materiály, s nadšením se i pár týdnů řeší jen aby se uložily do šuplíku a znovu otevřely v únoru...
+                    Víme, jak to běžně s přípravou na přijímačky chodí. Na podzim si každý nakoupí hromadu učebních materiálů, s nadšením s nimi pár týdnů možná i pracuje, aby je vzápětí uložil do šuplíku a znovu otevřel až v únoru...
+
                 </p>
                 <p className="mt-4">
-                    Vidíte v této metodě problém? Přijímačky jsou u dětí většinou jedním z prvních dlouhodobých cílů. Právě zde se učí motivaci, což není vůbec snadná záležitost ani u dospělého.
+                    Asi každému je jasné, že tohle není ideální. Přitom přijímací zkoušky na střední školu představují často první vzrušující výzvu v dlouhodobé kariéře životních cílů, kdy se otevírají dveře k budoucím snům a ambicím. Právě v tuhle chvíli se učíme umění motivace, což je dovednost, která je základním kamenem pro osobní rozvoj, ale často se s ní potýká nejeden dospělý.
                 </p>
                 <p className="mt-4">
-                    My jsme tu od toho, abychom fungovali nejen jako běžné doučování, ale i kontrolní bod, průvodce přípravou. Nahraďte tedy otázky typu "učíš se už?" něčím, co dítě namotivuje, ukáže mu konkrétně jak na přípravu a celkově mu zpřehlední cestu k přijetí na vybranou školu.
+                    My jsme tu od toho, abychom fungovali nejen jako běžné doučování, ale i jako kontrolní bod, průvodce přípravou. Nahrazujeme proto běžné otázky typu: "Učíš se už?" tím, co tě namotivuje, ukáže ti konkrétně, jak na přípravu, a celkově ti zpřehlední cestu k přijetí na vybranou školu.
+
                 </p>
                 <ul role="list" className="mt-8 space-y-3">
                     {[
-                        'Budeš vědět co a jak se máš učit',
+                        'Dozvíš se, co a jak se máš učit',
                         'Namotivuje tě jasný a viditelný posun',
-                        'Úlohy budeš umět řešit intuitivně',
-                        'Naučíš se pracovat s časem',
-                        'Na přijímačky půjdeš bez stresu',
+                        'Úlohy se naučíš řešit intuitivně',
+                        'Zvládneš pracovat s časem',
+                        'Na zkoušky půjdeš bez stresu',
                     ].map((feature) => (
                         <li key={feature} className="flex">
                             <CheckIcon className="h-8 w-8 flex-none fill-blue-500" />
@@ -39,14 +41,15 @@ export function Introduction() {
                     ))}
                 </ul>
                 <p className="mt-8">
-                    V březnu budeš rád, že si se na přijímačky na-zkoušku přihlásil, budeš mít klid v duši a vědět, že na školu kam chceš se dostaneš. To ti můžeme slíbit.
+                    V březnu budeš rád, že ses na přijímačky na-zkoušku přihlásil, budeš mít klid v duši a vědět, že na vysněnou školu se dostaneš. To ti můžeme slíbit.
+
                 </p>
                 <p className="mt-10">
                     <Link
-                        href="#free-chapters"
+                        href="#form"
                         className="text-base font-medium text-blue-600 hover:text-blue-800"
                     >
-                        Zajisti si místo na přijímačkách a získej přehled toho, co budeš muset umět (PDF.) {' '}
+                        Zajisti si místo na přijímačkách a získej přehled, co všechno musíš umět {' '}
                         <span aria-hidden="true">&rarr;</span>
                     </Link>
                 </p>

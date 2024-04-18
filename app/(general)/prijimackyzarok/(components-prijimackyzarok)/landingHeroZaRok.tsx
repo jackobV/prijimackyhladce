@@ -13,12 +13,12 @@ function Testimonial() {
             </div>
             <blockquote className="mt-2">
                 <p className="font-display text-xl font-medium text-slate-900">
-                    “Přijímačky na zkoušku byly rozhodně tím nejlepším, co jsem navštívila. Krásná atmosféra, skvělá vedoucí i testy, které byly schválně těžší a více připravily. Určitě bych doporučila i všem ostatním, je to ta správná volba. Děkuji za všechno.”
+                    “Přijímačky na-zkoušku byly rozhodně tím nejlepším, co jsem absolvovala. Krásná atmosféra, skvělá vedoucí i testy, které byly schválně těžší, takže více připravily. Určitě bych je doporučila i všem ostatním, je to ta správná volba. Děkuji za všechno.”
                 </p>
             </blockquote>
             <figcaption className="mt-2 text-sm text-slate-500">
                 <strong className="font-semibold text-blue-600 before:content-['—_']">
-                    Absolventka na-zkoušku
+                    Absolventka Anička
                 </strong>
                 , Rok 2022
             </figcaption>
@@ -52,14 +52,11 @@ export default function LandingHeroZaRok() {
                             Získej jistotu, že se dostaneš kam chceš.
                         </h1>
                         <p className="mt-4 text-2xl font-light  text-slate-600">
-                            Simulace přijímaček, které ti otevřou dveře ke všem školám.
+                            Simulace přijímacích zkoušek, které ti otevřou dveře do všech škol.
                         </p>
                         <div className="mt-8 flex gap-4">
-                            <Button href="#free-chapters" color="blue">
-                                Get sample chapter
-                            </Button>
-                            <Button href="#pricing" variant="outline" color="blue">
-                                Buy book
+                            <Button href="#form" color="blue">
+                                Zajisti si místo na přípravě
                             </Button>
                         </div>
                     </div>

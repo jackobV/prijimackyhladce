@@ -11,7 +11,7 @@ const resources = [
     {
         title: 'Shrnutí učiva, které budeš muset umět.',
         description:
-            'Pefectly structured templates for quickly designing new icons at dozens of common sizes.',
+            'Poskytneme ti souhrn všeho, co je potřeba se k přijímacím zkouškám naučit a co bezpečně ovládat.',
         image: function FigmaImage() {
             return (
                 <div className="absolute inset-0 flex items-center justify-center bg-[radial-gradient(#2C313D_35%,#000)]">
@@ -23,7 +23,7 @@ const resources = [
     {
         title: 'Přístup k předprodeji za zvýhodněnou cenu.',
         description:
-            'Weekly videos where we dissect and recreate beautiful icons we find on the web.',
+            'Pokud si naše testy objednáš v předstihu, nabídneme ti je za nižší cenu. Kdo je připraven, není překvapen, a navíc ušetří!',
         image: function VideoPlayerImage() {
             return (
                 <div className="absolute inset-0 flex items-center justify-center">
@@ -46,7 +46,7 @@ const resources = [
     {
         title: 'Přístup do komunity, která tě spojí s dalšími deváťáky.',
         description:
-            "A private Discord server where you can get help and give feedback on each others' work.",
+            "Sdílené zkušenosti, obavy i radosti jsou vždy lepší, než ty, které si držíme v sobě. Připoj se do komunity těch, kteří jsou na tom stejně jako ty.",
         image: function DiscordImage() {
             return (
                 <div className="absolute inset-0 flex items-center justify-center bg-[#6366F1]">
@@ -65,16 +65,15 @@ export default function ZiskejMailem() {
             className="scroll-mt-14 py-16 sm:scroll-mt-32 sm:py-20 lg:py-32"
         >
             <Container>
-                <SectionHeading number="3" id="resources-title">
-                    Co získáš po přihlášení k odběru k novinkám
+                <SectionHeading number="4" id="resources-title">
+                    Proč si rezervovat místo?
                 </SectionHeading>
                 <p className="mt-8 font-display text-4xl font-bold tracking-tight text-slate-900">
-                    Výhody, díky kterým získáš ještě větší náskok. Tenhle text může být delší.
+                    Co získáš rezervací místa?
                 </p>
                 <p className="mt-4 text-lg tracking-tight text-slate-700">
-                    Design assets, icon teardowns, and a community of fellow icon
-                    designers where you can ask questions, get feedback, and accelerate
-                    your learning.
+                    Jednoznačně výhody! Díky exkluzivním studijním materiálům, nové inspiraci a doporučeným strategiím budeš mít ještě větší náskok pro efektivní přípravu.
+
                 </p>
             </Container>
             <Container size="lg" className="mt-16">

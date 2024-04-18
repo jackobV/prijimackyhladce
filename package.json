@@ -9,7 +9,7 @@
     "lint": "next lint"
   },
   "dependencies": {
-    "@headlessui/react": "^1.7.15",
+    "@headlessui/react": "^2.0.0-alpha.4",
     "@heroicons/react": "^2.0.18",
     "@react-google-maps/api": "^2.19.2",
     "@sendgrid/mail": "^7.7.0",
@@ -21,7 +21,7 @@
     "@types/react": "18.2.14",
     "@types/react-dom": "18.2.6",
     "autoprefixer": "10.4.14",
-    "clsx": "^2.0.0",
+    "clsx": "^2.1.0",
     "eventsource-parser": "^1.1.1",
     "katex": "^0.16.9",
     "micro": "^10.0.1",

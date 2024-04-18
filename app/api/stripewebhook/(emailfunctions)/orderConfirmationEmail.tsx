@@ -8,7 +8,6 @@ export interface EmailConfirmationData {
     itemDates:Array<string>;
     ticketIds:Array<string>;
     orderSummaryView:string;
-
     totalPrice:number;
 }
 

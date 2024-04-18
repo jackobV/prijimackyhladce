@@ -18,6 +18,7 @@ import PricingPP from "@/app/(general)/LP/(components)/PricingPP";
 import TestDaySchedulePP from "@/app/(general)/LP/(components)/TestDayScheadulePP";
 import SocialProof from "@/app/(general)/LP/(components)/SocialProof";
 import EmailCaptureScrolled from "@/app/(general)/(components)/EmailCaptureScrolled";
+import BannerPrijimackyZaRok from "@/app/(general)/prijimackyzarok/(components-prijimackyzarok)/bannerPrijimackyZaRok";
 
 
 
@@ -28,6 +29,7 @@ export const metadata = {
 
 export default function Page(){
 return <main>
+    <BannerPrijimackyZaRok />
     <section className="pt-5">
         <LandingHeroPP />
     </section>

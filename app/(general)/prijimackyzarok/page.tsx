@@ -9,6 +9,8 @@ import Testimonial from "./(components-prijimackyzarok)/Testimonial";
 import image from "../../(media)/heroimagelanding.jpg"
 import OnlinePrijimacky from "@/app/(general)/prijimackyzarok/(components-prijimackyzarok)/onlinePrijimacky";
 import ZiskejMailem from "@/app/(general)/prijimackyzarok/(components-prijimackyzarok)/ziskejmailem";
+import SignUpForNews from "@/app/(general)/prijimackyzarok/(components-prijimackyzarok)/SignUpForNews";
+import Footer from "@/app/(general)/(components)/footer";
 export default function Page(){
     return(
         <div className="">
@@ -23,6 +25,9 @@ export default function Page(){
                 <WhatWillYouLearn />
             </section>
             <section>
+                <SignUpForNews />
+            </section>
+            <section>
                 <Testimonial
                     id="testimonial-from-tommy-stroman"
                     author={{
@@ -32,7 +37,7 @@ export default function Page(){
                     }}
                 >
                     <p>
-                        “Snažíme se najít metodiku přípravy, která bude jednoznačně nejefektivnější, ale zároveň zanechá v žácích pozitivní přístup ke vzdělávání”
+                        “Snažíme se najít metodiku přípravy, která bude jednoznačně nejefektivnější, ale zároveň zanechá v žácích pozitivní přístup ke vzdělávání.”
                     </p>
                 </Testimonial>
             </section>
@@ -44,18 +49,21 @@ export default function Page(){
                 <Testimonial
                     id="testimonial-from-tommy-stroman"
                     author={{
-                        name: 'Jakub Záloha',
-                        role: 'Zakladatel na-zkoušku',
+                        name: 'Jana Hámková',
+                        role: 'lektorka na-zkoušku',
                         image: image ,
                     }}
                 >
                     <p>
-                        “Snažíme se najít metodiku přípravy, která bude jednoznačně nejefektivnější, ale zároveň zanechá v žácích pozitivní přístup ke vzdělávání”
+                        “Jsem pokaždé ohromena z pokroků, které studenti během našich příjímaček na-zkoušku dělají. Tou největší odměnou je pak samozřejmě to, když se pochlubí, že je na školu vzali.”
                     </p>
                 </Testimonial>
             </section>
             <section>
                 <ZiskejMailem />
+            </section>
+            <section>
+                <Footer />
             </section>
         </div>
     )

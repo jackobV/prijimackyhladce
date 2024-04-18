@@ -7,24 +7,24 @@ import ExpandableItems, {
 
 const tableOfContents = {
     'Naučíš se pracovat s časem': {
-        'Zjistíš jak dlouho ti trvají jednotlivé části testu': 1,
-        'Naučíš se přeskakovat': 2,
-        'Poznáš u čeho musíš zapracovat na rychlosti': 3,
+        'Zjistíš, jak dlouho ti trvají jednotlivé části testu': 1,
+        'Naučíš se přeskakovat úlohy': 2,
+        'Poznáš, kde musíš zapracovat na rychlosti': 3,
     },
-    "Budeš znát klíč ke všem úlohám": {
+    "Dozvíš se klíč ke všem úlohám": {
         'Budeš umět zařadit úlohu do příslušné kategorie': 1,
-        'Podle kategorie budeš vědět přesný postup řešení': 2,
-        'Pokud existuje na úlohu nějaká vychytávka, ty jí ovládneš': 3,
+        'Podle kategorie zjistíš přesný postup řešení': 2,
+        'Pokud existuje k úloze nějaká vychytávka, ovládneš ji': 3,
     },
-    'Zjistíš co nezvládáš na 100%': {
-        'Poznáš svoje nedostatky': 1,
-        'Budeš vidět jak se v doplňování učiva posouváš': 2,
+    'Zjistíš, co nezvládáš na 100%': {
+        'Poznáš své nedostatky': 1,
+        'Uvidíš, jak se v doplňování učiva posouváš': 2,
         'Nemusíš si látku složitě doplňovat, vše tě na rozborech doučíme': 3,
     },
     'K přijímačkám nepůjdeš ve stresu': {
         'Prostředí ti nebude cizí': 1,
-        'Předáme ti konkrétní tipy na kontrolu stresu': 2,
-        'S čistou hlavou a bez stresu podáš svůj nejlepší výkon.': 3,
+        'Prozradíme ti konkrétní tipy, jak pracovat se stresem': 2,
+        'S čistou hlavou a bez stresu podáš svůj nejlepší výkon': 3,
     },
 }
 
@@ -40,11 +40,10 @@ export default function WhatWillYouLearn() {
                     Co od na-zkoušku získáš
                 </SectionHeading>
                 <p className="mt-8 font-display text-4xl font-bold tracking-tight text-slate-900">
-                    Zjisti co díky naší přípravě získáš.
+                    Zjisti, co díky naší přípravě získáš.
                 </p>
                 <p className="mt-4 text-lg tracking-tight text-slate-700">
-                    Pravidelná příprava, tým těch nejlepších lektorů, záruka spokojenosti, příjemný kolektiv, důraz na smysluplnost výuky, prostor pro otázky, podpora pro rodiče, originální učební materiály podle specifikací CERMAT a tak dále...
-                </p>
+                    Pravidelná příprava, tým těch nejlepších lektorů, záruka spokojenosti, příjemný kolektiv, důraz na smysluplnost výuky, prostor pro otázky, podpora pro rodiče, originální učební materiály podle specifikací CERMAT a další výhody!  </p>
                 <Expandable>
                     <ol role="list" className="mt-16 space-y-10 sm:space-y-16">
                         <ExpandableItems>

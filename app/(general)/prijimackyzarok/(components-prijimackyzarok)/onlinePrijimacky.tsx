@@ -13,28 +13,28 @@ const videos = [
     {
         title: 'Přihlaš se',
         description:
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry. ',
+            'Registruj se do systému, není to nic těžkého a zabere to jen pár minut. ',
         image: setupImage,
         runtime: { minutes: 16, seconds: 54 },
     },
     {
         title: 'Absolvuj test',
         description:
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'Vyplň v určeném časovém rozmezí náš test, až už to bude matematika nebo čeština.',
         image: gridsImage,
         runtime: { minutes: 9, seconds: 12 },
     },
     {
         title: 'Nahraj vyfocený záznamový arch',
         description:
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'Do systému nám nahraj vyplněný test a čekej na výsledek.',
         image: strokesImage,
         runtime: { minutes: 23, seconds: 25 },
     },
     {
         title: 'Podívej se na rozbor',
         description:
-            'Lorem Ipsum is simply dummy text of the printing and typesetting industry.',
+            'Projdi si opravený test, podívej se, v čem jsi chyboval nebo chybovala a poznámky si zapiš nebo ulož. Právě z chyb se totiž člověk nejvíc naučí!',
         image: duotoneImage,
         runtime: { minutes: 28, seconds: 44 },
     },
@@ -64,14 +64,15 @@ export default function OnlinePrijimacky() {
             className="scroll-mt-14 py-16 sm:scroll-mt-32 sm:py-20 lg:py-32"
         >
             <Container>
-                <SectionHeading number="2" id="screencasts-title">
-                    Screencasts
+                <SectionHeading number="3" id="screencasts-title">
+                    na-zkoušku online
                 </SectionHeading>
                 <p className="mt-8 font-display text-4xl font-bold tracking-tight text-slate-900">
                     Online přijímačky kdykoliv z domova.
                 </p>
                 <p className="mt-4 text-lg tracking-tight text-slate-700">
-                    Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s.
+                    Pokud nemůžeš dojíždět a chceš si testy vyzkoušet na dálku, ani tady tě o nic neošidíme. Vyhodnocení testu ti pošleme i s rozborem až domů. Jak na to?
+
                 </p>
             </Container>
             <Container size="lg" className="mt-16">

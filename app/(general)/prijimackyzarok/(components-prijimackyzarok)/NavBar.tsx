@@ -13,10 +13,10 @@ const sections = [
             </>
         ),
     },
-    { id: 'online', title: 'Na-zkoušku Online' },
-    { id: 'newsbenefits', title: 'Začni s přípravou s náskokem' },
-    { id: 'cenik', title: 'Ceník' },
-    { id: 'Autor', title: 'Kdo jsme?' },
+    { id: 'form', title: 'Zajisti si místo' },
+
+    { id: 'online', title: 'na-zkoušku online' },
+    { id: 'reservebenefits', title: 'Proč si rezervovat místo?' },
 ]
 
 function MenuIcon({
