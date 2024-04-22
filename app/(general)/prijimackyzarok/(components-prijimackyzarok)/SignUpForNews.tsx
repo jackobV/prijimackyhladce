@@ -36,19 +36,7 @@ export default function SignUpForNews(){
                 <p className="mt-8 font-display text-4xl font-bold tracking-tight text-slate-900">
                     Zajisti si místo na příští rok a získej přístup k exkluzivním slevám.
                 </p>
-                <ul role="list" className="mt-8 space-y-3">
-                    {[
-                        'Garance místa na příští rok',
-                        'Sleva 10% v předprodeji',
-                        'Přístup do komunity dalších deváťáků',
-                        'Shrnutí učiva, které budeš muset umět.',
-                    ].map((feature) => (
-                        <li key={feature} className="flex">
-                            <CheckIcon className="h-8 w-8 flex-none fill-blue-500" />
-                            <span className="ml-4">{feature}</span>
-                        </li>
-                    ))}
-                </ul>
+
             </Container>
             <div>
                 <div className="bg-white py-16 sm:py-24">
